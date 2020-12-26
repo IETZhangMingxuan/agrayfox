@@ -2,10 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/home">Home</router-link> |
-      <router-link to="/test1">Test1</router-link> |
-    </div>
-    <div>
-      <WeiboHot/>
+      <router-link to="/weibo">Weibo</router-link>
     </div>
     <router-view/>
   </div>

@@ -7,13 +7,12 @@ const routes = [{
     /* 主页路由组件 */
     name: 'Home',
     path: '/home',
-    component: () => import( /* webpackChunkName:"home" */ 'pages/Home/Home.vue'),
-  },
-  {
-    /* 测试路由组件1 */
-    name: 'Test1',
-    path: '/test1',
-    component: () => import( /* webpackChunkName: "test" */ 'pages/Test/Test1.vue'),
+    component: () => import( /* webpackChunkName:"home" */ 'pages/Home/Home'),
+  },{
+    /* 微博路由测试组件 */
+    name: 'Weibo',
+    path: '/weibo',
+    component: () => import( /* webpackChunkName:"home" */ 'pages/WeiboHot/WeiboHot'),
   }
 ];
 
