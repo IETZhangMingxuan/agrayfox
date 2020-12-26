@@ -6,12 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "grayfox": "npm run serve"
+    "grayfox":"npm run serve",
+    ""
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "nprogress": "^0.2.0",
     "vue": "^2.6.11",
     "vue-easyimport": "^2.1.1",
     "vue-router": "^3.2.0",
@@ -28,14 +27,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
-    "husky": "^4.3.6",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
   }
 }

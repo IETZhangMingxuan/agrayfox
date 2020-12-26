@@ -1,27 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/test1">Test1</router-link> |
-    </div>
-    <div>
-      <WeiboHot/>
+      <router-link to="/home">Home</router-link>
+      <router-link to="/test1">Test1</router-link>
     </div>
     <router-view/>
   </div>
 </template>
-<script>
-import {mapActions} from "vuex"
 
-export default {
-  methods:{
-    ...mapActions(["getWeiboHotList"])
-  },
-  async created(){
-    await this.getWeiboHotList();
-  }
-}
-</script>
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
