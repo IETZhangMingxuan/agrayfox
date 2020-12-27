@@ -1,0 +1,261 @@
+{
+    "sug_list": [
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6595518205114979597",
+                "words_position": 0,
+                "words_content": "热搜",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.429324",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "orion_qse_recall|origin_query|aweme_orion_word|aweme_index_query_word_shortterm|new_user_word",
+                "rich_sug_type": "0",
+                "score": "10020.715853"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜榜排名",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6579952897365120270",
+                "words_position": 1,
+                "words_content": "热搜榜排名",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.157413",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_index_query_word_shortterm",
+                "rich_sug_type": "0",
+                "score": "13.458663"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜榜排名今日热搜抖音",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6823001268198315276",
+                "words_position": 2,
+                "words_content": "热搜榜排名今日热搜抖音",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.044496",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_orion_word|aweme_index_query_word_shortterm",
+                "rich_sug_type": "0",
+                "score": "12.295195"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜榜",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6595524422214358286",
+                "words_position": 3,
+                "words_content": "热搜榜",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.031993",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "orion_qse_recall|aweme_orion_word|aweme_index_query_word_shortterm|new_user_word",
+                "rich_sug_type": "0",
+                "score": "20.534282"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜歌曲",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6579575539344872717",
+                "words_position": 4,
+                "words_content": "热搜歌曲",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.014089",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "orion_qse_recall|aweme_index_query_word_shortterm|aweme_orion_word",
+                "rich_sug_type": "0",
+                "score": "14.123798"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜西安",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6609165939583767815",
+                "words_position": 5,
+                "words_content": "热搜西安",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.007417",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_orion_word|aweme_index_query_word_shortterm|new_user_word",
+                "rich_sug_type": "0",
+                "score": "15.716942"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜礼品",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6872290636239279368",
+                "words_position": 6,
+                "words_content": "热搜礼品",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.005323",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_orion_word|aweme_index_query_word_shortterm|new_user_word",
+                "rich_sug_type": "0",
+                "score": "14.408641"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜预定",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6668418132979225867",
+                "words_position": 7,
+                "words_content": "热搜预定",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.004839",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_orion_word|aweme_index_query_word_shortterm",
+                "rich_sug_type": "0",
+                "score": "11.345405"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜视频",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6579872769339561223",
+                "words_position": 8,
+                "words_content": "热搜视频",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.004096",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_orion_word|aweme_index_query_word_shortterm",
+                "rich_sug_type": "0",
+                "score": "14.449909"
+            }
+        },
+        {
+            "pos": [
+                {
+                    "begin": 0,
+                    "end": 1
+                }
+            ],
+            "content": "热搜话题",
+            "sug_type": "",
+            "word_record": {
+                "group_id": "6579970964010833159",
+                "words_position": 9,
+                "words_content": "热搜话题",
+                "words_source": "sug"
+            },
+            "extra_info": {
+                "combine_utility": "0.003191",
+                "is_rich_sug": "0",
+                "latency": "62924",
+                "recall_reason": "aweme_orion_word|aweme_index_query_word_shortterm",
+                "rich_sug_type": "0",
+                "score": "13.099866"
+            }
+        }
+    ],
+    "status_code": 0,
+    "status_msg": "",
+    "rid": "2020122720340601002301709319D56AF1",
+    "words_query_record": {
+        "info": "{}",
+        "words_source": "sug",
+        "query_id": ""
+    },
+    "extra": {
+        "now": 1609072446000,
+        "logid": "2020122720340601002301709319D56AF1",
+        "fatal_item_ids": [],
+        "search_request_id": ""
+    },
+    "log_pb": {
+        "impr_id": "2020122720340601002301709319D56AF1"
+    }
+}

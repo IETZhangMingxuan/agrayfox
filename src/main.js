@@ -4,6 +4,9 @@ import router from 'router'
 import store from 'store/store'
 import 'vue-easyimport'
 import 'nprogress/nprogress.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false;
 

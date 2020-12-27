@@ -1,0 +1,1339 @@
+{
+    "status_code": 0,
+    "data": {
+        "share_info": {
+            "share_title": "我在看抖音热榜，发现最火的内容，赶快来看！",
+            "share_link_desc": "我在看抖音热榜，发现最火的内容，赶快来看！戳这里>>",
+            "share_url": "https://www.iesdouyin.com/share/billboard/?id=0"
+        },
+        "trending_list": [
+            {
+                "video_count": 9,
+                "group_id": "6909664126790210827",
+                "sentence_id": "200656",
+                "word": "于和伟对厌世妆的理解",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/1b461e5bd9264cc48d48b48ed1c7fe4d",
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/1b461e5bd9264cc48d48b48ed1c7fe4d~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/1b461e5bd9264cc48d48b48ed1c7fe4d~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/1b461e5bd9264cc48d48b48ed1c7fe4d~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "event_time": 1609063694,
+                "related_words": null,
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "word_type": 3
+            },
+            {
+                "hotlist_param": "{\"version\":1}",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/c4c235c66be34902a70467236cafefae",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/c4c235c66be34902a70467236cafefae~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/c4c235c66be34902a70467236cafefae~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/c4c235c66be34902a70467236cafefae~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6909368152834249998",
+                "word_type": 3,
+                "sentence_id": "199621",
+                "related_words": null,
+                "drift_info": null,
+                "word": "男子借玩情侣游戏杀情人被批捕",
+                "label": 0,
+                "video_count": 1,
+                "event_time": 1608942760
+            },
+            {
+                "video_count": 7,
+                "event_time": 1609060622,
+                "related_words": null,
+                "hotlist_param": "{\"version\":1}",
+                "word_type": 3,
+                "sentence_id": "200617",
+                "drift_info": null,
+                "word": "卓尔官宣李霄鹏担任主教练",
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/11e93fdb0b6044fca3051600e5028ea2",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/11e93fdb0b6044fca3051600e5028ea2~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/11e93fdb0b6044fca3051600e5028ea2~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/11e93fdb0b6044fca3051600e5028ea2~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6909661756688405772"
+            },
+            {
+                "related_words": null,
+                "drift_info": null,
+                "word": "8人火锅店吃霸王餐的后续",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/32053685b0ca4941a180ef8c0504ec98",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/32053685b0ca4941a180ef8c0504ec98~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/32053685b0ca4941a180ef8c0504ec98~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/32053685b0ca4941a180ef8c0504ec98~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 3,
+                "sentence_id": "200636",
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "video_count": 1,
+                "group_id": "6909668569577116932",
+                "event_time": 1609061800
+            },
+            {
+                "word": "小伙18岁起坚持每天自拍",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/9bc93d6cb383459f8d848c225a5e51bd",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/9bc93d6cb383459f8d848c225a5e51bd~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/9bc93d6cb383459f8d848c225a5e51bd~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/9bc93d6cb383459f8d848c225a5e51bd~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 1,
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "group_id": "6910018717204403470",
+                "word_type": 3,
+                "sentence_id": "200627",
+                "event_time": 1609061084,
+                "related_words": null,
+                "drift_info": null
+            }
+        ],
+        "trending_desc": "实时上升热点",
+        "recommend_list": null,
+        "word_list": [
+            {
+                "word": "被邻居大妈支配的恐惧",
+                "hot_value": 9079220,
+                "related_words": null,
+                "hotlist_param": "{\"version\":1}",
+                "position": 1,
+                "challenge_id": "",
+                "word_cover": {
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/19ed02d2e1ae4677b981a325f982450b~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/19ed02d2e1ae4677b981a325f982450b~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/19ed02d2e1ae4677b981a325f982450b~noop.jpeg?from=3218412987"
+                    ],
+                    "uri": "tos-cn-p-0015/19ed02d2e1ae4677b981a325f982450b"
+                },
+                "word_type": 1,
+                "event_time": 1609051855,
+                "label": 0,
+                "video_count": 167,
+                "group_id": "6910511485157266692",
+                "sentence_id": "200550",
+                "drift_info": null
+            },
+            {
+                "word": "郭德纲说不能欺负秦霄贤",
+                "position": 2,
+                "group_id": "6909976083614979336",
+                "drift_info": null,
+                "challenge_id": "",
+                "video_count": 4,
+                "event_time": 1609044997,
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/0503315a27ee4ea5b667a5065b9d0b07_1609044064",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/0503315a27ee4ea5b667a5065b9d0b07_1609044064~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/0503315a27ee4ea5b667a5065b9d0b07_1609044064~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/0503315a27ee4ea5b667a5065b9d0b07_1609044064~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "hotlist_param": "{\"version\":1}",
+                "sentence_id": "200462",
+                "related_words": null,
+                "hot_value": 8185523,
+                "can_extend_detail": false,
+                "word_type": 1
+            },
+            {
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/dff855bc41b049178313e65a688e1e95_1609040967",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/dff855bc41b049178313e65a688e1e95_1609040967~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/dff855bc41b049178313e65a688e1e95_1609040967~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/dff855bc41b049178313e65a688e1e95_1609040967~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "sentence_id": "200658",
+                "related_words": null,
+                "drift_info": null,
+                "word": "易烊千玺霸道总裁式出场",
+                "hot_value": 7872514,
+                "group_id": "6910006747773244680",
+                "hotlist_param": "{\"version\":1}",
+                "challenge_id": "",
+                "video_count": 11,
+                "can_extend_detail": false,
+                "event_time": 1609064040,
+                "label": 0,
+                "position": 3
+            },
+            {
+                "video_count": 2,
+                "hotlist_param": "{\"version\":1}",
+                "label": 3,
+                "position": 4,
+                "sentence_id": "200655",
+                "hot_value": 7757041,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/8f2ac7dfd72e4f1e95dc0c5f9f8ece7f",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/8f2ac7dfd72e4f1e95dc0c5f9f8ece7f~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/8f2ac7dfd72e4f1e95dc0c5f9f8ece7f~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/8f2ac7dfd72e4f1e95dc0c5f9f8ece7f~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6776814757396616460",
+                "word_type": 1,
+                "event_time": 1609063586,
+                "related_words": null,
+                "challenge_id": "",
+                "drift_info": null,
+                "word": "方便面原来可以这么吃"
+            },
+            {
+                "word": "乐华年会到底发生了什么",
+                "label": 0,
+                "video_count": 5,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/4f8a97d689dd4ac19bcad96478420899_1608973553",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/4f8a97d689dd4ac19bcad96478420899_1608973553~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/4f8a97d689dd4ac19bcad96478420899_1608973553~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/4f8a97d689dd4ac19bcad96478420899_1608973553~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "can_extend_detail": false,
+                "sentence_id": "200061",
+                "event_time": 1608974098,
+                "hotlist_param": "{\"version\":1}",
+                "challenge_id": "",
+                "position": 5,
+                "group_id": "6910294858860238092",
+                "drift_info": null,
+                "hot_value": 7674761,
+                "word_type": 1,
+                "related_words": null
+            },
+            {
+                "word": "轻享0负担好喝不怕胖",
+                "label": 2,
+                "hot_value": 7595798,
+                "search_word": "轻享0负担好喝不怕胖",
+                "related_words": null,
+                "view_count": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/41055269f5a544d7a4c1ce2ada1c99b1_1608902992",
+                    "url_list": [
+                        "http://sf1-ttcdn-tos.pstatp.com/obj/tos-cn-p-0015/41055269f5a544d7a4c1ce2ada1c99b1_1608902992?from=ad"
+                    ]
+                },
+                "ad_data": "{\"creative_id\":1687142410034190,\"log_extra\":\"{\\\"ad_price\\\":\\\"X-h-XgAWQktf6H5eABZCS_WYAWqv_qNmcnFYCw\\\",\\\"req_id\\\":\\\"202012272030220101310571330026D705\\\",\\\"rit\\\":40019}\",\"open_type\":0,\"track_url_list\":{\"url_list\":[],\"uri\":\"\"},\"click_track_url_list\":{\"url_list\":[],\"uri\":\"\"},\"is_preview\":false,\"item_id_list\":[6910185682392730884,6910099531086564608,6909635985538092291],\"item_id_list_str\":[\"6910185682392730884\",\"6910099531086564608\",\"6909635985538092291\"]}",
+                "position": 6,
+                "video_count": 3,
+                "drift_info": null
+            },
+            {
+                "label": 3,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/d5e232b3a53e4c4c93b8f8f8a9cc638b",
+                    "url_list": [
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d5e232b3a53e4c4c93b8f8f8a9cc638b~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d5e232b3a53e4c4c93b8f8f8a9cc638b~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/d5e232b3a53e4c4c93b8f8f8a9cc638b~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 6,
+                "sentence_id": "200396",
+                "related_words": null,
+                "drift_info": null,
+                "detail_info": {},
+                "word": "男子称买火腿肠发现老鼠腿索赔50万",
+                "event_time": 1609039093,
+                "hotlist_param": "{\"version\":1}",
+                "can_extend_detail": true,
+                "position": 7,
+                "challenge_id": "",
+                "group_id": "6909290115341620483",
+                "word_type": 1,
+                "hot_value": 7516836
+            },
+            {
+                "related_words": null,
+                "hot_value": 7413548,
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/b0215063314c4eb7b2bdec3f9a082c6b",
+                    "url_list": [
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/b0215063314c4eb7b2bdec3f9a082c6b~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/b0215063314c4eb7b2bdec3f9a082c6b~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/b0215063314c4eb7b2bdec3f9a082c6b~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 3,
+                "group_id": "6909941163513402632",
+                "sentence_id": "200527",
+                "word": "网约车司机遭乘客殴打砸车",
+                "label": 3,
+                "word_type": 1,
+                "drift_info": null,
+                "position": 8,
+                "event_time": 1609049863,
+                "hotlist_param": "{\"version\":1}"
+            },
+            {
+                "sentence_id": "200715",
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 7256713,
+                "challenge_id": "",
+                "video_count": 1,
+                "position": 9,
+                "drift_info": null,
+                "word": "致2020年那些离我们远去的人",
+                "label": 1,
+                "event_time": 1609070505,
+                "related_words": null,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/7614dcfd690847fdae879306f4085887_1609060351",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/7614dcfd690847fdae879306f4085887_1609060351~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/7614dcfd690847fdae879306f4085887_1609060351~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/7614dcfd690847fdae879306f4085887_1609060351~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6909717775481312524",
+                "word_type": 1
+            },
+            {
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "word": "四川达州街头惊现野猪",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/bbd40b95942742c2a1b98da410aa472d_1609059427",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/bbd40b95942742c2a1b98da410aa472d_1609059427~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/bbd40b95942742c2a1b98da410aa472d_1609059427~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/bbd40b95942742c2a1b98da410aa472d_1609059427~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 2,
+                "word_type": 1,
+                "hot_value": 7108104,
+                "challenge_id": "",
+                "event_time": 1609063539,
+                "related_words": null,
+                "label": 0,
+                "position": 10,
+                "group_id": "6909677835885401348",
+                "sentence_id": "200653"
+            },
+            {
+                "hot_value": 6992010,
+                "challenge_id": "",
+                "position": 11,
+                "drift_info": null,
+                "label": 3,
+                "group_id": "6909847830286832903",
+                "related_words": null,
+                "word": "侯明昊简直抓住了女生的精髓",
+                "video_count": 18,
+                "can_extend_detail": false,
+                "sentence_id": "200483",
+                "event_time": 1609046728,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/965c1a195236404384196a0606a2cd34",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/965c1a195236404384196a0606a2cd34~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/965c1a195236404384196a0606a2cd34~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/965c1a195236404384196a0606a2cd34~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "hotlist_param": "{\"version\":1}",
+                "word_type": 1
+            },
+            {
+                "hot_value": 6907821,
+                "challenge_id": "",
+                "event_time": 1609049161,
+                "related_words": null,
+                "drift_info": null,
+                "label": 0,
+                "word_type": 1,
+                "sentence_id": "200503",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/0578f7c8cece40b097a5a0eb0d46a5a7_1608905653",
+                    "url_list": [
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/0578f7c8cece40b097a5a0eb0d46a5a7_1608905653~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/0578f7c8cece40b097a5a0eb0d46a5a7_1608905653~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/0578f7c8cece40b097a5a0eb0d46a5a7_1608905653~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6907180110136644871",
+                "video_count": 47,
+                "hotlist_param": "{\"version\":1}",
+                "word": "蓝线油画大赛",
+                "position": 12
+            },
+            {
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/669b0c65141c43099001e968f847a091_1608987629",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/669b0c65141c43099001e968f847a091_1608987629~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/669b0c65141c43099001e968f847a091_1608987629~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/669b0c65141c43099001e968f847a091_1608987629~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "event_time": 1609036902,
+                "video_count": 5,
+                "group_id": "6909356528713618691",
+                "word_type": 1,
+                "related_words": null,
+                "word": "李一桐说张若昀眼里只有唐艺昕",
+                "label": 3,
+                "hot_value": 6804739,
+                "position": 13,
+                "hotlist_param": "{\"version\":1}",
+                "can_extend_detail": false,
+                "sentence_id": "200358",
+                "drift_info": null
+            },
+            {
+                "video_count": 8,
+                "group_id": "6909915018013709581",
+                "word": "赵又廷穿着衣服走出了郭敬明电影",
+                "hot_value": 6664228,
+                "can_extend_detail": false,
+                "word_type": 1,
+                "event_time": 1609051322,
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/40abd690389d4d77a25976a2653000d8_1609033435",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/40abd690389d4d77a25976a2653000d8_1609033435~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/40abd690389d4d77a25976a2653000d8_1609033435~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/40abd690389d4d77a25976a2653000d8_1609033435~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "hotlist_param": "{\"version\":1}",
+                "label": 3,
+                "position": 14,
+                "sentence_id": "200547",
+                "related_words": null,
+                "drift_info": null
+            },
+            {
+                "challenge_id": "",
+                "word_type": 1,
+                "hot_value": 6643987,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/5a480ecd1c47431584d16000727919e9_1608969770",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/5a480ecd1c47431584d16000727919e9_1608969770~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/5a480ecd1c47431584d16000727919e9_1608969770~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/5a480ecd1c47431584d16000727919e9_1608969770~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 15,
+                "group_id": "6893422013206992135",
+                "room_count": 1,
+                "sentence_id": "200533",
+                "word": "颜人中感情事故",
+                "video_count": 6,
+                "hotlist_param": "{\"version\":1}",
+                "label": 3,
+                "can_extend_detail": false,
+                "event_time": 1609050020,
+                "related_words": null,
+                "drift_info": null
+            },
+            {
+                "video_count": 1,
+                "group_id": "6909492066247955724",
+                "word_type": 1,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 6588545,
+                "challenge_id": "",
+                "drift_info": null,
+                "word": "蛋糕上的饰品有多逼真",
+                "position": 16,
+                "label": 3,
+                "related_words": null,
+                "event_time": 1609061033,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/44c7e0e81d674c0194d1b40f4c957e4e",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/44c7e0e81d674c0194d1b40f4c957e4e~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/44c7e0e81d674c0194d1b40f4c957e4e~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/44c7e0e81d674c0194d1b40f4c957e4e~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "sentence_id": "200626"
+            },
+            {
+                "drift_info": null,
+                "video_count": 16,
+                "hot_value": 6514848,
+                "position": 17,
+                "event_time": 1609060860,
+                "word": "侯明昊专治杨超越",
+                "challenge_id": "",
+                "word_cover": {
+                    "url_list": [
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/a434e15a89ac46de8c55527b9c58ee3b_1609052887~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/a434e15a89ac46de8c55527b9c58ee3b_1609052887~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/a434e15a89ac46de8c55527b9c58ee3b_1609052887~noop.jpeg?from=3218412987"
+                    ],
+                    "uri": "tos-cn-p-0015/a434e15a89ac46de8c55527b9c58ee3b_1609052887"
+                },
+                "group_id": "6909649949643691267",
+                "word_type": 1,
+                "sentence_id": "200622",
+                "related_words": null,
+                "hotlist_param": "{\"version\":1}",
+                "label": 3,
+                "can_extend_detail": false
+            },
+            {
+                "sentence_id": "200563",
+                "event_time": 1609053006,
+                "drift_info": null,
+                "challenge_id": "",
+                "video_count": 5,
+                "group_id": "6909265966418203907",
+                "can_extend_detail": false,
+                "word_type": 1,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/f0b0215e9ed044d6aeadabc14dbbbb0a_1608987060",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/f0b0215e9ed044d6aeadabc14dbbbb0a_1608987060~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/f0b0215e9ed044d6aeadabc14dbbbb0a_1608987060~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/f0b0215e9ed044d6aeadabc14dbbbb0a_1608987060~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word": "王一博银发撕漫感大片",
+                "label": 3,
+                "hot_value": 6357704,
+                "position": 18,
+                "related_words": null,
+                "hotlist_param": "{\"version\":1}"
+            },
+            {
+                "word": "阳光之下开播",
+                "hot_value": 5967001,
+                "challenge_id": "",
+                "group_id": "6896740829970699531",
+                "drift_info": null,
+                "can_extend_detail": false,
+                "sentence_id": "199735",
+                "position": 19,
+                "word_type": 1,
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/d62ce50aed5640178e250578b829124b_1608951860",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/d62ce50aed5640178e250578b829124b_1608951860~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d62ce50aed5640178e250578b829124b_1608951860~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d62ce50aed5640178e250578b829124b_1608951860~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 13,
+                "event_time": 1608951154,
+                "related_words": null
+            },
+            {
+                "related_words": null,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 5939091,
+                "challenge_id": "",
+                "position": 20,
+                "video_count": 8,
+                "sentence_id": "199635",
+                "word_type": 1,
+                "drift_info": null,
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/2c4c4c3457814adaa5c3e3fe66e9ac07",
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/2c4c4c3457814adaa5c3e3fe66e9ac07~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/2c4c4c3457814adaa5c3e3fe66e9ac07~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/2c4c4c3457814adaa5c3e3fe66e9ac07~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "event_time": 1608943542,
+                "word": "薛之谦话太多被硬塞吃鸡",
+                "group_id": "6909380354685211912"
+            },
+            {
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/9e810816307248ffb3d5cd05fffc1d7c",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/9e810816307248ffb3d5cd05fffc1d7c~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/9e810816307248ffb3d5cd05fffc1d7c~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/9e810816307248ffb3d5cd05fffc1d7c~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6910060757104678151",
+                "word": "老师冲刺打卡摔倒还是迟到一分钟",
+                "hot_value": 5740131,
+                "position": 21,
+                "sentence_id": "200605",
+                "related_words": null,
+                "drift_info": null,
+                "word_type": 1,
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "video_count": 1,
+                "event_time": 1609059134
+            },
+            {
+                "position": 22,
+                "related_words": null,
+                "word": "玛尼情歌",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/581b9bd161624054882553aec98263d5",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/581b9bd161624054882553aec98263d5~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/581b9bd161624054882553aec98263d5~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/581b9bd161624054882553aec98263d5~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "label": 0,
+                "can_extend_detail": false,
+                "event_time": 1609046780,
+                "challenge_id": "",
+                "video_count": 54,
+                "group_id": "6595530637531174157",
+                "sentence_id": "200484",
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 5643654
+            },
+            {
+                "word": "杜淳跳舞像军体拳",
+                "label": 0,
+                "event_time": 1609034254,
+                "challenge_id": "",
+                "group_id": "6909809591463908616",
+                "position": 23,
+                "can_extend_detail": true,
+                "word_type": 1,
+                "sentence_id": "200318",
+                "related_words": null,
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 5583750,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/2a0f0388bcee4ee0b3ec56298870d135",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/2a0f0388bcee4ee0b3ec56298870d135~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/2a0f0388bcee4ee0b3ec56298870d135~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/2a0f0388bcee4ee0b3ec56298870d135~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 2,
+                "detail_info": {
+                    "detail_type": 0,
+                    "detail_desc": "事件详情"
+                }
+            },
+            {
+                "word": "韦世豪100万欧身价创新高",
+                "sentence_id": "200397",
+                "event_time": 1609039109,
+                "detail_info": {
+                    "detail_type": 0,
+                    "detail_desc": "事件详情"
+                },
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/0224df1901af4cbe9cd7db22687d7803",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/0224df1901af4cbe9cd7db22687d7803~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/0224df1901af4cbe9cd7db22687d7803~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/0224df1901af4cbe9cd7db22687d7803~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 24,
+                "video_count": 5,
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "group_id": "6909793554828678413",
+                "word_type": 1,
+                "hot_value": 5579684,
+                "challenge_id": "",
+                "can_extend_detail": true,
+                "related_words": null,
+                "drift_info": null
+            },
+            {
+                "word": "吴邪我要带你回家",
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "sentence_id": "200537",
+                "related_words": null,
+                "label": 0,
+                "hot_value": 5449762,
+                "video_count": 6,
+                "word_type": 1,
+                "event_time": 1609050092,
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/dd335c3bdff345c695ae6e92beadc177",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/dd335c3bdff345c695ae6e92beadc177~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/dd335c3bdff345c695ae6e92beadc177~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/dd335c3bdff345c695ae6e92beadc177~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 25,
+                "group_id": "6905749283673920776"
+            },
+            {
+                "sentence_id": "200553",
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/6e4564978df9424bad81c5e474dba5ab",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/6e4564978df9424bad81c5e474dba5ab~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/6e4564978df9424bad81c5e474dba5ab~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/6e4564978df9424bad81c5e474dba5ab~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "related_words": null,
+                "drift_info": null,
+                "hot_value": 5415310,
+                "video_count": 2,
+                "group_id": "6903809174246298880",
+                "position": 26,
+                "event_time": 1609052509,
+                "word": "外婆为不肯喝药的宝宝做出的努力",
+                "challenge_id": ""
+            },
+            {
+                "related_words": null,
+                "video_count": 17,
+                "group_id": "6899703421977826572",
+                "challenge_id": "",
+                "event_time": 1608985218,
+                "word": "大秦赋大结局",
+                "hot_value": 5156299,
+                "drift_info": null,
+                "position": 27,
+                "word_type": 1,
+                "can_extend_detail": false,
+                "sentence_id": "200166",
+                "hotlist_param": "{\"version\":1}",
+                "label": 5,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/5e24295e508b4aba8fb1e7b9f8c45bb9_1608927101",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/5e24295e508b4aba8fb1e7b9f8c45bb9_1608927101~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/5e24295e508b4aba8fb1e7b9f8c45bb9_1608927101~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/5e24295e508b4aba8fb1e7b9f8c45bb9_1608927101~noop.jpeg?from=3218412987"
+                    ]
+                }
+            },
+            {
+                "hot_value": 5137493,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/5ae523d1b32a42bcac54f7ae706a48cb",
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/5ae523d1b32a42bcac54f7ae706a48cb~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/5ae523d1b32a42bcac54f7ae706a48cb~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/5ae523d1b32a42bcac54f7ae706a48cb~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 28,
+                "related_words": null,
+                "challenge_id": "",
+                "video_count": 6,
+                "word": "在重庆坐出租车是什么感觉",
+                "word_type": 1,
+                "sentence_id": "199822",
+                "drift_info": null,
+                "label": 0,
+                "group_id": "6909077381857269004",
+                "event_time": 1608957239,
+                "hotlist_param": "{\"version\":1}"
+            },
+            {
+                "challenge_id": "",
+                "position": 29,
+                "related_words": null,
+                "label": 0,
+                "hot_value": 5053381,
+                "video_count": 46,
+                "word_type": 1,
+                "sentence_id": "200108",
+                "word": "四季予你翻唱大赛",
+                "group_id": "6908403798209746190",
+                "event_time": 1608978257,
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/3db6879e98124307907422318734f917",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/3db6879e98124307907422318734f917~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/3db6879e98124307907422318734f917~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/3db6879e98124307907422318734f917~noop.jpeg?from=3218412987"
+                    ]
+                }
+            },
+            {
+                "hot_value": 5037328,
+                "challenge_id": "",
+                "video_count": 4,
+                "related_words": null,
+                "word": "张柏芝广州商演翻车",
+                "label": 0,
+                "hotlist_param": "{\"version\":1}",
+                "word_cover": {
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/78856becdd14401da738ba869be6b1d1~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/78856becdd14401da738ba869be6b1d1~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/78856becdd14401da738ba869be6b1d1~noop.jpeg?from=3218412987"
+                    ],
+                    "uri": "tos-cn-p-0015/78856becdd14401da738ba869be6b1d1"
+                },
+                "group_id": "6909765794235143438",
+                "word_type": 1,
+                "sentence_id": "200386",
+                "drift_info": null,
+                "detail_info": {
+                    "detail_type": 0,
+                    "detail_desc": "事件详情"
+                },
+                "position": 30,
+                "can_extend_detail": true,
+                "event_time": 1609038717
+            },
+            {
+                "word": "2020年度回顾",
+                "video_count": 6,
+                "event_time": 1609052523,
+                "related_words": null,
+                "label": 5,
+                "hot_value": 4971673,
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/2391eef920cb4912ad398e310f267159_1609041632",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/2391eef920cb4912ad398e310f267159_1609041632~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/2391eef920cb4912ad398e310f267159_1609041632~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/2391eef920cb4912ad398e310f267159_1609041632~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6773595895096169739",
+                "sentence_id": "200554",
+                "position": 31,
+                "word_type": 1
+            },
+            {
+                "challenge_id": "",
+                "position": 32,
+                "group_id": "6909449401392354573",
+                "event_time": 1608969301,
+                "related_words": null,
+                "hotlist_param": "{\"version\":1}",
+                "sentence_id": "200001",
+                "word": "在电影院看完邓伦的反应",
+                "hot_value": 4939329,
+                "video_count": 21,
+                "can_extend_detail": false,
+                "word_type": 1,
+                "drift_info": null,
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/3df8cf91cafb44e29c2e607b40b8efcd_1608965323",
+                    "url_list": [
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/3df8cf91cafb44e29c2e607b40b8efcd_1608965323~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/3df8cf91cafb44e29c2e607b40b8efcd_1608965323~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/3df8cf91cafb44e29c2e607b40b8efcd_1608965323~noop.jpeg?from=3218412987"
+                    ]
+                }
+            },
+            {
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/495361264d5e46be98abfd9c9e58b9f6",
+                    "url_list": [
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/495361264d5e46be98abfd9c9e58b9f6~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/495361264d5e46be98abfd9c9e58b9f6~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/495361264d5e46be98abfd9c9e58b9f6~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "related_words": null,
+                "word": "追光吧哥哥全网征后期",
+                "label": 5,
+                "hot_value": 4900547,
+                "can_extend_detail": false,
+                "position": 33,
+                "video_count": 32,
+                "sentence_id": "199589",
+                "event_time": 1608906982,
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "group_id": "6909091240950142221"
+            },
+            {
+                "event_time": 1608943174,
+                "detail_info": {
+                    "detail_type": 0,
+                    "detail_desc": "事件详情"
+                },
+                "word": "郭麒麟宋祖儿太甜了",
+                "label": 5,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/4449a9481b934dbda1dbd53ca31cf621_1608908438",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/4449a9481b934dbda1dbd53ca31cf621_1608908438~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/4449a9481b934dbda1dbd53ca31cf621_1608908438~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/4449a9481b934dbda1dbd53ca31cf621_1608908438~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 4,
+                "word_type": 1,
+                "sentence_id": "199631",
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 4899613,
+                "challenge_id": "",
+                "position": 34,
+                "group_id": "6906461538807616772",
+                "can_extend_detail": true,
+                "related_words": null
+            },
+            {
+                "video_count": 11,
+                "word_type": 1,
+                "hotlist_param": "{\"version\":1}",
+                "can_extend_detail": false,
+                "sentence_id": "200464",
+                "related_words": null,
+                "challenge_id": "",
+                "position": 35,
+                "event_time": 1609045046,
+                "drift_info": null,
+                "word": "薛之谦被怼成习惯",
+                "label": 0,
+                "hot_value": 4884485,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/4f1051443661476f8f05f362538ca2d9_1608903132",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/4f1051443661476f8f05f362538ca2d9_1608903132~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/4f1051443661476f8f05f362538ca2d9_1608903132~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/4f1051443661476f8f05f362538ca2d9_1608903132~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6909974387676828935"
+            },
+            {
+                "position": 36,
+                "video_count": 10,
+                "can_extend_detail": false,
+                "event_time": 1608963253,
+                "drift_info": null,
+                "hot_value": 4843747,
+                "group_id": "6735276178577298699",
+                "related_words": null,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/33cc158843e2403d8958bbfb0b9f544b",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/33cc158843e2403d8958bbfb0b9f544b~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/33cc158843e2403d8958bbfb0b9f544b~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/33cc158843e2403d8958bbfb0b9f544b~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "sentence_id": "199903",
+                "word": "IU保镖大叔",
+                "label": 0,
+                "challenge_id": "",
+                "hotlist_param": "{\"version\":1}"
+            },
+            {
+                "video_count": 2,
+                "group_id": "6909430514793649412",
+                "word_type": 1,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/452b0ebf981342f180b662abcc8a92e0",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/452b0ebf981342f180b662abcc8a92e0~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/452b0ebf981342f180b662abcc8a92e0~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/452b0ebf981342f180b662abcc8a92e0~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "sentence_id": "200258",
+                "drift_info": null,
+                "hotlist_param": "{\"version\":1}",
+                "word": "萌娃奶声奶气和哥哥嫂嫂对话",
+                "related_words": null,
+                "label": 0,
+                "hot_value": 4765757,
+                "challenge_id": "",
+                "position": 37,
+                "event_time": 1609029534
+            },
+            {
+                "hotlist_param": "{\"version\":1}",
+                "sentence_id": "200262",
+                "event_time": 1609029830,
+                "drift_info": null,
+                "label": 0,
+                "position": 38,
+                "group_id": "6909430443986015500",
+                "word_type": 1,
+                "related_words": null,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/d0e7041f43664cfbabaae0b8373448e0",
+                    "url_list": [
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/d0e7041f43664cfbabaae0b8373448e0~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d0e7041f43664cfbabaae0b8373448e0~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/d0e7041f43664cfbabaae0b8373448e0~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "hot_value": 4726656,
+                "challenge_id": "",
+                "video_count": 2,
+                "word": "没有语言可以形容我家水龙头了"
+            },
+            {
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/7c6688797c644b069f045d582a87742b_1608960656",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/7c6688797c644b069f045d582a87742b_1608960656~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/7c6688797c644b069f045d582a87742b_1608960656~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/7c6688797c644b069f045d582a87742b_1608960656~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 39,
+                "event_time": 1608987357,
+                "label": 0,
+                "hot_value": 4652009,
+                "challenge_id": "",
+                "group_id": "6909325374921233675",
+                "hotlist_param": "{\"version\":1}",
+                "related_words": null,
+                "drift_info": null,
+                "word": "女子超速被拦后对交警发飙",
+                "word_type": 1,
+                "sentence_id": "200181",
+                "video_count": 3
+            },
+            {
+                "label": 0,
+                "challenge_id": "",
+                "video_count": 1,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 4646844,
+                "word_type": 1,
+                "sentence_id": "200581",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/04b3e7c0dead4e438e9b44f96012c621_1608989070",
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/04b3e7c0dead4e438e9b44f96012c621_1608989070~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/04b3e7c0dead4e438e9b44f96012c621_1608989070~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/04b3e7c0dead4e438e9b44f96012c621_1608989070~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "drift_info": null,
+                "word": "小时候一刻也离不开妈妈",
+                "position": 40,
+                "group_id": "6909767455444374797",
+                "event_time": 1609055634,
+                "related_words": null
+            },
+            {
+                "hot_value": 4640966,
+                "video_count": 15,
+                "hotlist_param": "{\"version\":1}",
+                "group_id": "6910033375962240270",
+                "word_type": 1,
+                "related_words": null,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/d3bf2ce11a8e41e4a352bc99a598274b",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d3bf2ce11a8e41e4a352bc99a598274b~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/d3bf2ce11a8e41e4a352bc99a598274b~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d3bf2ce11a8e41e4a352bc99a598274b~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 41,
+                "event_time": 1609068363,
+                "word": "韦春红向宋运辉下跪",
+                "label": 0,
+                "challenge_id": "",
+                "sentence_id": "200699",
+                "drift_info": null
+            },
+            {
+                "word": "黄明昊吐槽乐华年会",
+                "label": 0,
+                "challenge_id": "",
+                "word_cover": {
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/1253896b65634725b8570648348e7053~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/1253896b65634725b8570648348e7053~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/1253896b65634725b8570648348e7053~noop.jpeg?from=3218412987"
+                    ],
+                    "uri": "tos-cn-p-0015/1253896b65634725b8570648348e7053"
+                },
+                "related_words": null,
+                "video_count": 2,
+                "sentence_id": "200456",
+                "drift_info": null,
+                "hot_value": 4433287,
+                "position": 42,
+                "group_id": "6909473214306342156",
+                "hotlist_param": "{\"version\":1}",
+                "can_extend_detail": false,
+                "word_type": 1,
+                "event_time": 1609044490
+            },
+            {
+                "word_type": 1,
+                "related_words": null,
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/8ce0055013584f0bad5ebf66c094f70b_1608993354",
+                    "url_list": [
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/8ce0055013584f0bad5ebf66c094f70b_1608993354~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/8ce0055013584f0bad5ebf66c094f70b_1608993354~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/8ce0055013584f0bad5ebf66c094f70b_1608993354~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 8,
+                "can_extend_detail": false,
+                "hotlist_param": "{\"version\":1}",
+                "challenge_id": "",
+                "drift_info": null,
+                "group_id": "6909113756887504139",
+                "sentence_id": "200238",
+                "event_time": 1609028579,
+                "word": "虞书欣古装面纱造型",
+                "hot_value": 4433061,
+                "position": 43
+            },
+            {
+                "hot_value": 4354302,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/069ee6f7dc99464bb4e5327759abc046",
+                    "url_list": [
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/069ee6f7dc99464bb4e5327759abc046~noop.jpeg?from=3218412987",
+                        "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/069ee6f7dc99464bb4e5327759abc046~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/069ee6f7dc99464bb4e5327759abc046~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "label": 0,
+                "position": 44,
+                "hotlist_param": "{\"version\":1}",
+                "word": "赵露思是钱枫迷妹",
+                "group_id": "6909583159135409420",
+                "word_type": 1,
+                "sentence_id": "200558",
+                "drift_info": null,
+                "challenge_id": "",
+                "video_count": 2,
+                "event_time": 1609052732,
+                "related_words": null
+            },
+            {
+                "word_type": 1,
+                "sentence_id": "199786",
+                "hotlist_param": "{\"version\":1}",
+                "group_id": "6909356296555336967",
+                "can_extend_detail": false,
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/d6bc6b145c38494b8583b2974cb86c4c_1608920826",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/d6bc6b145c38494b8583b2974cb86c4c_1608920826~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/d6bc6b145c38494b8583b2974cb86c4c_1608920826~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/d6bc6b145c38494b8583b2974cb86c4c_1608920826~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 7,
+                "label": 5,
+                "position": 45,
+                "event_time": 1608954179,
+                "related_words": null,
+                "drift_info": null,
+                "word": "兔子牙胜仔巅峰总冠军",
+                "hot_value": 4262999
+            },
+            {
+                "label": 5,
+                "sentence_id": "200635",
+                "drift_info": null,
+                "group_id": "6909442241212224776",
+                "hotlist_param": "{\"version\":1}",
+                "word": "换头召唤毛戈平",
+                "word_cover": {
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/9c3d483d7a5447f88d050b485f5476da~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/9c3d483d7a5447f88d050b485f5476da~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/9c3d483d7a5447f88d050b485f5476da~noop.jpeg?from=3218412987"
+                    ],
+                    "uri": "tos-cn-p-0015/9c3d483d7a5447f88d050b485f5476da"
+                },
+                "video_count": 15,
+                "event_time": 1609061731,
+                "related_words": null,
+                "challenge_id": "",
+                "position": 46,
+                "word_type": 1,
+                "hot_value": 4237316
+            },
+            {
+                "video_count": 3,
+                "group_id": "6853237674363344136",
+                "event_time": 1609030725,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/1151af73e02c4ecb9985a8c5c564dc4b",
+                    "url_list": [
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/1151af73e02c4ecb9985a8c5c564dc4b~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/1151af73e02c4ecb9985a8c5c564dc4b~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/1151af73e02c4ecb9985a8c5c564dc4b~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "related_words": null,
+                "drift_info": null,
+                "label": 0,
+                "hot_value": 4153402,
+                "challenge_id": "",
+                "word": "原来男生也会写小作文",
+                "hotlist_param": "{\"version\":1}",
+                "position": 47,
+                "sentence_id": "200275"
+            },
+            {
+                "hot_value": 4148801,
+                "challenge_id": "",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/ec597550be2041208d1647a577efbf31_1608958559",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/ec597550be2041208d1647a577efbf31_1608958559~noop.jpeg?from=3218412987",
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/ec597550be2041208d1647a577efbf31_1608958559~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/ec597550be2041208d1647a577efbf31_1608958559~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "video_count": 16,
+                "drift_info": null,
+                "word": "王一博 我的世界守则",
+                "group_id": "6909439383511045383",
+                "label": 0,
+                "word_type": 1,
+                "related_words": null,
+                "position": 48,
+                "can_extend_detail": false,
+                "sentence_id": "199918",
+                "event_time": 1608963915,
+                "hotlist_param": "{\"version\":1}"
+            },
+            {
+                "group_id": "6909346116560884996",
+                "can_extend_detail": false,
+                "event_time": 1609028662,
+                "related_words": null,
+                "challenge_id": "",
+                "label": 0,
+                "sentence_id": "200241",
+                "drift_info": null,
+                "word": "符龙飞汪东城李泽锋烈火战马",
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/937ad86a1a4e4249aa97d13a140a74e2",
+                    "url_list": [
+                        "https://p6-dy-ipv6.byteimg.com/img/tos-cn-p-0015/937ad86a1a4e4249aa97d13a140a74e2~noop.jpeg?from=3218412987",
+                        "https://p9-dy.byteimg.com/img/tos-cn-p-0015/937ad86a1a4e4249aa97d13a140a74e2~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/937ad86a1a4e4249aa97d13a140a74e2~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "position": 49,
+                "video_count": 3,
+                "hotlist_param": "{\"version\":1}",
+                "hot_value": 4075839,
+                "word_type": 1
+            },
+            {
+                "group_id": "6908857920398742795",
+                "related_words": null,
+                "position": 50,
+                "video_count": 3,
+                "drift_info": null,
+                "hot_value": 4072874,
+                "event_time": 1609069553,
+                "sentence_id": "200704",
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/c9e734a70bdf405a9d197c988fbaa2fc_1609063870",
+                    "url_list": [
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/c9e734a70bdf405a9d197c988fbaa2fc_1609063870~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6-test.byteimg.com/img/tos-cn-p-0015/c9e734a70bdf405a9d197c988fbaa2fc_1609063870~noop.jpeg?from=3218412987",
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/c9e734a70bdf405a9d197c988fbaa2fc_1609063870~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "word_type": 1,
+                "word": "山东发文严格疫情防控",
+                "challenge_id": ""
+            },
+            {
+                "position": 51,
+                "event_time": 1609066919,
+                "related_words": null,
+                "video_count": 7,
+                "drift_info": null,
+                "word_type": 1,
+                "sentence_id": "200687",
+                "hotlist_param": "{\"version\":1}",
+                "label": 0,
+                "word_cover": {
+                    "uri": "tos-cn-p-0015/7152d3fae06340df9e3a39ff41f2b3f7_1609049852",
+                    "url_list": [
+                        "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/7152d3fae06340df9e3a39ff41f2b3f7_1609049852~noop.jpeg?from=3218412987",
+                        "https://p26-dy.byteimg.com/img/tos-cn-p-0015/7152d3fae06340df9e3a39ff41f2b3f7_1609049852~noop.jpeg?from=3218412987",
+                        "https://p29-dy.byteimg.com/img/tos-cn-p-0015/7152d3fae06340df9e3a39ff41f2b3f7_1609049852~noop.jpeg?from=3218412987"
+                    ]
+                },
+                "group_id": "6638998607980664068",
+                "word": "程开颜吃醋",
+                "hot_value": 3820566,
+                "challenge_id": ""
+            }
+        ],
+        "active_time": "2020-12-27 20:30:15"
+    },
+    "ad_search_list": null,
+    "board_tabs": null,
+    "extra": {
+        "now": 1609072222000,
+        "fatal_item_ids": [],
+        "logid": "202012272030220101310571330026D705"
+    },
+    "log_pb": {
+        "impr_id": "202012272030220101310571330026D705"
+    }
+}

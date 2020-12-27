@@ -1,43 +1,52 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/weibo">Weibo</router-link>
+      <!-- 导航栏 -->
+      <Header />
+      <!-- 版心 -->
+      <div class="container">
+        <router-view></router-view>
+      </div>
+      <!-- 尾部 -->
+      <Footer />
     </div>
-    <router-view/>
   </div>
 </template>
 <script>
-import {mapActions} from "vuex"
+import { mapActions } from "vuex";
 
 export default {
-  methods:{
+  methods: {
     ...mapActions(["getWeiboHotList"])
   },
-  async created(){
+  async created() {
     await this.getWeiboHotList();
   }
-}
+};
 </script>
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  padding: 0px;
+  margin: 0px;
+  cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur),
+    auto !important;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+img,
+a,
+button,
+h3,
+li {
+  cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur),
+    auto !important;
+}
+#app {
+  width: 100%;
+  height: 5000px;
+  margin: 0 auto;
+  .container{
+    // width: 1200px;
+    margin:0 auto;
+    padding-top:70px
   }
 }
 </style>

@@ -8,11 +8,11 @@ const routes = [{
     name: 'Home',
     path: '/home',
     component: () => import( /* webpackChunkName:"home" */ 'pages/Home/Home'),
-  },{
-    /* 微博路由测试组件 */
-    name: 'Weibo',
-    path: '/weibo',
-    component: () => import( /* webpackChunkName:"home" */ 'pages/WeiboHot/WeiboHot'),
+  },
+  {
+    /* 返回主页 */
+    path: '/',
+    redirect: '/home'
   }
 ];
 
