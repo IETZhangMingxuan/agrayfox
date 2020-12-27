@@ -86,7 +86,7 @@ export default {
 #search {
   /* 测试 */
   //   border: 1px dashed blue;
-  background: linear-gradient(180deg, #fff, #DFEFFC,#fff);
+  background: linear-gradient(180deg, #fff, #fafafa);
   padding: 20px 0px 25px 0px;
   .buttonList {
     ul {
@@ -117,7 +117,8 @@ export default {
       }
       li.active {
         color: #fff;
-        background-color: rgba(129, 196, 255, 1);
+        // background-color: rgba(129, 196, 255, 1);
+        background-color: rgba(#007FFF, 0.7);
         box-shadow: 0 0 2px 2px rgba(99, 93, 253, 0.3);
       }
       li:hover {
@@ -125,6 +126,7 @@ export default {
         background-color: rgba(129, 196, 255, 1);
         box-shadow: 0 0 2px 2px rgba(99, 93, 253, 0.3);
       }
+      
     }
     ul > li {
       padding-left: 10px;
@@ -157,8 +159,10 @@ export default {
       outline: none;
       box-sizing: border-box;
       font-size: 14px;
+      box-shadow:1px 1px 0.5px #005efe 
     }
     button {
+      box-shadow:0px 1px 0.5px #005efe; 
       box-sizing: border-box;
       height: 35px;
       line-height: 35px;
@@ -172,6 +176,18 @@ export default {
       font-family: "华文中宋";
       font-size: 15px;
       letter-spacing: 1px;
+    }
+    button:hover{
+        background:#007FFF;
+        
+    }
+    button:active{
+        padding:3px 6px 2px 8px;
+        border:0.5px inset;
+        line-height: 20px;
+        height:35px;
+        // text-align:center;
+        display:inline-block;
     }
   }
 }
