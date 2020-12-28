@@ -10,6 +10,18 @@ const routes = [{
     component: () => import( /* webpackChunkName:"home" */ 'pages/Home/Home'),
   },
   {
+    name: 'News',
+    path: "/news",
+    component: () => import( /* webpackChunkName:"news" */ 'pages/News/News'),
+
+  },
+  {
+    name: 'Articles',
+    path: "/articles",
+    component: () => import( /* webpackChunkName:"articles" */ 'pages/Articles/Articles'),
+
+  },
+  {
     /* 返回主页 */
     path: '/',
     redirect: '/home'

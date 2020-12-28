@@ -14,6 +14,9 @@ module.exports = {
       },
       "/txapi":{
         target:"http://api.tianapi.com"
+      },
+      "/topnews":{
+        target:"http://api.tianapi.com"
       }
     }
   },

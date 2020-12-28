@@ -1,5 +1,5 @@
 <template>
-<!-- 这是静态组件:页面头部 agf_header 包含 页面Logo块 agf_header_logo 包含 头部导航栏块 agf_header_navbar -->
+  <!-- 这是静态组件:页面头部 agf_header 包含 页面Logo块 agf_header_logo 包含 头部导航栏块 agf_header_navbar -->
   <!-- 头部静态组件 -->
   <div class="agf_header">
     <!-- 头部版心包裹块 -->
@@ -31,18 +31,17 @@
               class="el-menu-demo"
               mode="horizontal"
               active-text-color="#409eff"
-              @select="handleSelect"
               router
             >
-              <el-menu-item index="/">首页</el-menu-item>
+              <el-menu-item index="/home">首页</el-menu-item>
               <el-menu-item index="/news">新闻</el-menu-item>
-              <el-menu-item index="/articles">文章</el-menu-item>
+              <el-menu-item index="/articles">博客</el-menu-item>
               <el-menu-item index="/resources">资源库</el-menu-item>
-              <el-menu-item index="5">留言板</el-menu-item>
+              <el-menu-item index="/comments">留言板</el-menu-item>
               <el-menu-item index="/douyin">抖音热搜</el-menu-item>
-              <el-menu-item index="7">联系站长</el-menu-item>
+              <el-menu-item index="/contact">联系站长</el-menu-item>
               <button class="login">登录</button>
-              
+
               <!-- <el-menu-item index="8">注册登录</el-menu-item> -->
             </el-menu>
           </el-col>
@@ -55,12 +54,21 @@
 export default {
   data() {
     return {
-      activeIndex: "/"
+      activeIndex: "/home"
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    
+  },
+  watch:{
+    /* 深度监听 */
+    $route:{
+      handler(activeIndex){
+        this.activeIndex = this.$route.path;
+        console.log(activeIndex);
+      },
+      deep:true,
+      immediate:true
     }
   }
 };
@@ -117,7 +125,7 @@ export default {
         height: 52px;
         line-height: 30px;
         position: absolute;
-        top:12px;
+        top: 12px;
         left: -20px;
 
         .line {
@@ -176,30 +184,29 @@ export default {
         // color:@defaultColor;
         font-size: 15px;
       }
-      :hover{
-        color:#007fff;
+      :hover {
+        color: #007fff;
         // color: @defaultColor;
       }
       /* 登录按钮 */
-      .login{
+      .login {
         width: 80px;
         font-size: 15px;
         margin-top: 13px;
         margin-left: 30px;
-        height:35px;
+        height: 35px;
         line-height: 36px;
         background-color: @defaultColor;
         border-radius: 18px;
         outline: none;
-        color:#fff;
-        border:0;
-        font-family:"Microsoft Yahei"
+        color: #fff;
+        border: 0;
+        font-family: "Microsoft Yahei";
       }
-      .login:hover{
-        background-color: #0876E4;
-        color:#F9FAFB
+      .login:hover {
+        background-color: #0876e4;
+        color: #f9fafb;
       }
-      
     }
   }
 }

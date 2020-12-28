@@ -1,7 +1,13 @@
 <template>
   <div id="home">
     <Search />
-    <div class="container"></div>
+    <div class="wrapper">
+      <div class="container">
+        <HotWebs />
+        <HotWeibo/>
+        <HotNews/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,12 +19,16 @@ export default {
 </script>
 <style scoped lang="less">
 #home {
-  // border: 1px solid blue;
   height: 5000px;
-  // background-color: #eaeaea;
-  .container {
-    width: 1200px;
-    margin: 0 auto;
+  .wrapper {
+    background-color: #f9f9f9;
+    height: 5000px;
+
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 5px;
+    }
   }
 }
 </style>

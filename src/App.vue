@@ -17,10 +17,11 @@ import { mapActions } from "vuex";
 
 export default {
   methods: {
-    ...mapActions(["getWeiboHotList"])
+    ...mapActions(["getWeiboHotList","getNewsHotList"])
   },
   async created() {
     await this.getWeiboHotList();
+    await this.getNewsHotList();
   }
 };
 </script>
