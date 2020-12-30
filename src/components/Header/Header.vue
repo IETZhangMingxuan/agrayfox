@@ -37,8 +37,8 @@
               <el-menu-item index="/news">新闻</el-menu-item>
               <el-menu-item index="/articles">博客</el-menu-item>
               <el-menu-item index="/resources">资源库</el-menu-item>
-              <el-menu-item index="/comments">留言板</el-menu-item>
-              <el-menu-item index="/douyin">抖音热搜</el-menu-item>
+              <el-menu-item index="/content">留言板</el-menu-item>
+              <el-menu-item index="/douyin">短视频</el-menu-item>
               <el-menu-item index="/contact">联系站长</el-menu-item>
               <button class="login">登录</button>
 
@@ -57,18 +57,16 @@ export default {
       activeIndex: "/home"
     };
   },
-  methods: {
-    
-  },
-  watch:{
+  methods: {},
+  watch: {
     /* 深度监听 */
-    $route:{
-      handler(activeIndex){
+    $route: {
+      handler(activeIndex) {
         this.activeIndex = this.$route.path;
         console.log(activeIndex);
       },
-      deep:true,
-      immediate:true
+      deep: true,
+      immediate: true
     }
   }
 };
@@ -127,6 +125,7 @@ export default {
         position: absolute;
         top: 12px;
         left: -20px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 
         .line {
           width: 350px;

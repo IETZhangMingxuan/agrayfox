@@ -20,6 +20,39 @@ const routes = [{
     path: "/articles",
     component: () => import( /* webpackChunkName:"articles" */ 'pages/Articles/Articles'),
 
+  }, {
+    name: 'Resources',
+    path: "/resources",
+    component: () => import( /* webpackChunkName:"resources" */ 'pages/Resources/Resources'),
+
+  }, {
+    name: 'Content',
+    path: "/content",
+    component: () => import( /* webpackChunkName:"content" */ 'pages/Content/Content')
+  }, {
+    name: 'Douyin',
+    path: "/douyin",
+    component: () => import( /* webpackChunkName:"douyin" */ 'pages/Douyin/Douyin'),
+    children: [{
+      name: 'TodayVideo',
+      path: "/douyin/todayVideo",
+      component: () => import('pages/Douyin/TodayVideo')
+    }, {
+      name: 'HotVideo',
+      path: "/douyin/hotVideo",
+      component: () => import('pages/Douyin/HotVideo')
+    }, {
+      name: 'RightNow',
+      path: "/douyin/rightNow",
+      component: () => import('pages/Douyin/RightNow')
+    }, {
+      path: '',
+      redirect: '/douyin/hotVideo'
+    }]
+  }, {
+    name: 'Contact',
+    path: "/contact",
+    component: () => import( /* webpackChunkName:"contact" */ 'pages/Contact/Contact')
   },
   {
     /* 返回主页 */

@@ -70,7 +70,8 @@ export default {
       width: 3px;
       height: 20px;
       line-height: 20px;
-      background-color: #409eef;
+      // background-color: #409eef;
+      background-color: orangered;
       margin: 25px 0px 0px 30px;
       display: inline-block;
     }
@@ -87,6 +88,7 @@ export default {
       font-family: "微软雅黑";
       font-size: 12px;
       margin-left: 40px;
+      // color: orangered;
       color: #666;
       position: absolute;
       top: 24px;
@@ -99,7 +101,8 @@ export default {
     }
     .change:hover {
       cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
-      color: #0876e4;
+      // color: #0876e4;
+      color: orangered;
     }
   }
   .main {
@@ -117,11 +120,11 @@ export default {
           text-align: center;
           width: 50px !important;
           background-color: #fafafa;
-          color:#666;
+          color: #666;
           user-select: none;
         }
-        .indexBlock:hover{
-            background-color: #eaeaea;
+        .indexBlock:hover {
+          background-color: #eaeaea;
         }
         a {
           margin-left: 10px;
@@ -131,12 +134,15 @@ export default {
           font-size: 14px;
         }
         a:hover {
-          color: #0876e4;
-        //   text-decoration: underline;
+          // color: #0876e4;
+          color: orangered;
+          //   text-decoration: underline;
         }
       }
     }
   }
-  
+}
+#hotweibo:hover {
+  box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);
 }
 </style>

@@ -1,0 +1,462 @@
+{
+    "billboard_data": [
+        {
+            "author": "Tian Storm & Ever Slkr",
+            "duration": 60,
+            "img_url": "https://p29-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/cf8121ecd80242aa8f5e32be8eac038a.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6888501829894686722",
+            "rank": 1,
+            "title": "Ampun Bang Jago",
+            "value": "585819"
+        },
+        {
+            "author": "是七叔呢",
+            "duration": 16,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/eca059eac590183e3a13784f09dc3ed4.jpeg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6896326384122087437",
+            "rank": 2,
+            "title": "踏山河",
+            "value": "1003854"
+        },
+        {
+            "author": "AK人声组合",
+            "duration": 22,
+            "img_url": "https://p6-dy-ipv6.byteimg.com/aweme/100x100/douyin-web-image/8a97d92d48ef91b3dc849da6a37e36f1.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6596187617027427075",
+            "rank": 3,
+            "title": "圣诞歌-剪辑版",
+            "value": "2748737"
+        },
+        {
+            "author": "Ana & Sven",
+            "duration": 30,
+            "img_url": "https://p9-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/5f3dec4546ea49ad82612bf14596483f.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6735803790986856450",
+            "rank": 4,
+            "title": "Experience",
+            "value": "176801"
+        },
+        {
+            "author": "赵芷彤",
+            "duration": 38,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/ies-music/storm_cover_d20f71a2ef941aa15497bf2d15395e39.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6894447329814775815",
+            "rank": 5,
+            "title": "多肉少女（DJ版）",
+            "value": "1771967"
+        },
+        {
+            "author": "澄海伯伯 / 超级橘子Orange / River",
+            "duration": 22,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/4e8fd2536f4c45b7a0700d59b183fad3.jpeg~100x100.jpeg?x-expires=1609257966&x-signature=ZhQcrfLRk%2BvtlbJjyRZF3JXNIeU%3D",
+            "link": "https://www.iesdouyin.com/share/music/6897948773482973959",
+            "rank": 6,
+            "title": "花间酒",
+            "value": "75429"
+        },
+        {
+            "author": "Jamai",
+            "duration": 30,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/e9a01522c3134b2580d2a97fda71a716.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6704565980825126914",
+            "rank": 7,
+            "title": "Sorry Seems to Be the Hardest Word",
+            "value": "76434"
+        },
+        {
+            "author": "啊唔儿童音乐",
+            "duration": 57,
+            "img_url": "https://p9-dy.byteimg.com/aweme/100x100/douyin-web-image/7bfe1aa706cc63b1673cb7fa3aac92e6.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6629536473580309251",
+            "rank": 8,
+            "title": "Jingle Bells-铃儿响叮当-剪辑版",
+            "value": "1285805"
+        },
+        {
+            "author": "ZIV/KIPES",
+            "duration": 49,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/ies-music/storm_cover_526fb7dc6333fd892166d166685f83f3.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6809150864020736013",
+            "rank": 9,
+            "title": "Melody",
+            "value": "612109"
+        },
+        {
+            "author": "Chris James",
+            "duration": 199,
+            "img_url": "https://p9-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/fe1fb0f052caa2d143d5769492598005.jpg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6871439468931319809",
+            "rank": 10,
+            "title": "Not Angry",
+            "value": "77201"
+        },
+        {
+            "author": "Mariah Carey",
+            "duration": 30,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/46daa290809e47aea675d856dfd4fb23.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/222454852260487168",
+            "rank": 11,
+            "title": "All I Want for Christmas Is You",
+            "value": "302867"
+        },
+        {
+            "author": "赛文的Demo",
+            "duration": 35,
+            "img_url": "https://p9-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/1b5caded794cc519267ec1d9c2e9a536.jpg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6894187316325026567",
+            "rank": 12,
+            "title": "努力工作吧",
+            "value": "74635"
+        },
+        {
+            "author": "iLab兴趣实验室",
+            "duration": 50,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_5e859c927bba4b606c243a71802bc1c7~100x100.jpeg?x-expires=1609257428&x-signature=xE9odBie%2FlWFD3lcTOsESDSofdM%3D",
+            "link": "https://www.iesdouyin.com/share/music/6632136733620341518",
+            "rank": 13,
+            "title": "Jingle Bells",
+            "value": "1468417"
+        },
+        {
+            "author": "Pascal Letoublon",
+            "duration": 30,
+            "img_url": "https://p26-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/ad83f721d496425b94158cec9185a315.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6764404203654744066",
+            "rank": 14,
+            "title": "Friendships",
+            "value": "24983"
+        },
+        {
+            "author": "拾贰！",
+            "duration": 20,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/5e92c16d2b2a3314b3ed056cd10b416f.png~100x100.jpeg?x-expires=1609257744&x-signature=cVWlAmAJdqpQy8oYWy%2Ba1TrCLC8%3D",
+            "link": "https://www.iesdouyin.com/share/music/6904178688535841543",
+            "rank": 15,
+            "title": "醒不来的梦",
+            "value": "274313"
+        },
+        {
+            "author": "老猪仙",
+            "duration": 20,
+            "img_url": "https://p29-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/7e4c0800f8dcf41c0dadec9d3cf4c79f.jpg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6897160736326289409",
+            "rank": 16,
+            "title": "大天蓬DJ版",
+            "value": "258247"
+        },
+        {
+            "author": "Zedd & Alessia Cara",
+            "duration": 30,
+            "img_url": "https://p6-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/6441e5b29b46406abe112d5f2bb7cd83.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6815314277885298689",
+            "rank": 17,
+            "title": "Stay",
+            "value": "35199"
+        },
+        {
+            "author": "司南",
+            "duration": 88,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_4460847c2ef6ca1f3b08ebe2348ce8fa~100x100.jpeg?x-expires=1609258164&x-signature=qCR9gD5iPYOkWop1BZF95iyK7UE%3D",
+            "link": "https://www.iesdouyin.com/share/music/6750882329222351623",
+            "rank": 18,
+            "title": "冬眠",
+            "value": "1850383"
+        },
+        {
+            "author": "六哲",
+            "duration": 30,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tos-ag-i-0000/f5444d367f9a473db878859f35c542b5~100x100.jpeg?x-expires=1609257569&x-signature=wzUI%2BWpghZeG8eD6N%2BfD7pska4o%3D",
+            "link": "https://www.iesdouyin.com/share/music/6832740219003881473",
+            "rank": 19,
+            "title": "爱情好无奈",
+            "value": "17837"
+        },
+        {
+            "author": "Coosje Smid",
+            "duration": 30,
+            "img_url": "https://p6-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/212d0ff26c894e0da048e981b3f1f19b.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6772278435076114433",
+            "rank": 20,
+            "title": "Bleeding Love - from The voice of Holland",
+            "value": "75887"
+        },
+        {
+            "author": "蓝心羽",
+            "duration": 34,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/08ab85b4ad48be5ac0d9bc798595942e.jpeg~100x100.jpeg?x-expires=1609257995&x-signature=Mu1W377TrCt0Oh%2BsMiGknFdjrsk%3D",
+            "link": "https://www.iesdouyin.com/share/music/6902017376204621825",
+            "rank": 21,
+            "title": "阿拉斯加海湾",
+            "value": "70581"
+        },
+        {
+            "author": "Chau Pak Ho & Stephanie Cheng",
+            "duration": 30,
+            "img_url": "https://p9-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/af41668936c342c0961727d258bd2f96.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6705040800176146433",
+            "rank": 22,
+            "title": "一事无成",
+            "value": "65370"
+        },
+        {
+            "author": "叶琼琳",
+            "duration": 29,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/75f60c6af87684a9fdc05d703681bdbf.jpeg~100x100.jpeg?x-expires=1609257891&x-signature=%2BiqeXHd4P8u%2B1LtLPLEuiDVzkZ0%3D",
+            "link": "https://www.iesdouyin.com/share/music/6893469927033342733",
+            "rank": 23,
+            "title": "无法坠入爱河",
+            "value": "31352"
+        },
+        {
+            "author": "The Hitters",
+            "duration": 30,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tos-ag-i-0000/f622405d9aa84e8991b909ac7c5ac79b~100x100.jpeg?x-expires=1609258135&x-signature=FDsvxsj67ZJqqyA4Kmb0gIjGscM%3D",
+            "link": "https://www.iesdouyin.com/share/music/6726537325574113281",
+            "rank": 24,
+            "title": "Every Breath you take",
+            "value": "69320"
+        },
+        {
+            "author": "BCD Studio",
+            "duration": 45,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/d00cd0b07e35213c71ffb202d19a8f3e~100x100.jpeg?x-expires=1609257619&x-signature=QQoXxFClGOxe7rqTcV7d8JMuqfU%3D",
+            "link": "https://www.iesdouyin.com/share/music/6764601206506522626",
+            "rank": 25,
+            "title": "Swaggy Christmas",
+            "value": "276491"
+        },
+        {
+            "author": "林俊杰 & 金莎",
+            "duration": 60,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/01565033f651493faa0fa09a99ab9c6c.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6835793516874958850",
+            "rank": 26,
+            "title": "期待爱",
+            "value": "117996"
+        },
+        {
+            "author": "Terror Jr",
+            "duration": 30,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/05892628a4004894804d40913febd90b.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/249620626724917248",
+            "rank": 27,
+            "title": "3 Strikes",
+            "value": "91738"
+        },
+        {
+            "author": "翁梓铭",
+            "duration": 58,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_f47d8d081c469bb0bf53bf180d1f82dd~100x100.jpeg?x-expires=1609257849&x-signature=dWGyoBjh05cJ0frEk6%2BMy90jvic%3D",
+            "link": "https://www.iesdouyin.com/share/music/6893058806171830274",
+            "rank": 28,
+            "title": "苦尽甘来",
+            "value": "509194"
+        },
+        {
+            "author": "Run D.M.C.",
+            "duration": 30,
+            "img_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2004/m12/d26/h21/s06.tonruake.jpg/170x170bb.jpg",
+            "link": "https://www.iesdouyin.com/share/music/5000000001443074088",
+            "rank": 29,
+            "title": "It's Tricky",
+            "value": "17957"
+        },
+        {
+            "author": "花僮",
+            "duration": 32,
+            "img_url": "https://p29-dy.byteimg.com/aweme/100x100/ies-music/storm_cover_fb2b5c4a8bf32e7e54c09ef917d6c7a4.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6891682795484088334",
+            "rank": 30,
+            "title": "浪子闲话",
+            "value": "2537700"
+        },
+        {
+            "author": "不是花火",
+            "duration": 21,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/a3344223da000a8c18525c166ce69b2c.jpeg~100x100.jpeg?x-expires=1609257617&x-signature=2X2EgvBaa65Bq1XPJiBu6tHmRJ4%3D",
+            "link": "https://www.iesdouyin.com/share/music/6862666977601653517",
+            "rank": 31,
+            "title": "陨落",
+            "value": "27099"
+        },
+        {
+            "author": "余佳运",
+            "duration": 25,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_7636b91498bbe6e670e2356e42bf3988~100x100.jpeg?x-expires=1609258055&x-signature=A45VMSxI5uzH%2Bru5rcu27HERVLA%3D",
+            "link": "https://www.iesdouyin.com/share/music/6836599171642820616",
+            "rank": 32,
+            "title": "和你",
+            "value": "98801"
+        },
+        {
+            "author": "Funbeat",
+            "duration": 60,
+            "img_url": "https://p26-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/3e99e61e0c194426965c104eebe79915.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6709398653733177345",
+            "rank": 33,
+            "title": "1,2,3,4 ( One, Two, Three, Four ) [Fun Elektro Mix]",
+            "value": "3555166"
+        },
+        {
+            "author": "林俊杰",
+            "duration": 30,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tos-ag-i-0000/381913d87b664a1dad5234daf314d333~100x100.jpeg?x-expires=1609258100&x-signature=%2BmJW6Nox5WaIMo0AWdzuNWYfaBw%3D",
+            "link": "https://www.iesdouyin.com/share/music/6899712933652072450",
+            "rank": 34,
+            "title": "Not Tonight (Tomorrow Sounds Good Steve Aoki Remix)",
+            "value": "97935"
+        },
+        {
+            "author": "林晨阳",
+            "duration": 54,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_c2ba48d123834682116a778d5df65461~100x100.jpeg?x-expires=1609258055&x-signature=xPaGliCTgnp4OjbTwqpuKIIhc7Q%3D",
+            "link": "https://www.iesdouyin.com/share/music/6904236290787510279",
+            "rank": 35,
+            "title": "《失眠播报》",
+            "value": "21642"
+        },
+        {
+            "author": "璐爷",
+            "duration": 24,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/fbe5e3c875c16277d4a8004120e38cb8.png.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6873434942232169223",
+            "rank": 36,
+            "title": "大天蓬",
+            "value": "1279146"
+        },
+        {
+            "author": "Alan Walker",
+            "duration": 37,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/1642116823586830.JPEG~100x100.jpeg?x-expires=1609258113&x-signature=DZvRF%2BS3NC9zRo%2B9Zz8hO%2FXEeN4%3D",
+            "link": "https://www.iesdouyin.com/share/music/6725365523015581704",
+            "rank": 37,
+            "title": "The Spectre",
+            "value": "1043662"
+        },
+        {
+            "author": "井迪",
+            "duration": 17,
+            "img_url": "https://p9-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/1efb201cd61f08d65f4efd708a341aa7.jpeg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6896030602932308744",
+            "rank": 38,
+            "title": "失控（剪辑版）",
+            "value": "101334"
+        },
+        {
+            "author": "呆呆破",
+            "duration": 30,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/a560e639836c0c9f8b128f9bcc56f534.jpg~100x100.jpeg?x-expires=1609258007&x-signature=3UlXVJOYSwk2WQEBOjM%2BiUUuE1A%3D",
+            "link": "https://www.iesdouyin.com/share/music/6897855779744402184",
+            "rank": 39,
+            "title": "收藏",
+            "value": "17072"
+        },
+        {
+            "author": "Putih Abu-Abu",
+            "duration": 30,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tos-ag-i-0000/a61d07bd2f04463e9cdfbb234693ccb9~100x100.jpeg?x-expires=1609257537&x-signature=MwaXQ83n9Tnb26vmLERypBD5iPs%3D",
+            "link": "https://www.iesdouyin.com/share/music/6807846720613910529",
+            "rank": 40,
+            "title": "Bagaikan Langit (Remix Version)",
+            "value": "195120"
+        },
+        {
+            "author": "你的大表哥曲甲",
+            "duration": 33,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_cd868db07fa5f686aebfc8d4f15f041f~100x100.jpeg?x-expires=1609257835&x-signature=OAmk0yvVkG8w%2Bf0SVR5XB2vZ%2Fa8%3D",
+            "link": "https://www.iesdouyin.com/share/music/6886319385594562568",
+            "rank": 41,
+            "title": "坠",
+            "value": "21211"
+        },
+        {
+            "author": "陈奕迅",
+            "duration": 60,
+            "img_url": "https://p6-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/70c4583ec7490a325ad20caebcb72896.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6782381022790027265",
+            "rank": 42,
+            "title": "圣诞结",
+            "value": "50300"
+        },
+        {
+            "author": "李润祺",
+            "duration": 15,
+            "img_url": "https://p29-dy.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/717723446a779c27b76c5dccc87ed78f.jpeg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6895224642437876488",
+            "rank": 43,
+            "title": "茫",
+            "value": "129252"
+        },
+        {
+            "author": "Taylor Swift",
+            "duration": 30,
+            "img_url": "https://p3-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tos-ag-i-0000/5b56dd22fa9041fe95c9045834d0220c.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6852953637644158977",
+            "rank": 44,
+            "title": "exile",
+            "value": "14625"
+        },
+        {
+            "author": "YangYang",
+            "duration": 19,
+            "img_url": "https://p1-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/e751b86a59abad8d81458c7af535ef6a.jpg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6881226835703679758",
+            "rank": 45,
+            "title": "哎呦喂",
+            "value": "58002"
+        },
+        {
+            "author": "Rnbstylerz & AREES",
+            "duration": 60,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tos-ag-i-0000/2e41557bb4684daaa7f5ba634d74c4eb~100x100.jpeg?x-expires=1609258180&x-signature=nAmcBK4wdv93PqzZe79xctJIDAA%3D",
+            "link": "https://www.iesdouyin.com/share/music/6826398089591392258",
+            "rank": 46,
+            "title": "WHAT",
+            "value": "34857"
+        },
+        {
+            "author": "零一九零贰",
+            "duration": 35,
+            "img_url": "https://p9-dy-cdn.byteimg.com/iesmusic-cn-local/v1/tt-obj/image/ef2dff2cf1ee8eddcb9c3b5b612cae8d.jpg~100x100.jpeg?x-expires=1609258149&x-signature=E0d7iV3ImJ9TEF85fBWu32NuYxQ%3D",
+            "link": "https://www.iesdouyin.com/share/music/6904516553086093313",
+            "rank": 47,
+            "title": "还在假装（DJ名龙版）",
+            "value": "22401"
+        },
+        {
+            "author": "Lambert/十七草",
+            "duration": 28,
+            "img_url": "https://p26-dy.byteimg.com/aweme/100x100/ies-music/storm_cover_694f9bc839cde9596f8040656abe3c43.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6902275060019628040",
+            "rank": 48,
+            "title": "young boss 2.0",
+            "value": "21595"
+        },
+        {
+            "author": "薛明媛",
+            "duration": 41,
+            "img_url": "https://p9-dy-cdn.byteimg.com/ies-music/storm_cover_42c84507108ab150da8066be01196444~100x100.jpeg?x-expires=1609257973&x-signature=lDH%2Bwua0qemoPRZ2XHl52Ch4Fyw%3D",
+            "link": "https://www.iesdouyin.com/share/music/6890083618136262669",
+            "rank": 49,
+            "title": "爱情派对（Lover Ball）",
+            "value": "508114"
+        },
+        {
+            "author": "王嘉尔/林俊杰",
+            "duration": 53,
+            "img_url": "https://p6-dy-ipv6.byteimg.com/aweme/100x100/iesmusic-cn-local/v1/tt-obj/image/979755686cc28cf7e58504e60716b871.jpg.jpeg",
+            "link": "https://www.iesdouyin.com/share/music/6906817243540097026",
+            "rank": 50,
+            "title": "过",
+            "value": "37095"
+        }
+    ],
+    "billboard_period": {
+        "billboard_key": ""
+    },
+    "extra": {
+        "now": 1609239851000
+    },
+    "status_code": 0,
+    "status_msg": ""
+}

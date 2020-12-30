@@ -22,7 +22,7 @@ export default {
         code,
         newslist
       } = await getNewsHotList();
-      console.log(code, newslist);
+      // console.log(code, newslist);
       commit("getNewsHotList", newslist);
       return newslist;
     }

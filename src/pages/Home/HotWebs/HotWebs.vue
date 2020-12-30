@@ -15,7 +15,7 @@ export default {
       hotwebsList: [
         {
           id: 0,
-          name: "全网影视资源",
+          name: "影视资源",
           imgUrl: "https://static.iiter.cn/v.iiter.cn.ico",
           url: "https://v.iiter.cn/"
         },
@@ -126,16 +126,18 @@ export default {
           name: "17素材网",
           imgUrl: "https://www.17sucai.com/static/i/favicon.ico",
           url: "http://www.17sucai.com"
-        },{
-            id:19,
-            name:"MDN文档",
-            imgUrl:"https://developer.mozilla.org/static/img/favicon144.e7e21ca263ca.png",
-            url:"https://developer.mozilla.org/zh-CN/"
-        },{
-            id:20,
-            name:"淘宝",
-            imgUrl:"https://img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png",
-            url:"http://www.taobao.com"
+        },
+        {
+          id: 19,
+          name: "MDN文档",
+          imgUrl: "https://developer.mozilla.org/static/img/favicon144.e7e21ca263ca.png",
+          url: "https://developer.mozilla.org/zh-CN/"
+        },
+        {
+          id: 20,
+          name: "淘宝",
+          imgUrl: "https://img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png",
+          url: "http://www.taobao.com"
         }
       ]
     };
@@ -160,7 +162,6 @@ export default {
       box-sizing: border-box;
       box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.2);
       width: 12%;
-      //   border: 1px dashed red;
       padding: 10px;
       background-color: #fff;
       margin: 10px;
@@ -180,7 +181,6 @@ export default {
         font-size: 14px;
         margin-left: 10px;
         user-select: none;
-        
       }
       a:hover {
         color: orangered;

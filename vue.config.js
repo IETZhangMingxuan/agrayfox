@@ -17,6 +17,12 @@ module.exports = {
       },
       "/topnews":{
         target:"http://api.tianapi.com"
+      },
+      "/api":{
+        target:"https://kuaiyinshi.com"
+      },
+      "/proxy":{
+        target:"https://1911958968496216.cn-shanghai.fc.aliyuncs.com/2016-08-15"
       }
     }
   },
@@ -30,7 +36,9 @@ module.exports = {
         "mock": resolve('src/mock'),
         "store": resolve('src/store'),
         "common": resolve('src/common'),
-        "modules":resolve('src/store/modules')
+        "modules":resolve('src/store/modules'),
+        "videos":resolve('src/pages/Douyin/videos'),
+        "util":resolve('src/util')
       }
     }
   },

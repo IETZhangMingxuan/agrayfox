@@ -6,6 +6,9 @@ import mutations from './mutaitions'
 import actions from './actions'
 import weibohot from './modules/weibohot.js'
 import hotnews from './modules/hotnews'
+import douyinVideo from './modules/douyinVideo'
+import kuaiShouVideo01 from './modules/kuaiShouVideo01'
+import rightNow from './modules/rightNow'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -15,6 +18,9 @@ export default new Vuex.Store({
   actions,
   modules:{
     weibohot,
-    hotnews
+    hotnews,
+    douyinVideo,
+    kuaiShouVideo01,
+    rightNow
   },
 });

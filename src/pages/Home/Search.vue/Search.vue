@@ -129,6 +129,7 @@ export default {
         color: #409eee;
         background: linear-gradient(to right, red, #409eee);
         -webkit-background-clip: text;
+        background-clip:text;
         color: transparent;
         // background-color: rgba(129, 196, 255, 1);
         // background-color: rgba(#007FFF, 1);
@@ -140,6 +141,7 @@ export default {
         // color: #409eee;
          background: linear-gradient(to right, red, #409eee);
         -webkit-background-clip: text;
+        background-clip:text;
         color: transparent;
         // background-color: rgba(129, 196, 255, 1);
         // background-color: rgba(#4fc7ff, 1);
@@ -177,6 +179,7 @@ export default {
       outline: none;
       box-sizing: border-box;
       font-size: 14.5px;
+      background-color: #fff;
       // box-shadow: 0px 2px 0.5px #005efe;
     }
     button {
