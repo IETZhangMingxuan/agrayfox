@@ -78,12 +78,12 @@ export default {
   // border: 1px solid blue;
   width: 100%;
   height: 60px;
+  z-index:9999 !important;
   position: fixed;
   // margin-bottom: 500px;
   box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.2);
   background-color: #fff;
-  z-index: 99999;
-
+  z-index:1111;
   /* 头部版心 */
   .agf_header_container {
     // border: 1px solid purple;

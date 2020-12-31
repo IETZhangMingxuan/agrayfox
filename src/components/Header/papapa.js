@@ -2,10 +2,10 @@ const fs = require('fs');
 const request = require('request');
 const path = require("path");
 
-
+const url = "https://1911958968496216.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/python/douyin/5"
 
 request({
-  url: 'https://1911958968496216.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/python/douyin/4', // 请求的URL
+  url: 'https://creator.douyin.com/aweme/v1/creator/data/billboard/?billboard_type=1', // 请求的URL
   method: 'GET',
   // 指定请求头
   headers: {
@@ -14,9 +14,12 @@ request({
   }
 }, function (error, response, body) {
   if (!error && response.statusCode == 200) {
-    fs.writeFileSync("douyin04.json", body, err => {
+    fs.writeFileSync("realRequst01.json", body, err => {
+      console.log(err);
       if (err) throw err;
     })
     console.log(new Date() + "时文件写入成功")
+  }else{
+    console.log(error);
   }
 });

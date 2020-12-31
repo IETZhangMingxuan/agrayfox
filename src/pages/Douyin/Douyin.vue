@@ -12,7 +12,7 @@
             <router-link to="/douyin/rightNow" class="select">实时榜</router-link>
             <router-link to="/douyin/todayVideo" class="select">视频榜</router-link>
             <li class="select">原创榜</li>
-            <li class="select">音乐榜</li>
+            <router-link to="/douyin/hotMusic" class="select">音乐榜</router-link>
           </ul>
         </div>
       </div>
@@ -35,12 +35,13 @@ export default {
   text-align: center;
   .container {
     background-color: black;
-    // background: linear-gradient(45deg, orangered, #fff);
+    // background: linear-gradient(180deg, orange, orangered);
     width: 1200px;
     padding: 0px;
     height: 750px;
     border-radius: 10px;
     user-select: none;
+    overflow: hidden !important;
     .header {
       color: #fff;
       // border: 1px dashed #fff;
@@ -61,7 +62,7 @@ export default {
         }
         .kuaiShouLogo {
           width: 90px;
-          height: 39px;
+          height: 40px;
           padding: 20px 50px;
           position: absolute;
           top: 660px;

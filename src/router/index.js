@@ -35,17 +35,21 @@ const routes = [{
     component: () => import( /* webpackChunkName:"douyin" */ 'pages/Douyin/Douyin'),
     children: [{
       name: 'TodayVideo',
-      path: "/douyin/todayVideo",
+      path: "todayVideo",
       component: () => import('pages/Douyin/TodayVideo')
     }, {
       name: 'HotVideo',
-      path: "/douyin/hotVideo",
+      path: "hotVideo",
       component: () => import('pages/Douyin/HotVideo')
     }, {
       name: 'RightNow',
-      path: "/douyin/rightNow",
+      path: "rightNow",
       component: () => import('pages/Douyin/RightNow')
     }, {
+      name:'HotMusic',
+      path:"hotMusic",
+      component:()=> import('pages/Douyin/HotMusic')
+    },{
       path: '',
       redirect: '/douyin/hotVideo'
     }]

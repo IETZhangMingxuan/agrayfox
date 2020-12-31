@@ -17,7 +17,7 @@ import { mapActions } from "vuex";
 
 export default {
   methods: {
-    ...mapActions(["getWeiboHotList", "getNewsHotList", "getDouyinVideoList","getKuaiShouVideoList01","getRightNowList"])
+    ...mapActions(["getWeiboHotList", "getNewsHotList", "getDouyinVideoList","getKuaiShouVideoList01","getRightNowList","getDouyinMusicList"])
   },
   async created() {
     await this.getWeiboHotList();
@@ -25,6 +25,7 @@ export default {
     await this.getDouyinVideoList();
     await this.getKuaiShouVideoList01();
     await this.getRightNowList();
+    await this.getDouyinMusicList();
   }
 };
 </script>
@@ -50,5 +51,10 @@ li {
     margin: 0 auto;
     padding-top: 70px;
   }
+}
+::-webkit-scrollbar{
+  display: none;
+  // width: 5px;
+  // background-color: #409eee;
 }
 </style>

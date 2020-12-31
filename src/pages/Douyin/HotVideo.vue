@@ -28,8 +28,8 @@
         <i class="iconfont icon-xihuan" :class="{ redColor }" @click="open(redColor)"></i>
         <i class="iconfont icon-pinglun2"></i>
         <i class="iconfont icon-fenxiang1"></i>
-        <span class="likeNums">{{ item.statistics.zan }}</span>
-        <span class="commentNums">{{ item.statistics.comment }}</span>
+        <span class="likeNums">{{ ((item.statistics.zan)/10000).toFixed(1) + 'w' }}</span>
+        <span class="commentNums">{{ ((item.statistics.comment)/10000).toFixed(1) + 'w' }}</span>
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@ import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
-      currentIndex: 0,
+      currentIndex: 8,
       /* 根据接口来修改,该接口返回20条数据 */
       totalSize: 19,
       redColor: false
@@ -194,10 +194,10 @@ export default {
         cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
       }
     }
-    /* 右侧未开发功能 */
+    /* 右侧未开发按钮 */
     .tips {
       @marginTopDefault: 10%;
-      @marginRightDefault: 20px;
+      @marginRightDefault: 100px;
       .redColor {
         color: rgba(red, 0.7) !important;
       }
@@ -207,8 +207,8 @@ export default {
         display: inline-block;
         border-radius: 50%;
         position: absolute;
-        top: 2.5 * @marginTopDefault;
-        right: 0.85 * @marginRightDefault;
+        top: 2.75 * @marginTopDefault;
+        right: 0.96 * @marginRightDefault;
       }
       .icon-xihuan {
         position: absolute;
@@ -232,7 +232,7 @@ export default {
       }
       .icon-pinglun2 {
         position: absolute;
-        top: 5 * @marginTopDefault;
+        top: 4.8 * @marginTopDefault;
         right: @marginRightDefault + 2px;
         color: rgba(white, 0.8);
         font-size: 1.8em;
@@ -249,14 +249,14 @@ export default {
       .likeNums {
         position: absolute;
         top: 4.26 * @marginTopDefault;
-        right: 0.1 * @marginRightDefault;
+        right: 0.79 * @marginRightDefault;
         width: 70px;
         text-align: center;
       }
       .commentNums {
         position: absolute;
-        top: 5.52 * @marginTopDefault;
-        right: 0.6 * @marginRightDefault;
+        top: 5.3 * @marginTopDefault;
+        right: 0.90 * @marginRightDefault;
         width: 50px;
         // border:1px solid blue;
         text-align: center;
@@ -266,8 +266,8 @@ export default {
       }
       .icon-fenxiang1 {
         position: absolute;
-        top: 6.2 * @marginTopDefault;
-        right: @marginRightDefault + 2px;
+        top: 5.78 * @marginTopDefault;
+        right: @marginRightDefault;
         color: rgba(white, 0.8);
         font-size: 1.9em;
       }

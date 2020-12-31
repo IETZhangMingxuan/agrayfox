@@ -9,6 +9,7 @@ import hotnews from './modules/hotnews'
 import douyinVideo from './modules/douyinVideo'
 import kuaiShouVideo01 from './modules/kuaiShouVideo01'
 import rightNow from './modules/rightNow'
+import douyinMusic from './modules/douyinMusic'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -21,6 +22,7 @@ export default new Vuex.Store({
     hotnews,
     douyinVideo,
     kuaiShouVideo01,
-    rightNow
+    rightNow,
+    douyinMusic
   },
 });

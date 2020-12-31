@@ -4,8 +4,8 @@
     <div class="wrapper">
       <div class="container">
         <HotWebs />
-        <HotWeibo/>
-        <HotNews/>
+        <HotWeibo />
+        <HotNews />
       </div>
     </div>
   </div>
@@ -23,7 +23,6 @@ export default {
   .wrapper {
     background-color: #f9f9f9;
     height: 5000px;
-
     .container {
       width: 1200px;
       margin: 0 auto;
@@ -31,4 +30,5 @@ export default {
     }
   }
 }
+// 
 </style>
