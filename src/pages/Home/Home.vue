@@ -4,7 +4,10 @@
     <div class="wrapper">
       <div class="container">
         <HotWebs />
-        <HotWeibo />
+        <div class="raw2">
+          <HotWeibo />
+          <Frame />
+        </div>
         <HotNews />
       </div>
     </div>
@@ -13,8 +16,7 @@
 
 <script>
 export default {
-  name: "Home",
-  components: {}
+  name: "Home"
 };
 </script>
 <style scoped lang="less">
@@ -27,8 +29,13 @@ export default {
       width: 1200px;
       margin: 0 auto;
       padding-top: 5px;
+      .raw2{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
     }
   }
 }
-// 
+//
 </style>

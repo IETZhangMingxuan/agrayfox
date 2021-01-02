@@ -10,6 +10,7 @@ import douyinVideo from './modules/douyinVideo'
 import kuaiShouVideo01 from './modules/kuaiShouVideo01'
 import rightNow from './modules/rightNow'
 import douyinMusic from './modules/douyinMusic'
+import kasidata from './modules/kasidata'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -23,6 +24,7 @@ export default new Vuex.Store({
     douyinVideo,
     kuaiShouVideo01,
     rightNow,
-    douyinMusic
+    douyinMusic,
+    kasidata
   },
 });

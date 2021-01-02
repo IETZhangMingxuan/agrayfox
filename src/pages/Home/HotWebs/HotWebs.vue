@@ -191,4 +191,7 @@ export default {
     }
   }
 }
+#hotwebs:hover {
+  box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);
+}
 </style>

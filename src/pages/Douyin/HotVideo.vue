@@ -8,15 +8,23 @@
     >
       <video :src="item.video_url" class="videoMain" loop autoplay></video>
       <!-- 文字部分 -->
-      <div class="text">
+      <div class="text" v-show="textVisible">
         <div class="author">
           <!-- <img :src="item.avatar" alt="网络出错" class="authorImg" /> -->
           <div class="authorName">@{{ item.nickname }}</div>
           <div class="videoDes">
             {{ item.desc }}
           </div>
+          <!-- 点击隐藏文字部分 -->
+          <i class="iconfont icon-xia" @click="changeTextVisible(textVisible, textUnvisible)"></i>
         </div>
       </div>
+      <!-- 点击显示文字部分 -->
+      <i
+        class="iconfont icon-top"
+        @click="changeTextUnvisible(textVisible,textUnvisible)"
+        v-show="textUnvisible"
+      ></i>
       <!-- 左右切换按钮 -->
       <div class="button">
         <i class="iconfont icon-right2" @click="nextDouyin(currentIndex, totalSize)"></i>
@@ -28,8 +36,8 @@
         <i class="iconfont icon-xihuan" :class="{ redColor }" @click="open(redColor)"></i>
         <i class="iconfont icon-pinglun2"></i>
         <i class="iconfont icon-fenxiang1"></i>
-        <span class="likeNums">{{ ((item.statistics.zan)/10000).toFixed(1) + 'w' }}</span>
-        <span class="commentNums">{{ ((item.statistics.comment)/10000).toFixed(1) + 'w' }}</span>
+        <span class="likeNums">{{ (item.statistics.zan / 10000).toFixed(1) + "w" }}</span>
+        <span class="commentNums">{{ (item.statistics.comment / 10000).toFixed(1) + "w" }}</span>
       </div>
     </div>
   </div>
@@ -42,7 +50,9 @@ export default {
       currentIndex: 8,
       /* 根据接口来修改,该接口返回20条数据 */
       totalSize: 19,
-      redColor: false
+      redColor: false,
+      textVisible: true,
+      textUnvisible: false
     };
   },
   computed: {
@@ -86,6 +96,18 @@ export default {
         });
         this.redColor = false;
       }
+    },
+    changeTextVisible(textVisible) {
+      if ((textVisible = true)) {
+        this.textVisible = false;
+        this.textUnvisible = true;
+      } else {
+        this.textVisible = true;
+      }
+    },
+    changeTextUnvisible(textVisible, textUnvisible) {
+      this.textVisible = true;
+      this.textUnvisible = false;
     }
   }
 };
@@ -105,7 +127,7 @@ export default {
     position: relative;
     /* 渲染出来的视频主体 */
     .videoMain {
-      width: 500px;
+      width: 500px !important;
       position: relative;
       height: 100%;
       display: block;
@@ -164,11 +186,26 @@ export default {
           display: block;
           width: 100%;
         }
+        .icon-xia {
+          position: absolute;
+          top: 8px;
+          left: 48%;
+          color: #fff;
+          font-size: 2em;
+        }
       }
     }
     .text:hover {
       cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
       background-color: rgba(black, 1);
+    }
+    .icon-top {
+      color: #fff;
+      font-size: 1.2em;
+      bottom: 5px;
+      right: 18.5%;
+      position: absolute;
+      width: 300px;
     }
     .button {
       .icon-right2 {
@@ -215,7 +252,7 @@ export default {
         top: 3.7 * @marginTopDefault;
         right: @marginRightDefault + 1px;
         color: rgba(white, 0.8);
-        font-size: 2em;
+        font-size: 1.8em;
         /* 存在bug */
         .isXiHuan {
           position: absolute;
@@ -235,7 +272,7 @@ export default {
         top: 4.8 * @marginTopDefault;
         right: @marginRightDefault + 2px;
         color: rgba(white, 0.8);
-        font-size: 1.8em;
+        font-size: 1.7em;
       }
       .icon-pinglun2:hover {
         cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
@@ -256,7 +293,7 @@ export default {
       .commentNums {
         position: absolute;
         top: 5.3 * @marginTopDefault;
-        right: 0.90 * @marginRightDefault;
+        right: 0.9 * @marginRightDefault;
         width: 50px;
         // border:1px solid blue;
         text-align: center;
@@ -269,7 +306,7 @@ export default {
         top: 5.78 * @marginTopDefault;
         right: @marginRightDefault;
         color: rgba(white, 0.8);
-        font-size: 1.9em;
+        font-size: 1.7em;
       }
     }
   }

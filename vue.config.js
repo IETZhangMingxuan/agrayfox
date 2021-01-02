@@ -23,6 +23,9 @@ module.exports = {
       },
       "/proxy":{
         target:"https://1911958968496216.cn-shanghai.fc.aliyuncs.com/2016-08-15"
+      },
+      "/kol":{
+        target:"https://api.data.caasdata.com"
       }
     }
   },

@@ -64,7 +64,6 @@ export default {
   position: relative;
   .header {
     // border: 1px dashed red;
-    margin-top: 20px;
     position: relative;
     .line {
       width: 3px;
@@ -109,23 +108,21 @@ export default {
     margin: 10px 0px 0px 20px;
     .hotWeiboList {
       list-style-type: none;
+
       li {
         padding: 5px 0;
         .indexBlock {
-          font-family: "-apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;";
-          font-size: 14px;
-          padding: 1px 10px;
-          border: 1px solid #eaeaea;
+          font-family: "Microsoft Yahei";
+          // font-family: "-apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;";
+          font-size: 12px;
+          padding: 3px 12px;
           border-radius: 5px;
           text-align: center;
-          width: 50px !important;
-          background-color: #fafafa;
+          background-color: #eaeaea;
           color: #666;
           user-select: none;
         }
-        .indexBlock:hover {
-          background-color: #eaeaea;
-        }
+        
         a {
           margin-left: 10px;
           text-decoration: none;
@@ -138,6 +135,36 @@ export default {
           color: orangered;
           //   text-decoration: underline;
         }
+      }
+      li:first-child span {
+        background-color: #ff2a2a;
+        color:#fff;
+        border:none;
+        box-sizing:border-box;
+      }
+      li:nth-child(2) span {
+        background-color:#ff7171;
+        color:#fff;
+        border:none;
+        box-sizing:border-box;
+      }
+      li:nth-child(3) span {
+        background-color:#f90;
+        color:#fff;
+        border:none;
+        box-sizing:border-box;
+      }
+      li:nth-child(4) span {
+        background-color:#fc0;
+        color:#fff;
+        border:none;
+        box-sizing:border-box;
+      }
+      li:nth-child(5) span {
+        background-color:#e7d48e;
+        color:#fff;
+        border:none;
+        box-sizing:border-box;
       }
     }
   }

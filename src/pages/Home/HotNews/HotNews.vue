@@ -1,5 +1,5 @@
 <template>
-  <div id="hotweibo">
+  <div id="hotnews">
     <div class="header">
       <div class="line"></div>
       <span class="title">头条新闻</span>
@@ -53,7 +53,7 @@ export default {
 };
 </script>
 <style scoped lang="less">
-#hotweibo {
+#hotnews {
   //   border: 1px solid blue;
   box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.1);
   width: 30%;
@@ -159,5 +159,8 @@ export default {
       color: #0876e4;
     }
   }
+}
+#hotnews:hover {
+  box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);
 }
 </style>

@@ -17,7 +17,7 @@ import { mapActions } from "vuex";
 
 export default {
   methods: {
-    ...mapActions(["getWeiboHotList", "getNewsHotList", "getDouyinVideoList","getKuaiShouVideoList01","getRightNowList","getDouyinMusicList"])
+    ...mapActions(["getWeiboHotList", "getNewsHotList", "getDouyinVideoList","getKuaiShouVideoList01","getRightNowList","getDouyinMusicList","getkasidatalist"])
   },
   async created() {
     await this.getWeiboHotList();
