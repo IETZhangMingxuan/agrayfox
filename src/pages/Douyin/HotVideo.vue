@@ -188,7 +188,7 @@ export default {
         }
         .icon-xia {
           position: absolute;
-          top: 8px;
+          top: -5px;
           left: 48%;
           color: #fff;
           font-size: 2em;

@@ -9,6 +9,7 @@
           <Frame />
         </div>
         <HotNews />
+        <Ads/>
       </div>
     </div>
   </div>
