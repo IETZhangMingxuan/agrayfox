@@ -155,7 +155,7 @@ export default {
           imgUrl:
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F69%2F80%2F595f67c2aff1e_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612487556&t=11c946602a69f40b7f16d8dd388ad884",
           isvip: true,
-          vip: "测试组组长",
+          vip: "测试组",
           time: "2021年1月6日 09:13分",
           color:"red"
         },

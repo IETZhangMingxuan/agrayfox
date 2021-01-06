@@ -155,9 +155,8 @@ export default {
           imgUrl:
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F69%2F80%2F595f67c2aff1e_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612487556&t=11c946602a69f40b7f16d8dd388ad884",
           isvip: true,
-          vip: "测试组组长",
-          time: "2021年1月6日 09:13分",
-          color:"red"
+          vip: "测试组",
+          time: "2021年1月6日 09:13分"
         },
         {
           id: 5,
@@ -167,7 +166,7 @@ export default {
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20130624%2F20130624134512-82321674.jpg&refer=http%3A%2F%2Fpic.baike.soso.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612469463&t=3dbe0ff61ab7d3a3947c5b56a9034497",
           isvip: false,
           vip: "",
-          time: "2021年1月5日 22:40分",
+          time: "2021年1月5日 22:40分"
         },
         {
           id: 4,
@@ -178,8 +177,7 @@ export default {
             "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2570888551,3866070349&fm=26&gp=0.jpg",
           isvip: true,
           vip: "大德鲁伊",
-          time: "2021年1月5日 22:13分",
-          color:"#00A4FF"
+          time: "2021年1月5日 22:13分"
         },
         {
           id: 3,
@@ -202,8 +200,7 @@ export default {
             "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3380940217,696179768&fm=26&gp=0.jpg",
           isvip: true,
           vip: "前部落大酋长",
-          time: "2021年1月4日 10:52分",
-          color:"#00A4FF"
+          time: "2021年1月4日 10:52分"
         },
         {
           id: 1,

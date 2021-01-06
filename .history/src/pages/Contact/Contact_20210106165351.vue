@@ -4,7 +4,7 @@
     <div class="left">
       <!-- 发布留言区 -->
       <div class="publish">
-        <div class="title">评论</div>
+        <div class="title">留言</div>
         <div class="line"></div>
         <!-- 提示 -->
         <div class="mention">
@@ -24,12 +24,12 @@
             autocomplete="off"
           />
           <textarea type="text" name="main" class="main" placeholder="在此处输入留言内容" />
-          <input type="submit" value="提交评论" class="submit" />
+          <input type="submit" value="提交留言" class="submit" />
         </form>
       </div>
       <!-- 所有留言区 -->
       <div class="allContents">
-        <div class="title">全部留言 ({{ contentsList.length }})</div>
+        <div class="title">留言板 ({{ contentsList.length }})</div>
         <div class="line"></div>
         <div class="contents">
           <ul class="contentsList">
@@ -39,7 +39,7 @@
             >
               <img :src="item.imgUrl" alt="" />
               <p class="name">
-                {{ item.name }}<span v-show="item.isvip" class="vip" :style="`background-color:${item.color}`">{{ item.vip }}</span>
+                {{ item.name }}<span v-show="item.isvip" class="vip">{{ item.vip }}</span>
               </p>
               <span class="time">{{ item.time }}</span>
               <pre class="content">{{ item.content }}</pre>
@@ -56,7 +56,7 @@
           layout="prev, pager, next,sizes,total"
           :total="contentsList.length"
           class="elementUIPagination"
-          :page-sizes="[2, 3, 4, 5, 10]"
+          :page-sizes="[1, 2, 3, 4, 5]"
           :page-size="pageSize"
           :current-page="this.currentPage"
           @current-change="currentPageChange"
@@ -72,31 +72,11 @@
   </div>
 </template>
 <script>
+import { Pagination } from "element-ui";
 export default {
   data() {
     return {
       contentsList: [
-        {
-          id: 13,
-          name: "陈欣欣",
-          content: `嘻嘻,终于上线啦~`,
-          imgUrl:
-            "https://t1.hxzdhn.com/uploads/tu/201805/9999/4a4431c8fa.jpg",
-          isvip: true,
-          vip: "小仙女",
-          time: "2021年1月6日 19:02分",
-          color:"orange"
-        },
-        {
-          id: 12,
-          name: "余鑫睿",
-          content: `这个博客我喜欢~`,
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1186877255,688740697&fm=11&gp=0.jpg",
-          isvip: false,
-          vip: "测试组",
-          time: "2021年1月6日 18:34分"
-        },
         {
           id: 11,
           name: "测试人员小D",
@@ -104,8 +84,8 @@ export default {
           imgUrl:
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F69%2F80%2F595f67c2aff1e_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612487556&t=11c946602a69f40b7f16d8dd388ad884",
           isvip: true,
-          vip: "测试组",
-          time: "2021年1月6日 16:52分"
+          vip: "站长",
+          time: "2021年1月6日 15:49分"
         },
         {
           id: 10,
@@ -115,8 +95,7 @@ export default {
             "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
           isvip: true,
           vip: "站长",
-          time: "2021年1月6日 15:49分",
-          color:"orange"
+          time: "2021年1月6日 15:49分"
         },
         {
           id: 9,
@@ -155,9 +134,8 @@ export default {
           imgUrl:
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F69%2F80%2F595f67c2aff1e_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612487556&t=11c946602a69f40b7f16d8dd388ad884",
           isvip: true,
-          vip: "测试组组长",
-          time: "2021年1月6日 09:13分",
-          color:"red"
+          vip: "测试组",
+          time: "2021年1月6日 09:13分"
         },
         {
           id: 5,
@@ -167,7 +145,7 @@ export default {
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20130624%2F20130624134512-82321674.jpg&refer=http%3A%2F%2Fpic.baike.soso.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612469463&t=3dbe0ff61ab7d3a3947c5b56a9034497",
           isvip: false,
           vip: "",
-          time: "2021年1月5日 22:40分",
+          time: "2021年1月5日 22:40分"
         },
         {
           id: 4,
@@ -178,8 +156,7 @@ export default {
             "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2570888551,3866070349&fm=26&gp=0.jpg",
           isvip: true,
           vip: "大德鲁伊",
-          time: "2021年1月5日 22:13分",
-          color:"#00A4FF"
+          time: "2021年1月5日 22:13分"
         },
         {
           id: 3,
@@ -190,8 +167,7 @@ export default {
             "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3341890544,1435051804&fm=26&gp=0.jpg",
           isvip: true,
           vip: "三修大法师",
-          time: "2021年1月4日 14:26分",
-          color:"#00A4FF"
+          time: "2021年1月4日 14:26分"
         },
         {
           id: 2,
@@ -202,8 +178,7 @@ export default {
             "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3380940217,696179768&fm=26&gp=0.jpg",
           isvip: true,
           vip: "前部落大酋长",
-          time: "2021年1月4日 10:52分",
-          color:"#00A4FF"
+          time: "2021年1月4日 10:52分"
         },
         {
           id: 1,
@@ -214,18 +189,17 @@ export default {
             "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
           isvip: true,
           vip: "站长",
-          time: "2021年1月3日 20:00分",
-          color:"orange"
+          time: "2021年1月3日 20:00分"
         }
       ],
       /* 初始显示的首个索引:可修改,但不建议 */
       currentIndex: 0,
       /* 返回的总条数:不可修改 */
-      totalSize: "",
+      totalSize: 10,
       /* 每页显示条数:可修改 */
-      pageSize: 10,
-      /* 当前显示页:可修改,但不建议 */
-      currentPage: 1
+      pageSize: 4,
+      /* 当前显示页 */
+      currentPage: 3
     };
   },
   methods: {
@@ -268,7 +242,7 @@ export default {
       .title {
         text-align: left;
         font-family: "微软雅黑";
-        font-size: 16px;
+        font-size: 18px;
         // color: #333;
         color: #007fff;
         text-shadow: 1px 1px 1px 1px;
@@ -278,8 +252,8 @@ export default {
         font-weight: bold;
       }
       .line {
-        width: 60px;
-        height: 2px;
+        width: 70px;
+        height: 3px;
         line-height: 22px;
         background-color: #409eef;
         // background-color: orangered;
@@ -287,7 +261,7 @@ export default {
         display: inline-block;
         position: absolute;
         left: 0px;
-        top: 18px;
+        top: 20px;
       }
       .mention {
         background-color: rgba(#e6f7ff);
@@ -399,17 +373,17 @@ export default {
       .title {
         text-align: left;
         font-family: "微软雅黑";
-        font-size: 16px;
+        font-size: 18px;
         // color: #333;
         color: #007fff;
         text-shadow: 1px 1px 1px 1px;
-        margin-left: 15px;
+        margin-left: 25px;
         margin-top: 5px;
         user-select: none;
         font-weight: bold;
       }
       .line {
-        width: 108px;
+        width: 110px;
         height: 3px;
         line-height: 22px;
         background-color: #007fff;
@@ -417,28 +391,27 @@ export default {
         display: inline-block;
         position: absolute;
         left: 0px;
-        top: 20px;
+        top: 25px;
       }
       .contents {
         .contentsList {
           list-style-type: none;
+          min-height: 500px;
           margin-top: 30px;
-          margin-bottom: 20px;
-          // border: 1px solid red;
+          margin-bottom: 30px;
           li {
-            // background: linear-gradient(45deg, #fafafa, #fff);
+            background: linear-gradient(45deg, #fafafa, #fff);
             font-family: "微软雅黑";
-            margin-top: 12px;
-            border-left: 3px solid rgba(#409eef,0.5);
-            border-right: 2px solid #fafafa;
-            border-top: 1px solid transparent;
-            border-bottom: 1px solid #eaeaea;
             position: relative;
-            box-shadow:1px 2px 2px #fafafa;
-            background-color: #f9f9f9;
+            min-height: 130px;
+            margin-top: 15px;
+            border-left: 1px solid #eaeaea;
+            border-right: 1px solid #eaeaea;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
             img {
-              width: 45px;
-              height: 45px;
+              width: 50px;
+              height: 50px;
               border-radius: 50%;
               position: absolute;
               top: 10px;
@@ -446,85 +419,80 @@ export default {
             }
             .name {
               position: absolute;
-              top: 10px;
-              left: 70px;
+              top: 12px;
+              left: 80px;
               color: #333;
               font-weight: 700;
               letter-spacing: 1px;
-              font-size: 15px;
+              font-size: 16px;
               .vip {
                 vertical-align: bottom;
                 display: inline-block;
                 color: #fff;
                 // background-color: #409eff;
                 background-color: #00a4ff;
-                padding: 1px 4px;
-                text-align: center;
+                padding: 2px 5px;
                 // border: 1px solid #eaeaea;
                 border-radius: 5px;
                 font-family: "微软雅黑";
                 font-weight: 500;
-                font-size: 1px;
+                font-size: 12px;
                 margin-left: 10px;
                 margin-bottom: 0.5px;
               }
             }
             .time {
               position: absolute;
-              top: 35px;
-              left: 70px;
+              top: 38px;
+              left: 78px;
               color: #666;
               font-family: "consolas";
-              font-size:14px;
             }
 
             .content {
               color: #333;
-              font-weight: 300;
+              font-weight: 400;
               font-size: 15px;
               width: 650px;
               text-align: left;
+              // background-color: rgba(#0a88f6,0.1);
               padding: 8px 10px;
-              margin: 60px 0px 10px 60px;
-              margin-bottom: 10px;
-              margin-left: 60px;
+              margin: 60px;
+              margin-bottom: 20px;
+              margin-left: 70px;
               font-family: "Microsoft Yahei";
-              line-height: 20px;
+              line-height: 30px;
               letter-spacing: 1px;
-              // border:1px solid blue;
             }
 
             .floor {
               position: absolute;
-              top: 5px;
-              right: 12px;
+              top: 10px;
+              right: 20px;
               font-size: 14px;
-              color: #999;
+              color: #666;
             }
             .reply {
-              font-size: 12px;
+              font-size: 13px;
               font-family: "Microsoft Yahei";
               background-color: #999;
               color: #fff;
               padding: 3px 6px;
               border-radius: 4px;
               position: absolute;
-              right: 10px;
+              right: 20px;
               bottom: 10px;
             }
             .reply:hover {
               cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
             }
           }
-          li:first-child {
-            margin-top: 0px;
-          }
         }
       }
     }
     // 分页器
     .pagination {
-      // border:1px solid blue;
+      margin-top: 20px;
       margin-bottom: 130px;
       font-family: "Microsoft Yahei,", sans-serif;
       .elementUIPagination {
@@ -533,12 +501,6 @@ export default {
         .el-pager {
           li {
             background-color: red !important;
-            button {
-              cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
-              .el-icon-arrow-right {
-                cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
-              }
-            }
           }
         }
       }

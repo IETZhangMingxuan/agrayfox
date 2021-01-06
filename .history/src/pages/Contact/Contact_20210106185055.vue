@@ -39,7 +39,7 @@
             >
               <img :src="item.imgUrl" alt="" />
               <p class="name">
-                {{ item.name }}<span v-show="item.isvip" class="vip" :style="`background-color:${item.color}`">{{ item.vip }}</span>
+                {{ item.name }}<span v-show="item.isvip" class="vip">{{ item.vip }}</span>
               </p>
               <span class="time">{{ item.time }}</span>
               <pre class="content">{{ item.content }}</pre>
@@ -77,17 +77,6 @@ export default {
     return {
       contentsList: [
         {
-          id: 13,
-          name: "陈欣欣",
-          content: `嘻嘻,终于上线啦~`,
-          imgUrl:
-            "https://t1.hxzdhn.com/uploads/tu/201805/9999/4a4431c8fa.jpg",
-          isvip: true,
-          vip: "小仙女",
-          time: "2021年1月6日 19:02分",
-          color:"orange"
-        },
-        {
           id: 12,
           name: "余鑫睿",
           content: `这个博客我喜欢~`,
@@ -115,8 +104,7 @@ export default {
             "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
           isvip: true,
           vip: "站长",
-          time: "2021年1月6日 15:49分",
-          color:"orange"
+          time: "2021年1月6日 15:49分"
         },
         {
           id: 9,
@@ -155,9 +143,8 @@ export default {
           imgUrl:
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F69%2F80%2F595f67c2aff1e_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612487556&t=11c946602a69f40b7f16d8dd388ad884",
           isvip: true,
-          vip: "测试组组长",
-          time: "2021年1月6日 09:13分",
-          color:"red"
+          vip: "测试组",
+          time: "2021年1月6日 09:13分"
         },
         {
           id: 5,
@@ -167,7 +154,7 @@ export default {
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20130624%2F20130624134512-82321674.jpg&refer=http%3A%2F%2Fpic.baike.soso.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612469463&t=3dbe0ff61ab7d3a3947c5b56a9034497",
           isvip: false,
           vip: "",
-          time: "2021年1月5日 22:40分",
+          time: "2021年1月5日 22:40分"
         },
         {
           id: 4,
@@ -178,8 +165,7 @@ export default {
             "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2570888551,3866070349&fm=26&gp=0.jpg",
           isvip: true,
           vip: "大德鲁伊",
-          time: "2021年1月5日 22:13分",
-          color:"#00A4FF"
+          time: "2021年1月5日 22:13分"
         },
         {
           id: 3,
@@ -190,8 +176,7 @@ export default {
             "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3341890544,1435051804&fm=26&gp=0.jpg",
           isvip: true,
           vip: "三修大法师",
-          time: "2021年1月4日 14:26分",
-          color:"#00A4FF"
+          time: "2021年1月4日 14:26分"
         },
         {
           id: 2,
@@ -202,8 +187,7 @@ export default {
             "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3380940217,696179768&fm=26&gp=0.jpg",
           isvip: true,
           vip: "前部落大酋长",
-          time: "2021年1月4日 10:52分",
-          color:"#00A4FF"
+          time: "2021年1月4日 10:52分"
         },
         {
           id: 1,
@@ -214,8 +198,7 @@ export default {
             "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
           isvip: true,
           vip: "站长",
-          time: "2021年1月3日 20:00分",
-          color:"orange"
+          time: "2021年1月3日 20:00分"
         }
       ],
       /* 初始显示的首个索引:可修改,但不建议 */
@@ -223,7 +206,7 @@ export default {
       /* 返回的总条数:不可修改 */
       totalSize: "",
       /* 每页显示条数:可修改 */
-      pageSize: 10,
+      pageSize: 5,
       /* 当前显示页:可修改,但不建议 */
       currentPage: 1
     };
@@ -426,19 +409,17 @@ export default {
           margin-bottom: 20px;
           // border: 1px solid red;
           li {
-            // background: linear-gradient(45deg, #fafafa, #fff);
+            background: linear-gradient(45deg, #fafafa, #fff);
             font-family: "微软雅黑";
-            margin-top: 12px;
-            border-left: 3px solid rgba(#409eef,0.5);
-            border-right: 2px solid #fafafa;
-            border-top: 1px solid transparent;
-            border-bottom: 1px solid #eaeaea;
             position: relative;
-            box-shadow:1px 2px 2px #fafafa;
-            background-color: #f9f9f9;
+            margin-top: 15px;
+            // border-left: 3px solid #409EEF;
+            // border-right: 1px solid #eaeaea;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
             img {
-              width: 45px;
-              height: 45px;
+              width: 40px;
+              height: 40px;
               border-radius: 50%;
               position: absolute;
               top: 10px;
@@ -458,20 +439,19 @@ export default {
                 color: #fff;
                 // background-color: #409eff;
                 background-color: #00a4ff;
-                padding: 1px 4px;
-                text-align: center;
+                padding: 2px 5px;
                 // border: 1px solid #eaeaea;
                 border-radius: 5px;
                 font-family: "微软雅黑";
                 font-weight: 500;
-                font-size: 1px;
+                font-size: 12px;
                 margin-left: 10px;
                 margin-bottom: 0.5px;
               }
             }
             .time {
               position: absolute;
-              top: 35px;
+              top: 32px;
               left: 70px;
               color: #666;
               font-family: "consolas";
@@ -480,12 +460,12 @@ export default {
 
             .content {
               color: #333;
-              font-weight: 300;
-              font-size: 15px;
+              font-weight: 500;
+              font-size: 13px;
               width: 650px;
               text-align: left;
               padding: 8px 10px;
-              margin: 60px 0px 10px 60px;
+              margin: 50px;
               margin-bottom: 10px;
               margin-left: 60px;
               font-family: "Microsoft Yahei";
@@ -496,20 +476,20 @@ export default {
 
             .floor {
               position: absolute;
-              top: 5px;
-              right: 12px;
+              top: 10px;
+              right: 20px;
               font-size: 14px;
               color: #999;
             }
             .reply {
-              font-size: 12px;
+              font-size: 13px;
               font-family: "Microsoft Yahei";
               background-color: #999;
               color: #fff;
               padding: 3px 6px;
               border-radius: 4px;
               position: absolute;
-              right: 10px;
+              right: 20px;
               bottom: 10px;
             }
             .reply:hover {
