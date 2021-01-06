@@ -83,11 +83,12 @@ export default {
           id: 13,
           name: "陈欣欣",
           content: `嘻嘻,终于上线啦~`,
-          imgUrl: "https://t1.hxzdhn.com/uploads/tu/201805/9999/4a4431c8fa.jpg",
+          imgUrl:
+            "https://t1.hxzdhn.com/uploads/tu/201805/9999/4a4431c8fa.jpg",
           isvip: true,
           vip: "小仙女",
           time: "2021年1月6日 19:02分",
-          color: "orange"
+          color:"orange"
         },
         {
           id: 12,
@@ -108,7 +109,7 @@ export default {
           isvip: true,
           vip: "测试组",
           time: "2021年1月6日 16:52分",
-          color: "#00A4FF"
+          color:"#00A4FF"
         },
         {
           id: 10,
@@ -119,7 +120,7 @@ export default {
           isvip: true,
           vip: "站长",
           time: "2021年1月6日 15:49分",
-          color: "orange"
+          color:"orange"
         },
         {
           id: 9,
@@ -140,7 +141,7 @@ export default {
           isvip: true,
           vip: "测试组",
           time: "2021年1月6日 13:20分",
-          color: "#00A4FF"
+          color:"#00A4FF",
         },
         {
           id: 7,
@@ -151,7 +152,7 @@ export default {
           isvip: true,
           vip: "测试组",
           time: "2021年1月6日 10:44分",
-          color: "#00A4FF"
+          color:"#00A4FF"
         },
         {
           id: 6,
@@ -162,7 +163,7 @@ export default {
           isvip: true,
           vip: "测试组组长",
           time: "2021年1月6日 09:13分",
-          color: "red"
+          color:"red"
         },
         {
           id: 5,
@@ -172,7 +173,7 @@ export default {
             "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20130624%2F20130624134512-82321674.jpg&refer=http%3A%2F%2Fpic.baike.soso.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612469463&t=3dbe0ff61ab7d3a3947c5b56a9034497",
           isvip: false,
           vip: "",
-          time: "2021年1月5日 22:40分"
+          time: "2021年1月5日 22:40分",
         },
         {
           id: 4,
@@ -184,7 +185,7 @@ export default {
           isvip: true,
           vip: "大德鲁伊",
           time: "2021年1月5日 22:13分",
-          color: "#00A4FF"
+          color:"#00A4FF"
         },
         {
           id: 3,
@@ -196,7 +197,7 @@ export default {
           isvip: true,
           vip: "三修大法师",
           time: "2021年1月4日 14:26分",
-          color: "#00A4FF"
+          color:"#00A4FF"
         },
         {
           id: 2,
@@ -208,7 +209,7 @@ export default {
           isvip: true,
           vip: "前部落大酋长",
           time: "2021年1月4日 10:52分",
-          color: "#00A4FF"
+          color:"#00A4FF"
         },
         {
           id: 1,
@@ -220,7 +221,7 @@ export default {
           isvip: true,
           vip: "站长",
           time: "2021年1月3日 20:00分",
-          color: "orange"
+          color:"orange"
         }
       ],
       /* 初始显示的首个索引:可修改,但不建议 */
@@ -439,8 +440,8 @@ export default {
             border-top: 1px solid transparent;
             border-bottom: 1px solid #eaeaea;
             position: relative;
-            // box-shadow: 2px 2px 2px #eaeaea;
-            box-shadow: 2px 2px 2px #f9f9f9;
+            box-shadow: 1px 2px 2px #fafafa;
+            background-color: #f9f9f9;
             img {
               width: 45px;
               height: 45px;
@@ -507,7 +508,6 @@ export default {
               color: #999;
             }
             .reply {
-              box-sizing: border-box;
               font-size: 12px;
               font-family: "Microsoft Yahei";
               background-color: #999;
@@ -517,21 +517,14 @@ export default {
               position: absolute;
               right: 10px;
               bottom: 10px;
-              cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
             }
             .reply:hover {
-              background-color: #666;
-              background-color: #f53333;
-              color: #fff;
-              box-sizing: border-box;
+              cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
+              background-color: #fafafa;
             }
           }
           li:first-child {
             margin-top: 0px;
-          }
-          li:hover{
-            // transform: scale(1.02);
-            transform: translateX(-8px);
           }
         }
       }

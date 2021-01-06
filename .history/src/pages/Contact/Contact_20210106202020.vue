@@ -531,7 +531,7 @@ export default {
           }
           li:hover{
             // transform: scale(1.02);
-            transform: translateX(-8px);
+            transform: translateX(-20px);
           }
         }
       }

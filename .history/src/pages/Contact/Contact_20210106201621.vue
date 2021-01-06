@@ -529,10 +529,6 @@ export default {
           li:first-child {
             margin-top: 0px;
           }
-          li:hover{
-            // transform: scale(1.02);
-            transform: translateX(-8px);
-          }
         }
       }
     }

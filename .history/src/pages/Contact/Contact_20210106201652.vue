@@ -530,8 +530,7 @@ export default {
             margin-top: 0px;
           }
           li:hover{
-            // transform: scale(1.02);
-            transform: translateX(-8px);
+            transform: scale(1.1);
           }
         }
       }

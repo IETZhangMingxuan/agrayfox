@@ -439,8 +439,8 @@ export default {
             border-top: 1px solid transparent;
             border-bottom: 1px solid #eaeaea;
             position: relative;
-            // box-shadow: 2px 2px 2px #eaeaea;
-            box-shadow: 2px 2px 2px #f9f9f9;
+            box-shadow: 1px 2px 2px #fafafa;
+            background-color: #f9f9f9;
             img {
               width: 45px;
               height: 45px;
@@ -517,21 +517,16 @@ export default {
               position: absolute;
               right: 10px;
               bottom: 10px;
-              cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
             }
             .reply:hover {
-              background-color: #666;
-              background-color: #f53333;
-              color: #fff;
+              cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
+              background-color: #fafafa;
+              color: #666;
               box-sizing: border-box;
             }
           }
           li:first-child {
             margin-top: 0px;
-          }
-          li:hover{
-            // transform: scale(1.02);
-            transform: translateX(-8px);
           }
         }
       }
