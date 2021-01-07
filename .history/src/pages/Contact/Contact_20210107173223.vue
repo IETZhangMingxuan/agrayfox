@@ -50,12 +50,6 @@
           <!-- <p id="my-form-status" style="background:#eaeaea;margin-top:20px;padding:10px;">待发送</p> -->
         </form>
       </div>
-      <!-- 广告区 -->
-      <div class="ads">
-        <a href="https://www.aliyun.com/minisite/goods?userCode=l1qstn8f"
-          ><img src="https://img.alicdn.com/tfs/TB1P1fuocieb18jSZFvXXaI3FXa-2880-482.png" alt=""
-        /></a>
-      </div>
       <!-- 所有留言区 -->
       <div class="allContents">
         <div class="title">全部留言 ({{ contentsList.length }})</div>
@@ -341,7 +335,7 @@ export default {
             customClass: "nonono",
             center: true
           });
-          this.$refs.submitBtn.style.background = "#ff7171";
+          this.$refs.submitBtn.style.background = '#ff7171';
           this.submitText = "请修改后再次提交评论";
         });
     }
@@ -495,20 +489,10 @@ body {
           }
         }
       }
-      // 广告区
-      .ads {
-        img {
-          width: 800px;
-          margin-top: 70px;
-          border:2px solid #f9f9f9;
-          border-radius: 10px;
-          box-shadow: 1px 1px 2px #eaeaea;
-        }
-      }
       // 全部留言
       .allContents {
         // border: 1px dashed blue;
-        margin-top: 20px;
+        margin-top: 100px;
         position: relative;
         .title {
           text-align: left;

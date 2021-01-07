@@ -508,7 +508,7 @@ body {
       // 全部留言
       .allContents {
         // border: 1px dashed blue;
-        margin-top: 20px;
+        margin-top: 10px;
         position: relative;
         .title {
           text-align: left;

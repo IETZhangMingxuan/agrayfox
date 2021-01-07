@@ -502,13 +502,13 @@ body {
           margin-top: 70px;
           border:2px solid #f9f9f9;
           border-radius: 10px;
-          box-shadow: 1px 1px 2px #eaeaea;
+          box-shadow: 1px 1px 1px blue;
         }
       }
       // 全部留言
       .allContents {
         // border: 1px dashed blue;
-        margin-top: 20px;
+        margin-top: 10px;
         position: relative;
         .title {
           text-align: left;

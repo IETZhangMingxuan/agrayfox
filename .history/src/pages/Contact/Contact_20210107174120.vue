@@ -52,9 +52,7 @@
       </div>
       <!-- 广告区 -->
       <div class="ads">
-        <a href="https://www.aliyun.com/minisite/goods?userCode=l1qstn8f"
-          ><img src="https://img.alicdn.com/tfs/TB1P1fuocieb18jSZFvXXaI3FXa-2880-482.png" alt=""
-        /></a>
+        <img src="https://img.alicdn.com/tfs/TB1P1fuocieb18jSZFvXXaI3FXa-2880-482.png" alt="" />
       </div>
       <!-- 所有留言区 -->
       <div class="allContents">
@@ -496,19 +494,16 @@ body {
         }
       }
       // 广告区
-      .ads {
-        img {
+      .ads{
+        img{
           width: 800px;
           margin-top: 70px;
-          border:2px solid #f9f9f9;
-          border-radius: 10px;
-          box-shadow: 1px 1px 2px #eaeaea;
         }
       }
       // 全部留言
       .allContents {
         // border: 1px dashed blue;
-        margin-top: 20px;
+        margin-top: 10px;
         position: relative;
         .title {
           text-align: left;
