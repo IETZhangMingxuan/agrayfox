@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://formspree.io/f/myyblyqp" method="POST" id="my-form">
+        <input type="text" name="name" placeholder="请输入昵称" autocomplete="off" />
+        <input
+          type="email"
+          name="_replyto"
+          placeholder="请输入邮箱"
+          autocomplete="off"
+        />
+        <textarea type="text" name="main" placeholder="在此处输入留言内容">
+        <button id="my-form-button" @click="sendEmail">提交评论</button>
+        <p id="my-form-status" style="background:#eaeaea;margin-top:20px;margin-bottom:20px;padding:10px;">待发送</p>
+      </form>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector("#my-form");
+        var button = document.querySelector("#my-form-button");
+        var status = document.querySelector("#my-form-status");
+
+        function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "提交成功!待审核后显示!";
+        }
+
+        function error() {
+            status.innerHTML = "出错了!请检查一下邮箱格式是否正确";
+        }
+        form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });
+    });
+
+    function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                success(xhr.response, xhr.responseType);
+            } else {
+                error(xhr.status, xhr.response, xhr.responseType);
+            }
+        };
+        xhr.send(data);
+    }
+</script>
+
+</html>
