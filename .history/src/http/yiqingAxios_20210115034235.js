@@ -1,8 +1,7 @@
-/* 放置/topnews开始的请求 */
 import axios from 'axios'
 import nprogress from 'nprogress'
 const axiosIns = axios.create({
-  baseURL: "/kol",
+  baseURL: "https://c.m.163.com",
   timeout: 7000
 });
 axiosIns.interceptors.request.use(function (config) {
@@ -18,7 +17,8 @@ axiosIns.interceptors.request.use(function (config) {
 axiosIns.interceptors.response.use(function (response) {
   // 对响应数据做点什么(自定义添加了.data)
   nprogress.done();
-  // console.log('获取到卡思数据')
+  // console.log(response.data);
+  // console.log("获取到了网易新闻");
   return response.data;
 }, function (error) {
   // 对响应错误做点什么
