@@ -1,0 +1,29 @@
+<template>
+  <div id="articles">
+    <h3>博客模块正在开发中...</h3>
+  </div>
+</template>
+<script>
+// import Aplayer from "vue-aplayer";
+export default {
+  data(){
+    return {
+     
+    }
+  },
+  // components: { Aplayer }
+};
+</script>
+<style scoped lang="less">
+#articles {
+  // border: 1px dashed blue;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  width: 1200px;
+  .aplayer {
+    width:500px;
+    height:1000px;
+  }
+}
+</style>
