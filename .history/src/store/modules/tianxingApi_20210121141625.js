@@ -22,15 +22,12 @@ export default {
     VirusNumList: [],
     SportsNewsList: [],
     /* 收费 */
-    WXArticlesList: [],
+    WXArticlesList:[],
   },
   getters: {
 
   },
   mutations: {
-    getWXArticlesList(state, newslist) {
-      state.WXArticlesList = newslist;
-    },
     getAppleNewsList(state, newslist) {
       state.AppleNewsList = newslist;
     },
@@ -57,17 +54,6 @@ export default {
     }
   },
   actions: {
-    async getWXArticlesList({
-      commit
-    }) {
-      const {
-        code,
-        newslist
-      } = await getWXArticlesList();
-        console.log(code, newslist);
-      commit("getWXArticlesList", newslist);
-      return newslist;
-    },
     async getAppleNewsList({
       commit
     }) {

@@ -75,7 +75,7 @@ export const getSportsNewsList = () => tianxingapiAxios.get(
   "/tiyu/index?key=284032390ca46e0760bc80d2364bf65f&num=50");
 /* 实时获取天行API(此请求收费0.05元/条)微信文章 */
 export const getWXArticlesList = () => tianxingapiAxios.get(
-  `http://api.tianapi.com/txapi/wxsearch/index?key=4428d8e64916b6207baf857dac31f424&word=${this.wxsearch}`);
+  `http://api.tianapi.com/txapi/wxsearch/index?key=4428d8e64916b6207baf857dac31f424&word=${wxsearch}`);
 
 
 

@@ -179,7 +179,7 @@
         </div>
       </div>
       <!-- 搜索微信热文(收费接口)模块 -->
-      <WXArticles />
+      <input type="text" v-model="wxsearch">
     </div>
   </div>
 </template>
@@ -241,6 +241,7 @@ export default {
       selectIndex: 0,
       isSportsNewsShow: false,
       seeMoreOrNot: "查看更多",
+      wxsearch:""
     };
   },
   computed: {

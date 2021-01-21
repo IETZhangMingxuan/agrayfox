@@ -57,17 +57,6 @@ export default {
     }
   },
   actions: {
-    async getWXArticlesList({
-      commit
-    }) {
-      const {
-        code,
-        newslist
-      } = await getWXArticlesList();
-        console.log(code, newslist);
-      commit("getWXArticlesList", newslist);
-      return newslist;
-    },
     async getAppleNewsList({
       commit
     }) {

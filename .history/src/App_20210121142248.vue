@@ -101,6 +101,7 @@ export default {
     await this.getDeveloperTopList();
     await this.getOsChinaTopList();
     await this.getUserWeather();
+    await this.getWXArticlesList();
   }
 };
 </script>
