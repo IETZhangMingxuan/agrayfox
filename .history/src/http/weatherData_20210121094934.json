@@ -1,0 +1,36 @@
+{
+    "HeWeather6": [
+        {
+            "basic": {
+                "cid": "CN101070101",
+                "location": "沈阳",
+                "parent_city": "沈阳",
+                "admin_area": "辽宁省",
+                "cnty": "中国",
+                "lat": "41.79676819",
+                "lon": "123.42909241",
+                "tz": "+8.00"
+            },
+            "update": {
+                "loc": "2021-01-20 21:00",
+                "utc": "2021-01-20 13:00"
+            },
+            "status": "ok",
+            "now": {
+                "cloud": "100",
+                "cond_code": "104",
+                "cond_txt": "阴",
+                "fl": "-3",
+                "hum": "71",
+                "pcpn": "0.0",
+                "pres": "1025",
+                "tmp": "1",
+                "vis": "28",
+                "wind_deg": "180",
+                "wind_dir": "南风",
+                "wind_sc": "3",
+                "wind_spd": "14"
+            }
+        }
+    ]
+}
