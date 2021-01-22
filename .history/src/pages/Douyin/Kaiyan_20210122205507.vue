@@ -5,6 +5,7 @@
       <div class="loading" v-if="!KYVideoList.length">
         请稍后,正在努力加载中...
       </div>
+      <button @click="getKYVideoList">发送Axios请求</button>
       <ul class="videoList">
         <li
           v-for="(p, index) in KYVideoList.slice(currentIndex, currentIndex + pageSize)"
@@ -14,7 +15,7 @@
             <img :src="p.data.cover.detail" alt="" />
           </div>
           <div class="title">
-            <img :src="p.data.tags[0].bgPicture" alt="" class="authorImg" />
+            <!-- <img :src="p.data.tags[0].bgPicture" alt="" class="authorImg" /> -->
             <p class="videoTitle">{{ p.data.author.name }}</p>
           </div>
           <p class="videoDesc">{{ p.data.author.description }}</p>
@@ -61,12 +62,6 @@ export default {
           data: {
             playUrl:
               "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=46569&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid=e686f5856bdf4d48b77b1220abedbb48b5cf1035",
-            tags: [
-              {
-                bgPicture:
-                  "http://img.kaiyanapp.com/afb9e7d7f061d10ade5ebcb524dc8679.jpeg?imageMogr2/quality/60/format/jpg"
-              }
-            ],
             cover: {
               detail:
                 "http://img.kaiyanapp.com/244174c74fbe7e078867b8b8bdc8393a.png?imageMogr2/quality/60/format/jpg"
@@ -82,12 +77,6 @@ export default {
           data: {
             playUrl:
               "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=137507&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid=e686f5856bdf4d48b77b1220abedbb48b5cf1035",
-            tags: [
-              {
-                bgPicture:
-                  "http://img.kaiyanapp.com/9056413cfeffaf0c841d894390aa8e08.jpeg?imageMogr2/quality/60/format/jpg"
-              }
-            ],
             cover: {
               detail:
                 "http://img.kaiyanapp.com/dd3a5ee6926dc692478e36f7c3928167.jpeg?imageMogr2/quality/60/format/jpg"
@@ -103,12 +92,6 @@ export default {
           data: {
             playUrl:
               "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=188271&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid=e686f5856bdf4d48b77b1220abedbb48b5cf1035",
-            tags: [
-              {
-                bgPicture:
-                  "http://img.kaiyanapp.com/a082f44b88e78daaf19fa4e1a2faaa5a.jpeg?imageMogr2/quality/60/format/jpg"
-              }
-            ],
             cover: {
               detail:
                 "http://img.kaiyanapp.com/c6df679d90b8cfa2b4cf950d0a429f14.png?imageMogr2/quality/60/format/jpg"
@@ -125,12 +108,6 @@ export default {
           data: {
             playUrl:
               "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=98925&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid=e686f5856bdf4d48b77b1220abedbb48b5cf1035",
-            tags: [
-              {
-                bgPicture:
-                  "http://img.kaiyanapp.com/9056413cfeffaf0c841d894390aa8e08.jpeg?imageMogr2/quality/60/format/jpg"
-              }
-            ],
             cover: {
               detail:
                 "http://img.kaiyanapp.com/a6d1f0d83140ab27593b6de278bf984b.jpeg?imageMogr2/quality/60/format/jpg"
@@ -147,12 +124,6 @@ export default {
           data: {
             playUrl:
               "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=184469&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid=e686f5856bdf4d48b77b1220abedbb48b5cf1035",
-            tags: [
-              {
-                bgPicture:
-                  "http://img.kaiyanapp.com/7ea328a893aa1f092b9328a53494a267.png?imageMogr2/quality/60/format/jpg"
-              }
-            ],
             cover: {
               detail:
                 "http://img.kaiyanapp.com/bdfa64ccce240558c6de705dc36d73ce.png?imageMogr2/quality/60/format/jpg"
@@ -169,12 +140,6 @@ export default {
           data: {
             playUrl:
               "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=145565&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&udid=e686f5856bdf4d48b77b1220abedbb48b5cf1035",
-            tags: [
-              {
-                bgPicture:
-                  "http://img.kaiyanapp.com/9056413cfeffaf0c841d894390aa8e08.jpeg?imageMogr2/quality/60/format/jpg"
-              }
-            ],
             cover: {
               detail:
                 "http://img.kaiyanapp.com/cf2db44f87f6ef0dd98432d41862118f.jpeg?imageMogr2/quality/60/format/jpg"

@@ -5,6 +5,7 @@
       <div class="loading" v-if="!KYVideoList.length">
         请稍后,正在努力加载中...
       </div>
+      <button @click="getKYVideoList">发送Axios请求</button>
       <ul class="videoList">
         <li
           v-for="(p, index) in KYVideoList.slice(currentIndex, currentIndex + pageSize)"
