@@ -1,7 +1,5 @@
 <template>
   <div id="weatherWrapper" class="animate__animated animate__bounceIn">
-    <!-- <div class="line"></div> -->
-    <!-- <div class="title">实况天气</div> -->
     <div id="he-plugin-standard"></div>
   </div>
 </template>
@@ -11,17 +9,18 @@ export default {
   mounted() {
     window.WIDGET = {
       CONFIG: {
-        layout: 2,
+        layout: 1,
         // modules: "20",
-        width: "320",
-        height: "320",
+        width: "340",
+        height: "160",
         background: 1,
         // dataColor: "4A4A4A",
         dataColor: "fff",
         language: "zh",
         borderRadius: "5",
-        tmpSize:24,
-        key: "cfd862f506f641f0ab66b8586290732e"
+        tmpSize: 22,
+        // key: "cfd862f506f641f0ab66b8586290732e",
+        key:"4343170b735b44c9952ef8cc41e693b7",
       }
     };
     var script = document.createElement("script");
@@ -32,9 +31,9 @@ export default {
 };
 </script>
 <style scoped lang="less">
+
 #weatherWrapper {
-  padding: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
   box-shadow: 0 0 10px hsla(0, 0%, 40%, 0.2);
   border-radius: 5px;
   font-family: "微软雅黑";
@@ -43,6 +42,7 @@ export default {
   margin: 0 auto;
   margin-bottom: 20px;
   position: relative;
+
   .line {
     width: 3px;
     height: 22px;

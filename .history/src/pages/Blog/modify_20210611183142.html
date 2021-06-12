@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue项目中实现图片懒加载</title>
+    <style>
+        .content {
+            width: 770px;
+            color: #555666;
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .preface {
+            width: 720px;
+            background-color: #EEF0F4;
+            padding: 7px 20px;
+            color: #555666;
+            line-height: 30px;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .preface:hover {
+            cursor: text;
+        }
+
+        .preface::before {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            content: '';
+            width: 10px;
+            height: 100%;
+            background-color: #DDDFE4;
+        }
+
+        .preh3 {
+            padding: 0 0 15px 0;
+        }
+
+        h3 {
+            color: #333;
+            padding: 15px 0;
+            // border:1px solid red;
+        }
+
+        img {
+            width: 750px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        p {
+            padding: 10px 0;
+            color: #555666;
+            font-weight: 700;
+            // border:1px solid blue;
+            cursor: pointer;
+        }
+
+        p:hover {
+            color: #333;
+        }
+
+        .first {
+            padding-top: 0px;
+        }
+
+        a {
+            display: block;
+            padding: 15px 0 0 0;
+            text-decoration: none;
+            color: #409eef;
+        }
+
+        .showpic {
+            width: 760px;
+            display: block;
+            margin-bottom: 15px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <img src="../../static/images/0007.jpg" alt="0007" class="showpic">
+        <h3 class="preh3">前言</h3>
+        <p class="preface">
+            对于图片过多的页面,为了提高页面的加载速度,很多时候我们需要将页面内未出现在可视区域内的图片先不做加载,等到滚动到可视区域后再去加载.这样子对于页面加载性能上会有很大的提升,也提高了用户体验
+        </p>
+        <h3>实现方法(使用Vue的vue-lazyload插件)</h3>
+        <p class="first">一.安装插件</p>
+        <img src="../../../static/images/0001.png" alt="0001">
+        <p>二.在入口文件main.js中引入</p>
+        <img src="../../../static/images/0002.png" alt="0002">
+        <p>三.直接使用</p>
+        <img src="../../../static/images/0003.png" alt="0003">
+        <p>或者添加自定义选项</p>
+        <img src="../../../static/images/0004.png" alt="0004">
+        <p>四.修改图片显示方式为懒加载(将:src属性直接改为v-lazy)</p>
+        <img src="../../../static/images/0005.png" alt="0005">
+        <p>五.参数选项说明</p>
+        <img src="../../../static/images/0006.png" alt="0006">
+        <p>六.vue-lazyload官网
+         <a href="https://www.npmjs.com/package/vue-lazyload">点此链接</a>
+            <p>至此，一个简单的vue图片懒加载就完成了</p>
+    </div>
+</body>
+
+</html>

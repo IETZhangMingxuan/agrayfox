@@ -1,0 +1,398 @@
+<template>
+  <div id="robot">
+    <div class="header">
+      <img src="./robot.jpeg" alt="404 not found" title="小白" />
+      <p>愚蠢的机器人小白</p>
+      <div class="share">分享到：<i class="iconfont icon-weixin"></i></div>
+      <div class="clear">
+        <span class="clearBtn">清除聊天</span>
+      </div>
+      <div class="control">
+        <i class="iconfont icon-zuixiaohua"></i>
+        <i class="iconfont icon-close"></i>
+        <i class="iconfont icon-zuidahua"></i>
+      </div>
+    </div>
+    <div class="main">
+      <div class="wrapper">
+        <div class="talkList clearfix"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <input type="text" placeholder="快来和我聊天吧" maxlength="20" />
+      <i class="iconfont icon-fasong"></i>
+    </div>
+  </div>
+</template>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script>
+$(function() {
+  // 0.进入网页后等待1秒钟机器人自动回复
+  setTimeout(function() {
+    $(`<p class="left">你好呀,有什么不懂的问题可以来问我</p>`).appendTo(".talkList");
+  }, 1000);
+  // 1.清除聊天
+  $(".clearBtn").click(function() {
+    $(".talkList p").remove();
+  });
+  // 2.点击按钮发送请求并呈现在屏幕上
+  $(".icon-fasong").on("click", sendMessage);
+  // 3.在输入框处于焦点状态时按回车发送请求
+  $("input").on("keyup", function(e) {
+    if (e.keyCode == 13) {
+      if ($("input").val() !== "") {
+        $(".deleteP").remove();
+        // 获取输入框中的文字
+        var askText = $("input").val();
+        $(`<p class="right">${askText}</p>`).appendTo(".talkList");
+        let str = $("input").val();
+        // 清除输入框
+        $("input").val("");
+        /* 重点:创建一个虚拟元素占位 */
+        $('<p class="deleteP right" style="visibility:hidden"></p>').appendTo(".talkList");
+        $(".main").scrollTop($(".talkList")[0].scrollHeight);
+        try {
+          axios({
+            method: "GET",
+            url: `http://www.tuling123.com/openapi/api?key=fef25662f0d442a9bc94ce5bd83f776b&info=${str}`
+          }).then(response => {
+            $(".deleteP").remove();
+            $(`<p class="left">${response.data.text}</p>`).appendTo(".talkList");
+            $('<p class="deleteP right" style="visibility:hidden"></p>').appendTo(".talkList");
+            // 重点:设置滚动条每次都在最新消息的底部
+            $(".main").scrollTop($(".talkList")[0].scrollHeight + 100);
+          });
+        } catch (error) {}
+        // var talkList = document.querySelector('.talkList');
+        // console.log(talkList.scrollHeight);
+        // console.log($('.talkList')[0].scrollHeight);
+      }
+    }
+  });
+  // 4.点击右上角的关闭按钮
+  $(".icon-close").click(function() {
+    $("#ZMXRobot").hide(300);
+  });
+  // 5.点击右上角的最小化按钮
+  $(".icon-zuixiaohua").click(() => {
+    $("#ZMXRobot").css("bottom", "-560px");
+    $(".clear").hide();
+    $(".share").hide();
+    $(".icon-zuixiaohua").hide();
+    $(".icon-zuidahua").show();
+  });
+  // 6.点击右上角的最大化按钮
+  $(".icon-zuidahua").click(() => {
+    $("#ZMXRobot").css("bottom", "0px");
+    $(".clear").toggle(1000);
+    $(".share").toggle(1000);
+    $(".icon-zuixiaohua").toggle();
+    $(".icon-zuidahua").toggle();
+  });
+  // 封装函数
+  function sendMessage() {
+    if ($("input").val() !== "") {
+      // 获取输入框中的文字
+      var askText = $("input").val();
+      $(`<p class="right">${askText}</p>`).appendTo(".talkList");
+      let str = $("input").val();
+      // 清除输入框
+      $("input").val("");
+      axios({
+        method: "GET",
+        url: `http://www.tuling123.com/openapi/api?key=fef25662f0d442a9bc94ce5bd83f776b&info=${str}`
+      }).then(response => {
+        let result = response.data.text;
+        $(`<p class="left">${result}</p>`).appendTo(".talkList");
+      });
+    }
+  }
+});
+</script>
+<style scoped>
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft Yahei";
+  height: 5000px;
+  position: relative;
+  background-color: #f4f4f4;
+  user-select: none;
+}
+
+#robot {
+  position: fixed;
+  left: 10px;
+  bottom: 40px;
+  width: 300px;
+  height: 630px;
+  background-color: #fff;
+}
+
+.header {
+  box-sizing: border-box;
+  height: 90px !important;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  padding: 10px 5px 30px 5px;
+  position: relative;
+  background-color: hsla(0, 0%, 92%, 0.8);
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+}
+
+.header p {
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.header .share {
+  font-size: 10px;
+  position: absolute;
+  border: 1px solid transparent;
+  height: 15px;
+  bottom: 10px;
+  left: 75px;
+  padding: 2px 5px;
+  font-size: 12px;
+  color: #555;
+  background-color: transparent;
+}
+
+.header .share .icon-weixin {
+  margin-left: 3px;
+  color: rgba(0, 128, 0, 0.7);
+  font-size: 22px;
+  background-color: transparent;
+  position: absolute;
+  top: -1px;
+  left: 45px;
+}
+
+.header .share .icon-weixin:hover {
+  color: rgba(0, 128, 0, 0.9);
+}
+
+.header .control {
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.header .icon-zuixiaohua {
+  color: #999;
+  font-weight: 100 !important;
+  width: 10px;
+  font-size: 30px;
+  height: 10px;
+  position: absolute;
+  right: 45px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.header .icon-zuidahua {
+  color: #999;
+  font-weight: 400 !important;
+  width: 10px;
+  font-size: 14px;
+  height: 10px;
+  position: absolute;
+  right: 44px;
+  top: 6px;
+  cursor: pointer;
+  display: none;
+}
+
+.header .icon-zuidahua:hover {
+  font-weight: 700 !important;
+}
+
+.header .icon-zuixiaohua:hover {
+  font-weight: 700 !important;
+}
+
+.header .icon-close {
+  color: #999;
+  font-weight: 300 !important;
+  width: 10px;
+  font-size: 18px;
+  height: 10px;
+  position: absolute;
+  right: 15px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.header .icon-close:hover {
+  font-weight: 800 !important;
+}
+
+.icon-weixin:hover {
+  cursor: pointer;
+}
+
+.header .clear {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 15px !important;
+  line-height: 17px;
+  border: 1px solid #409eff;
+  padding: 1px 4px;
+  font-size: 8px;
+  border-radius: 4px;
+  background-color: transparent;
+  letter-spacing: -0.1px;
+}
+
+.header .clear:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.header .clear span {
+  text-align: center;
+  color: #409eef;
+}
+
+.main {
+  box-sizing: border-box;
+  height: 500px;
+  border: none;
+  border-left: 1px solid rgba(51, 51, 51, 0.1);
+  border-right: 1px solid rgba(51, 51, 51, 0.1);
+  overflow-y: scroll !important;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.main::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 10px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+  scrollbar-arrow-color: red;
+}
+
+.main::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.clearfix:before {
+  /*伪元素content属性可以为空但是不能不写  如果不写  不渲染*/
+  content: "";
+  /*clear  必须要在块级元素身上才能生效*/
+  display: block;
+  clear: both;
+}
+
+.main .wrapper {
+  /* border:1px solid orangered; */
+  height: auto;
+}
+
+.main .talkList {
+  height: auto;
+  padding-bottom: 150px;
+}
+
+.main .talkList p {
+  width: auto;
+  height: auto;
+  line-height: 20px;
+  padding: 5px 10px;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 15px;
+  letter-spacing: 0px;
+  word-break: break-all;
+  word-wrap: break-word;
+  clear: both;
+  background-color: rgba(159, 235, 107);
+  color: #333;
+  border-radius: 8px;
+}
+
+.main .talkList p:first-child {
+  margin-top: 15px !important;
+}
+
+.main .talkList p:last-child {
+  margin-bottom: 50px !important;
+}
+
+.left {
+  float: left;
+  max-width: 200px !important;
+  color: #666;
+  border: 1px solid #eaeaea;
+  background-color: #fff !important;
+}
+
+.right {
+  float: right;
+  max-width: 200px !important;
+}
+
+.footer {
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+
+.footer input {
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 12px;
+  background-color: #eaeaea;
+  width: 300px;
+  padding: 0px 0px 0px 10px;
+}
+
+.footer input:focus {
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+}
+
+.icon-fasong {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background-color: transparent;
+  color: #666;
+  font-size: 18px;
+  height: 10px !important;
+  z-index: 99999;
+}
+
+.icon-fasong:hover {
+  color: #409eef;
+  cursor: pointer;
+}
+
+input:focus + .icon-fasong {
+  color: #409eef !important;
+}
+</style>

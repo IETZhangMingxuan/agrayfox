@@ -1,0 +1,125 @@
+<template>
+  <div class="blog-content">
+    <div class="blog-title" id="blog-title">
+      <h2>{{ newsList.title }}</h2>
+    </div>
+    <div class="blog-info" id="blog-info">
+      <span class="create-time">
+        <i class="iconfont icon-rili"></i>
+        <span>{{ newsList.createtime }}</span>
+      </span>
+      <span class="read">
+        <i class="iconfont icon-author"></i>
+        <span>阅读:{{ newsList.hot }}</span>
+      </span>
+      <span class="zan">
+        <i class="iconfont icon-zan"></i>
+        <span>点赞:{{ newsList.zan }}</span>
+      </span>
+    </div>
+    <p v-html="newsList.content">Loading...</p>
+  </div>
+</template>
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      newsList: ``
+    };
+  },
+  async mounted() {
+    let result = await axios({
+      method: "GET",
+      url: "http://59.110.242.49:8080/getBlogs"
+    }).then(response => {
+      return response.data;
+    });
+    // console.log(this.$route.params.id);
+    this.newsList = result[this.$route.params.id - 1];
+    // console.log(this.newsList);
+  }
+};
+</script>
+<style scoped lang="less">
+.blog-content {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #777;
+  font-family: "Microsoft Yahei";
+  font-family: "consolas", "Microsoft Yahei";
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  user-select: text;
+  .blog-title {
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+  }
+
+  .blog-title h2 {
+    font: "Microsoft Yahei";
+    color: #333;
+    padding: 15px 15px 5px 15px;
+    padding-left: 15px;
+  }
+  .blog-info {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0 0 10px 10px;
+    padding-left: 15px;
+    margin-top: 0px;
+    background-color: #fff;
+    color: #888;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  span {
+    font-weight: 400 !important;
+  }
+  .icon-rili,
+  .icon-author,
+  .icon-zan {
+    color: #888;
+    font-size: 14px;
+  }
+
+  .icon-rili {
+    font-size: 15px;
+  }
+
+  .icon-zan:hover {
+    color: red;
+    cursor: pointer;
+  }
+
+  .icon-author {
+    position: absolute;
+    top: -12px;
+    left: 6px;
+    font-size: 16px;
+  }
+
+  .icon-zan {
+    position: absolute;
+    top: -13px;
+    left: 5px;
+    font-size: 16px;
+  }
+
+  .blog-info .read {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .blog-info .zan {
+    position: relative;
+    padding-left: 25px;
+  }
+}
+</style>

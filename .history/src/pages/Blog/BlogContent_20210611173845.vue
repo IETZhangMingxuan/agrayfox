@@ -1,0 +1,210 @@
+<template>
+  <div class="blog-content">
+    <div class="blog-title" id="blog-title">
+      <span>{{ newsList.title }}</span>
+    </div>
+    <div class="blog-info" id="blog-info">
+      <span class="create-time">
+        <i class="iconfont icon-rili"></i>
+        <span>{{ newsList.createtime }}</span>
+      </span>
+      <span class="read">
+        <i class="iconfont icon-author"></i>
+        <span>阅读:{{ newsList.hot }}</span>
+      </span>
+      <span class="zan">
+        <i class="iconfont icon-zan"></i>
+        <span>点赞:{{ newsList.zan }}</span>
+      </span>
+    </div>
+    <!-- <p v-html="newsList.content">Loading...</p> -->
+    <p v-html="newsList">Loading...</p>
+  </div>
+</template>
+<script>
+// import axios from "axios";
+export default {
+  data() {
+    return {
+      newsList: `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用vue-cliboard2实现剪切板的功能</title>
+    <style>
+        .content {
+            width: 770px;
+            color: #555666;
+            font-family: 'consolas', 'microsoft yahei';
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .content .preface {
+            width: 720px;
+            background-color: #EEF0F4;
+            padding: 7px 20px;
+            color: #555666;
+            line-height: 30px;
+            position: relative;
+            font-weight: 400;
+            font-size:16px;
+        }
+
+        .content .preface:hover {
+            cursor: text;
+        }
+
+        .content .preface::before {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            content: '';
+            width: 8px;
+            height: 100%;
+            background-color: #DDDFE4;
+        }
+
+        .content .preh3 {
+            padding: 0 0 15px 0;
+        }
+
+        .content h3 {
+            color: #333;
+            padding: 15px 0;
+        }
+
+        .content img {
+            width: 750px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .content p {
+            padding: 10px 0;
+            color: #555666;
+            font-weight: 700;
+            font-size:14px;
+            cursor: pointer;
+        }
+
+        .content span {
+            font-weight: 700;
+
+        }
+
+        .content p:hover {
+            color: #333;
+        }
+
+        .content .first {
+            padding-top: 10px;
+        }
+
+        .content a {
+            display: block;
+            padding: 15px 0 0 0;
+            text-decoration: none;
+            color: #409eef;
+        }
+
+        .content .showpic {
+            width: 760px;
+            display: block;
+            margin-bottom: 15px;
+            margin-top: -5px;
+        }
+
+        .content #prev1 {
+            display: block;
+            width: 400px !important;
+        }
+
+        .content #prev2 {
+            display: block;
+            width: 500px !important;
+            margin-top: 20px;
+        }
+
+        .content a {
+            padding: 10px;
+        }
+
+        .content .ojbk {
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3 class="preh3">前言</h3>
+        <p class="preface">在浏览网页的时候经常会看到很多好的内容,需要复用一下;当然可以直接选中复制.但有些时候站长会直接提供复制的功能,这是如何实现的呢?vue-cliboard2就是专门用于该功能的.
+        </p>
+        <p class="first">1.安装vue-cliboard2库</p>
+        <img src="../images/0201.png" alt="0201">
+        <p>2.在main.js文件中引入使用</p>
+        <img src="../images/0202.png" alt="0202">
+        <p>3.使用</p>
+        <p class="ojbk">3-1.使用方式一:个人推荐</p>
+        <img src="../images/0203.png" alt="0203">
+        <p>效果如下</p>
+        <img src="../images/0204.png" alt="0204" id="prev1">
+        <img src="../images/0205.png" alt="0205" id="prev2">
+        <p>3-2.使用方式二</p>
+        <img src="../images/0206.png" alt="0206">
+        <p>4.API</p>
+        <a href="https://www.npmjs.com/package/vue-clipboard2" target="_blank">点此链接</a>
+
+    </div>
+</body>
+
+</html>`
+    };
+  }
+  // async mounted() {
+  //   let result = await axios({
+  //     method: "GET",
+  //     url: "http://59.110.242.49:8080/getBlogs"
+  //   }).then(response => {
+  //     return response.data;
+  //   });
+  //   // console.log(this.$route.params.id);
+  //   this.newsList = result[this.$route.params.id - 1];
+  //   // console.log(this.newsList);
+  // }
+};
+</script>
+<style scoped lang="less">
+.blog-content {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  color: #777;
+  font-family: "Microsoft Yahei";
+  font-family: "consolas", "Microsoft Yahei";
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  user-select: text;
+  .blog-title {
+    background-color: #fff;
+    span {
+      display: inline-block;
+      padding: 5px 15px 15px 0px;
+      color: #333;
+      font-family: "Microsoft Yahei";
+      font-size: 26px;
+      font-weight: 3000;
+    }
+  }
+  .blog-info {
+    font-family: "Microsoft Yahei";
+    font-weight: 300 !important;
+  }
+}
+</style>

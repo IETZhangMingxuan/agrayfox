@@ -57,7 +57,7 @@ export default {
 #ads {
   // z-index
   // border: 1px solid blue;
-  width: 320px;
+  width: 340px;
   margin-top: 20px;
   box-shadow: 0 0 10px hsla(0, 0%, 40%, 0.2);
   padding: 5px;
@@ -99,7 +99,7 @@ export default {
     .picItem {
       position: relative;
       img {
-        width: 320px;
+        width: 380px;
         height: 500px;
       }
       .title {

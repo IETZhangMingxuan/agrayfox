@@ -122,9 +122,12 @@ li {
   width: 100%;
   margin: 0 auto;
   .app_container {
-    width: 1200px;
+    box-sizing: content-box;
+    width: 1240px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding: 20px;
+    padding-top:60px;
+    border-radius: 10px;
   }
 }
 ::-webkit-scrollbar {

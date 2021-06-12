@@ -272,7 +272,7 @@ export default {
     virusNumTime(VirusNumList) {
       return moment(VirusNumList[0].desc.modifyTime).format("lll");
     },
-    changeSportsNews(isSportsNewsShow, seeMoreOrNot) {
+    changeSportsNews() {
       if (this.isSportsNewsShow == true) {
         this.isSportsNewsShow = false;
         setTimeout(() => {
@@ -299,7 +299,7 @@ export default {
   margin: 0 auto;
   text-align: center;
   margin-top: 20px;
-  width: 1200px;
+  width: 1240px;
   display: flex;
   justify-content: flex-start;
   min-height: 800px;
@@ -524,7 +524,7 @@ export default {
     .carousel {
       // border: 1px solid blue;
       margin-top: 20px;
-      padding: 5px;
+      padding: 15px;
       box-shadow: 0 0 10px hsla(0, 0%, 40%, 0.2);
       border-radius: 5px;
       // height: 520px;
@@ -641,12 +641,13 @@ export default {
         }
         .seeMoreOrNot {
           background-color: rgba(#007eee, 0.7);
-          padding: 2px 5px;
+          padding: 5px 7px;
           border-radius: 5px;
           outline: none;
           border: none;
           color: #fff;
           font-family: "Microsoft Yahei";
+          margin-top:10px;
         }
         .seeMoreOrNot:hover {
           background-color: #0876e4;
@@ -659,6 +660,7 @@ export default {
     // 新闻路由广告区
     .adsWrapper{
       height:1200px;
+      width: 100%;
     }
   }
 }

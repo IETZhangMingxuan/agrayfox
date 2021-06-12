@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用vue-cliboard2实现剪切板的功能</title>
+    <style>
+        .content {
+            width: 770px;
+            color: #555666;
+            font-family: 'consolas', 'microsoft yahei';
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .preface {
+            width: 720px;
+            background-color: #EEF0F4;
+            padding: 7px 20px;
+            color: #555666;
+            line-height: 30px;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .preface:hover {
+            cursor: text;
+        }
+
+        .preface::before {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            content: '';
+            width: 8px;
+            height: 100%;
+            background-color: #DDDFE4;
+        }
+
+        .preh3 {
+            padding: 0 0 15px 0;
+        }
+
+        h3 {
+            color: #333;
+            padding: 15px 0;
+        }
+
+        .content img {
+            width: 750px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        p {
+            padding: 10px 0;
+            color: #555666;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        span {
+            font-weight: 700;
+
+        }
+
+        p:hover {
+            color: #333;
+        }
+
+        .first {
+            padding-top: 10px;
+        }
+
+        a {
+            display: block;
+            padding: 15px 0 0 0;
+            text-decoration: none;
+            color: #409eef;
+        }
+
+        .showpic {
+            width: 760px;
+            display: block;
+            margin-bottom: 15px;
+            margin-top: -5px;
+        }
+
+        #prev1 {
+            display: block;
+            width: 400px;
+        }
+
+        #prev2 {
+            display: block;
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        a {
+            padding: 10px;
+        }
+
+        .ojbk {
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3 class="preh3">前言</h3>
+        <p class="preface">在浏览网页的时候经常会看到很多好的内容,需要复用一下;当然可以直接选中复制.但有些时候站长会直接提供复制的功能,这是如何实现的呢?vue-cliboard2就是专门用于该功能的.
+        </p>
+        <p class="first">1.安装vue-cliboard2库</p>
+        <img src="public/images/0201.png" alt="0201">
+        <img src="static/images/0201.png" alt="0201">
+        <img src="../../static/images/0201.png" alt="0201">
+        <img src="../../../static/images/0201.png" alt="0201">
+        <img src="../../../../static/images/0201.png" alt="0201">
+        <p>2.在main.js文件中引入使用</p>
+        <img src="../../../../public/images/0202.png" alt="0202">
+        <img src="../../../public/images/0202.png" alt="0202">
+        <img src="../public/images/0202.png" alt="0202">
+        <img src="./images/0202.png" alt="0202">
+        <img src="/images/0202.png" alt="0202">
+        <p>3.使用</p>
+        <p class="ojbk">3-1.使用方式一:个人推荐</p>
+        <img src="/public/images/0203.png" alt="0203">
+        <p>效果如下</p>
+        <img src="public/images/0204.png" alt="0204" id="prev1">
+        <p>3-2.使用方式二</p>
+        <img src="public/images/0206.png" alt="0206">
+        <p>4.API</p>
+        <a href="https://www.npmjs.com/package/vue-clipboard2" target="_blank">点此链接</a>
+
+    </div>
+</body>
+
+</html>

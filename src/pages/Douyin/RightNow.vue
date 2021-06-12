@@ -21,7 +21,12 @@
       </div>
       <!-- 左右切换按钮 -->
       <div class="button">
-        <i class="iconfont icon-right2" @click="nextDouyin(currentIndex, totalSize)"></i>
+        <input type="text" placeholder="请输入" @keyup="text($event)">
+        <i
+          class="iconfont icon-right2"
+          @click="nextDouyin(currentIndex, totalSize)"
+          @keyup="text($event)"
+        ></i>
         <i class="iconfont icon-left_3" @click="prevDouyin(currentIndex, totalSize)"></i>
       </div>
     </div>
@@ -45,6 +50,7 @@ export default {
 
   methods: {
     nextDouyin(currentIndex, totalSize) {
+      console.log("触发了下一页的事件");
       if (currentIndex < totalSize) {
         this.currentIndex = currentIndex + 1;
       } else {
@@ -100,7 +106,7 @@ export default {
       bottom: 0px;
       // background-color: rgba(black, 0.5);
       width: 100%;
-      height:80px !important;
+      height: 80px !important;
       .author {
         width: 100%;
         display: flex;

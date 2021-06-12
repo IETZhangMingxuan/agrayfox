@@ -5,8 +5,8 @@
       <span class="title">头条新闻</span>
       <div>
         <router-link class="change" to="/news"
-          >更多分类<i class="iconfont icon-iconmore"></i
-        ></router-link>
+          ><i class="iconfont icon-more"></i>更多分类</router-link
+        >
       </div>
     </div>
     <div class="main">
@@ -92,15 +92,18 @@ export default {
       color: #666;
       position: absolute;
       text-decoration: none;
-      top: 22px;
-      right: 10px;
+      top: 25px;
+      right: 19px;
       user-select: none;
       .icon-exchange {
         padding-right: 4px;
         cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
       }
-      .icon-iconmore {
-        font-size: 12px;
+      .icon-more {
+        position: absolute;
+        top:-1px;
+        left:-21px;
+        font-size: 17px;
       }
     }
     .change:hover {
@@ -110,11 +113,11 @@ export default {
   }
   .main {
     margin: 10px 0px 0px 20px;
-    .loading{
+    .loading {
       font-family: "微软雅黑";
-      font-size:14px;
-      font-weight:400;
-      color:#555;
+      font-size: 14px;
+      font-weight: 400;
+      color: #555;
       text-align: center;
       // position: absolute;
       // top:40%;

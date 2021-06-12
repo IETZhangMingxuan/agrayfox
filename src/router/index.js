@@ -49,16 +49,14 @@ const routes = [{
 
   },
   {
-    name: 'Articles',
-    path: "/articles",
-    component: () => import( /* webpackChunkName:"articles" */ 'pages/Articles/Articles'),
-  }, 
+    name: 'blog',
+    path: "/blog",
+    component: () => import('pages/Blog/BlogList.vue'),
+  },
   // P.S:动态路由不能被当成嵌套子路由
   {
-    name: 'Articles',
-    path: "/articles/:id?",
-    component: () => import( /* webpackChunkName:"details" */ 'pages/Articles/ArticleDetails'),
-    props: true
+    path: "/blog/:id",
+    component: () => import( /* webpackChunkName:"id" */ `pages/Blog/Blog.vue`),
   }, {
     name: 'Resources',
     path: "/resources",
