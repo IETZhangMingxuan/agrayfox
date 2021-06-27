@@ -51,6 +51,7 @@ export default {
   }
   .appleNewslist {
     list-style: none;
+    background-color: #fff;
     li {
       position: relative;
       //   border-left: 2px solid #409eef;

@@ -6,8 +6,6 @@ import mutations from './mutaitions'
 import actions from './actions'
 import weibohot from './modules/weibohot.js'
 import hotnews from './modules/hotnews'
-import douyinVideo from './modules/douyinVideo'
-import kuaiShouVideo01 from './modules/kuaiShouVideo01'
 import rightNow from './modules/rightNow'
 import douyinMusic from './modules/douyinMusic'
 import news from './modules/news'
@@ -15,7 +13,8 @@ import tianyan from './modules/tianyan'
 import tianxingApi from './modules/tianxingApi'
 import randomSentences from "./modules/randomSentences"
 import anyknow from "./modules/anyknowApi"
-import weatherApi from "./modules/weatherApi"
+import login from "./modules/login"
+import myKuaiShou from "./modules/myKuaiShou"
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -26,8 +25,6 @@ export default new Vuex.Store({
   modules: {
     weibohot,
     hotnews,
-    douyinVideo,
-    kuaiShouVideo01,
     rightNow,
     douyinMusic,
     news,
@@ -35,6 +32,7 @@ export default new Vuex.Store({
     tianxingApi,
     randomSentences,
     anyknow,
-    weatherApi
+    login,
+    myKuaiShou
   }
 });

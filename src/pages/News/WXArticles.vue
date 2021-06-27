@@ -59,10 +59,7 @@ export default {
         )
         .then(response => {
           const result = response.data.newslist;
-          // console.log("取得微信文章数据");
           this.resultList = result;
-          // console.log("微信文章数据为:" + this.resultList);
-          // console.log(this.resultList[0].title, this.resultList[1].title);
         })
         .catch(error => {
           console.log("我没有获取到微信文章数据,原因是:" + error.message);

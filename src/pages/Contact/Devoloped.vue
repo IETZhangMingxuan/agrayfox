@@ -11,7 +11,6 @@
       </div>
       <el-timeline class="blockList" :reverse="reverse">
         <el-timeline-item
-          :timestamp="p.ctime"
           placement="top"
           class="blockSingle"
           v-for="(p, index) in timeLineList"
@@ -36,47 +35,56 @@ export default {
         {
           id: 1,
           title: "完成主页开发",
-          ctime: "2020-09-01",
-          color: "green"
+          color: "#409EEF"
         },
         {
           id: 2,
           title: "完成新闻页开发",
-          ctime: "2020-09-05",
-          color: "green"
+          color: "#409EEF"
         },
         {
           id: 3,
           title: "完成站长页开发",
-          ctime: "2020-09-18",
-          color: "green"
+          color: "#409EEF"
         },
         {
           id: 4,
-          title: "Version 1.0版本上线",
-          ctime: "2020-09-30",
-          color: "green"
+          title: "1.0版本上线",
+          color: "#409EEF"
         },
         {
           id: 5,
           title: "完成短视频页面开发",
-          ctime: "2020-10-27",
-          color: "green",
-          desc: "接入了快手,开眼,抖音的部分接口。功能待完善"
+          color: "#409EEF",
+          desc: "接入了快手,开眼,抖音的部分接口"
         },
         {
           id: 6,
           title: "完成热点页开发",
-          ctime: "2021-01-18",
-          color: "green",
+          color: "#409EEF",
           desc: "整合热门网站热搜榜单,让你迅速了解当前最新的时事新闻热点"
         },
         {
           id: 7,
-          title: "",
-          ctime: "Future",
-          color: "orangered",
-          desc: "博客页\r\n商城页\r\n对话机器人模块\r\n电子钢琴模块\r\n天气模块"
+          title: "完成博客页开发",
+          color: "#409EEF",
+          desc: ""
+        },
+        {
+          id: 8,
+          title: "主页添加智能对话机器人",
+          color: "#409EEF",
+          desc: "接口每天有次数限制,且行且珍惜"
+        },
+        {
+          id: 9,
+          title: "新闻页添加天气模块",
+          color: "#409EEF"
+        },
+        {
+          id: 10,
+          title: "优化了短视频看快手功能",
+          color: "#409EEF"
         }
       ]
     };
@@ -129,8 +137,8 @@ export default {
       height: 500px;
       .el-timeline-item {
         width: 300px;
-        // border: 1px solid blue !important;
-        font-family: "Microsoft Yahei";
+        font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          sans-serif;
         font-size: 14.5px;
         padding: 5px;
         color: #333;
@@ -152,15 +160,19 @@ export default {
             p {
               padding: 2px 0px;
               color: #666 !important;
-              font-size: 12px;
+              font-size: 14px;
+              font-weight: 400;
+              text-align: left;
+              padding-left: 20px;
             }
             .desc {
               font-size: 12px;
               margin-top: 5px;
               color: #999 !important;
               text-align: left;
-              padding: 0px 5px 0px 10px;
+              padding: 0px 10px 0px 0px;
               font-weight: 400;
+              padding-left: 20px;
             }
           }
           .el-card__body:hover {

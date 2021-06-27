@@ -30,7 +30,7 @@
           </ul>
           <button
             class="getmore"
-            v-show="this.filterList[0] !== undefined && this.filterList.length >= 3"
+            v-show="this.filterList[0] !== undefined && this.filterList.length >= 10"
           >
             加载更多
           </button>
@@ -82,7 +82,7 @@ export default {
         this.filterList = this.newsList.filter(a => {
           return a.type == item;
         });
-      }else{
+      } else {
         this.filterList = this.newsList;
       }
     },
@@ -111,7 +111,7 @@ export default {
 <style scoped lang="less">
 #bloglist {
   background-color: #f4f4f4;
-  width: 1240px;
+  width: 1200px;
   padding: 20px 20px 0px 20px;
   margin-top: -120px;
   .bloglist-nav {
@@ -149,6 +149,7 @@ export default {
         border-radius: 10px;
         margin-top: 20px;
         padding: 20px;
+        margin-right: 20px;
         ul {
           list-style: none;
           li {

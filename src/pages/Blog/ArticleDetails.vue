@@ -228,7 +228,6 @@ Vue.use(VueClipboard)
   methods: {},
   created(num) {
     num = this.$route.params.id;
-    console.log(num);
   }
 };
 </script>

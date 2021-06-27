@@ -21,7 +21,7 @@
               secondSpan: index + 1 + currentIndex === 2,
               thirdSpan: index + 1 + currentIndex === 3,
               fourthSpan: index + 1 + currentIndex === 4,
-              fifthSpan: index + 1 + currentIndex === 5,
+              fifthSpan: index + 1 + currentIndex === 5
             }"
             >{{ index + 1 + currentIndex }}</span
           >
@@ -107,6 +107,8 @@ export default {
       .icon-exchange {
         padding-right: 4px;
         cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
+        position: relative;
+        top: 2px;
       }
     }
     .change:hover {
@@ -143,6 +145,7 @@ export default {
           border-radius: 5px;
           text-align: center;
           background-color: #eaeaea;
+          // background-color: #fff;
           color: #666;
           user-select: none;
         }
@@ -170,7 +173,7 @@ export default {
         a {
           margin-left: 10px;
           text-decoration: none;
-          color: #666;
+          color: #333;
           font-family: "Microsoft Yahei";
           font-size: 14px;
         }
@@ -189,6 +192,19 @@ export default {
       // }
     }
   }
+}
+// 利用伪元素给组件添加背景图
+#hotweibo::after {
+  content: "";
+  background: url(./images/0003.png) -1px -9px;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
 }
 #hotweibo:hover {
   box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);

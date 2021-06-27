@@ -194,7 +194,8 @@ export default {
         width: 72%;
       }
       a:hover {
-        color: orangered;
+        // color: orangered;
+        color:#409eef;
       }
     }
     li:hover {

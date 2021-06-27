@@ -14,10 +14,8 @@
         </div>
         <div class="raw4">
           <Robot />
+          <Frame3 />
         </div>
-        <!-- <div>
-          <Robot />
-        </div> -->
       </div>
     </div>
   </div>
@@ -25,7 +23,19 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  data() {
+    return {
+      userinfo: {}
+    };
+  },
+  // 使用vuex替代了总线获取登录成功后的用户信息
+  // async created() {
+  //   this.$bus.$on("sendUserInfoToHome", okok => {
+  //     this.userinfo = okok;
+  //     console.log(this.userinfo);
+  //   });
+  // }
 };
 </script>
 <style scoped lang="less">

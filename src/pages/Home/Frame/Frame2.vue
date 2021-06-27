@@ -38,7 +38,7 @@ export default {
         {
           id: 3,
           name: "京东",
-          imgUrl: "https://dgss2.bdstatic.com/5bVYsj_p_tVS5dKfpU_Y_D3/qiusuo_icon/aa0448bf686b54f648b869155388d64e.ico",
+          imgUrl: "https://www.jd.com/favicon.ico",
           url: "https://jd.com/"
         },
         {
@@ -50,7 +50,7 @@ export default {
         {
           id: 5,
           name: "优酷",
-          imgUrl: "https://dgss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/res/img/defaultIcon1229.png",
+          imgUrl: "https://www.youku.com/favicon.ico",
           url: "http://www.youku.com"
         },
         {
@@ -260,7 +260,7 @@ export default {
         {
           id: 40,
           name: "微信公众号",
-          imgUrl: "http://lackar.com/aa/icon/wxgongzhonghao.png",
+          imgUrl: "https://weixin.sogou.com/favicon.ico",
           url: "https://weixin.sogou.com/"
         },
         {
@@ -272,26 +272,26 @@ export default {
         {
           id: 42,
           name: "Boss直聘",
-          imgUrl: "http://lackar.com/aa/icon/bosszp.png",
+          imgUrl: "https://www.zhipin.com/favicon.ico",
           url: "https://www.zhipin.com/"
         },
         {
           id: 43,
           name: "天眼查",
-          imgUrl: "http://lackar.com/aa/icon/tianyancha.png",
+          imgUrl: "https://www.tianyancha.com/favicon.ico",
           url: "https://www.tianyancha.com/"
         },
         {
           id: 44,
           name: "简书",
-          imgUrl: "http://lackar.com/aa/icon/jianshu.png",
+          imgUrl: "https://www.jianshu.com/favicon.ico",
           url: "https://www.jianshu.com/"
         },
         {
           id: 45,
-          name: "GitNavi",
-          imgUrl: "http://www.gitnavi.com/statics/other/navigation/front/image/logo.png",
-          url: "http://www.gitnavi.com/"
+          name: "iconfont",
+          imgUrl: "https://iconfont.alicdn.com/t/3bd6ecd7-0bc8-43a9-a548-004e06d5fea4.jpg@200h_200w.jpg",
+          url: "https://www.iconfont.cn/"
         },
         {
           id: 46,
@@ -326,7 +326,7 @@ export default {
       width: 3px;
       height: 20px;
       line-height: 20px;
-      background-color: deeppink;
+      background-color: purple;
       margin: 25px 0px 0px 30px;
       display: inline-block;
     }
@@ -352,7 +352,8 @@ export default {
       box-sizing: border-box;
       width: 15%;
       padding: 10px;
-      background-color: #fff;
+      // background-color: #fff;
+      background-color: transparent;
       text-align: left;
       border-radius: 8px;
       vertical-align: center;
@@ -367,17 +368,29 @@ export default {
       a {
         vertical-align: middle;
         text-decoration: none;
-        color: #999;
+        color: #333;
         font-family: "Microsoft Yahei";
         font-size: 14px;
         margin-left: 10px;
         user-select: none;
       }
       a:hover {
-        color: deeppink;
+        color: purple;
       }
     }
   }
+}
+#frame::after {
+  content: "";
+  background: url(./images/0006.png) -367px -19px no-repeat;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
 }
 #frame:hover {
   box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);

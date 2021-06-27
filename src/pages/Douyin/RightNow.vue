@@ -49,7 +49,6 @@ export default {
 
   methods: {
     nextDouyin(currentIndex, totalSize) {
-      console.log("触发了下一页的事件");
       if (currentIndex < totalSize) {
         this.currentIndex = currentIndex + 1;
       } else {

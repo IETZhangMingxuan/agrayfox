@@ -2,8 +2,8 @@
   <div id="footer">
     <div class="desc">
       <p>
-        灰狐的个人主页 - 热点导航网站 www.agrayfox.com @ All rights Reserved. Designed by Mingxuan
-        Zhang
+        张明轩的个人主页 - 热点导航网站 www.agrayfox.com @ All rights Reserved. Designed by Mingxuan
+        Zhang - Server In HongKong
       </p>
       <p>
         本站收录的网址或使用的链接若侵害到您的利益,请联系我们删除处理，邮箱1628029199@qq.com
@@ -26,8 +26,9 @@ export default {};
   padding: 30px 60px;
   .desc {
     font-family: "Microsoft Yahei";
-    font-size: 12px;
-    color: #333;
+    font-size: 14px;
+    color: #555666;
+    font-weight:300;
     letter-spacing: 1px;
     p {
       padding: 8px;

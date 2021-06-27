@@ -1,5 +1,5 @@
 <template>
-  <div id="robot" :class="{ minShow: isMinShow }">
+  <div id="robot" :class="{ minShow: isMinShow }" class="animate__animated animate__slideInLeft">
     <div class="header" v-show="headerIsShow">
       <img src="images/robot.jpeg" alt="404 not found" title="小白" />
       <p>{{ robotName }}</p>
@@ -279,16 +279,17 @@ export default {
   line-height: 40px;
   outline: none;
   border: 1px solid transparent;
-  font-size: 12px;
+  font-size: 14px;
   background-color: #eaeaea;
   padding: 0px 0px 0px 10px;
   width: 100%;
   border-radius: 0 0 10px 10px;
+  font-weight: 300;
+  font-family: "microsoft yahei";
 }
 
 .footer input:focus {
   background-color: #fff;
-  /* border: 1px solid #ccc; */
   border-color: #eaeaea;
 }
 

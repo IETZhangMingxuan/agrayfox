@@ -352,7 +352,8 @@ export default {
       box-sizing: border-box;
       width: 15%;
       padding: 10px;
-      background-color: #fff;
+      // background-color: #fff;
+      background-color: transparent;
       text-align: left;
       border-radius: 8px;
       vertical-align: center;
@@ -367,17 +368,40 @@ export default {
       a {
         vertical-align: middle;
         text-decoration: none;
-        color: #999;
+        color: #333;
         font-family: "Microsoft Yahei";
         font-size: 14px;
         margin-left: 10px;
         user-select: none;
       }
       a:hover {
-        color: green;
+        color: #409eef;
       }
     }
   }
+}
+#frame::before {
+  content: "";
+  opacity: 0.3;
+  top: 0;
+  left: 0px;
+  bottom: 0;
+  right: 0px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+}
+#frame::after {
+  content: "";
+  background: url(./images/0006.png) -365px no-repeat;
+  opacity: 0.3;
+  top: 0;
+  left: 0px;
+  bottom: 0;
+  right: 0px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
 }
 #frame:hover {
   box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);

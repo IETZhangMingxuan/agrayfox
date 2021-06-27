@@ -15,13 +15,13 @@ import {
   getEasymoneyNewsList,
   getCaixinNewsList,
   getInvestingNewsList,
-  getPearVideoList,
   getBilibiliVideoList,
   getGameSkyGameList,
   getMaoYanList,
   getSteamList,
   getDeveloperTopList,
   getOsChinaTopList,
+  getZolList
 } from "http/http";
 const OK = 200;
 export default {
@@ -40,13 +40,13 @@ export default {
     EasymoneyNewsList: [],
     CaixinNewsList: [],
     InvestingNewsList: [],
-    PearVideoList: [],
     BilibiliVideoList: [],
     GameSkyGameList: [],
     MaoYanList: [],
     SteamList: [],
     DeveloperTopList: [],
-    OsChinaTopList: []
+    OsChinaTopList: [],
+    ZolList: []
   },
   getters: {
 
@@ -69,9 +69,6 @@ export default {
     },
     getBilibiliVideoList(state, data) {
       state.BilibiliVideoList = data;
-    },
-    getPearVideoList(state, data) {
-      state.PearVideoList = data;
     },
     getInvestingNewsList(state, data) {
       state.InvestingNewsList = data;
@@ -115,6 +112,9 @@ export default {
     getCnBetaNewsList(state, data) {
       state.CnBetaNewsList = data;
     },
+    getZolList(state, data) {
+      state.ZolList = data;
+    }
   },
   actions: {
     async getOsChinaTopList({
@@ -181,17 +181,6 @@ export default {
       } = await getBilibiliVideoList();
       // console.log(msg, data);
       commit("getBilibiliVideoList", data);
-      return data;
-    },
-    async getPearVideoList({
-      commit
-    }) {
-      const {
-        msg,
-        data
-      } = await getPearVideoList();
-      // console.log(msg, data);
-      commit("getPearVideoList", data);
       return data;
     },
     async getInvestingNewsList({
@@ -347,6 +336,16 @@ export default {
       // console.log(msg, data);
       commit("getCnBetaNewsList", data);
       return data;
+    },
+    async getZolList({
+      commit
+    }) {
+      const {
+        msg,
+        data
+      } = await getZolList();
+      commit("getZolList", data);
+      return data
     }
   }
 }

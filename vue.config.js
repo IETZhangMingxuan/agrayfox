@@ -24,7 +24,7 @@ module.exports = {
       },
       "/proxy": {
         target: "https://1911958968496216.cn-shanghai.fc.aliyuncs.com/2016-08-15"
-      }
+      },
     },
     // app:有能力注册路由(低级mockjs)
     before(app) {

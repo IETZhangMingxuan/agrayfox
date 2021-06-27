@@ -3,17 +3,15 @@
     <div class="container">
       <div class="header">
         <div class="logo">
-          <img src="./images/Douyin01.png" alt="logo" class="douYinLogo" />
           <img src="./images/Kuaishou01.png" alt="logo" class="kuaiShouLogo" />
-          <img src="./images/Kaiyan01.png" alt="logo" class="KaiYanLogo" />
+          <img src="./images/Douyin01.png" alt="logo" class="douYinLogo" />
         </div>
         <div class="navbar">
           <ul class="selectList">
-            <router-link to="/douyin/hotVideo" class="select">热点榜</router-link>
-            <router-link to="/douyin/rightNow" class="select">实时榜</router-link>
-            <router-link to="/douyin/todayVideo" class="select">视频榜</router-link>
-            <router-link to="/douyin/kaiYan" class="select">原创榜</router-link>
-            <router-link to="/douyin/hotMusic" class="select">音乐榜</router-link>
+            <router-link to="/douyin/hotVideo" class="select">看快手</router-link>
+            <router-link to="/douyin/rightNow" class="select">看抖音</router-link>
+            <router-link to="/douyin/kaiYan" class="select">开眼视频</router-link>
+            <router-link to="/douyin/hotMusic" class="select">抖音热门音乐</router-link>
           </ul>
         </div>
       </div>
@@ -32,8 +30,9 @@ export default {
 <style scoped lang="less">
 #douyin {
   // border: 1px dashed blue;
-  margin: 20px auto;
+  margin: 0px auto;
   text-align: center;
+  margin-top: 5px;
   .container {
     background-color: black;
     // background: linear-gradient(180deg, orange, orangered);
@@ -57,22 +56,12 @@ export default {
         .douYinLogo {
           width: 90px;
           height: 40px;
-          padding: 20px 50px;
-          // border: 1px solid red;
+          padding: 20px 50px 21px 0px;
         }
         .kuaiShouLogo {
           width: 87px;
-          height: 39px;
-          padding: 20px 50px 21px 20px;
-          // border: 1px solid red;
-        }
-        .KaiYanLogo {
-          width: 190px;
-          height: 24px;
-          padding: 21px 0px;
-          position: absolute;
-          top: 670px;
-          right: -805px;
+          height: 40px;
+          padding: 20px 50px;
         }
       }
       .navbar {
@@ -92,9 +81,12 @@ export default {
             text-decoration: none;
             // border:1px solid #fff;
           }
+          .active {
+            color: orangered;
+          }
           .select:hover {
             // color: #409eef;
-            color: #007fff;
+            color: orange;
           }
         }
       }

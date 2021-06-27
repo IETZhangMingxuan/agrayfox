@@ -1,18 +1,80 @@
 /* 放置所有的请求方法 */
-import weiboAxios from './txapiAxios'
-import hotNewsAxios from './hotNewsAxios'
-import kuaiShouAxios from './KuaiShouAxios'
-import rightNowAxios from './rightNowAxios'
-import apiopenAxios from './apiopenAxios'
-import tianxingapiAxios from './tianxingapiAxios'
-import randomsentences from './randomsentences'
-import locationAxios from './locationAxios'
-/* anyknow */
-import anyknowAxios from './anyknowAxios'
-import weatherAxios from './weatherAxios'
+import weiboAxios from './txapiAxios';
+import hotNewsAxios from './hotNewsAxios';
+import rightNowAxios from './rightNowAxios';
+import apiopenAxios from './apiopenAxios';
+import tianxingapiAxios from './tianxingapiAxios';
+import randomsentences from './randomsentences';
+/* anyknow热点搜索 */
+import anyknowAxios from './anyknowAxios';
 
 
-/* 制作动态ajax请求 */
+/* 个人网站自定义接口 */
+import grayfoxAxios from './grayfoxAxios';
+
+/* 个人网站自定义接口请求集 */
+
+/* 用户登录操作 */
+export const sendLoginAxios = (username, password) => grayfoxAxios.post("/login", {
+  username,
+  password
+});
+/* 获取所有用户信息 */
+export const getAllUsersInfo = () => grayfoxAxios.get("/getUsers");
+/* 用户注册操作 */
+export const sendRegisterAxios = (username, password, email) => grayfoxAxios.post("/register", {
+  username,
+  password,
+  email
+});
+/* 用户自动登录操作 */
+export const autoLoginAxios = () => grayfoxAxios.get('/autologin');
+/* 用户登录成功后修改自定义导航后将修改后的用户navlist数据上传到数据库中 */
+export const editUserNavlistAxios = (finalStr) => grayfoxAxios.post("/editUserNavlist", {
+  finalStr
+});
+/* 获取mySQL数据库中comments集合的评论列表 */
+export const getAllComments = () => grayfoxAxios.get('/getAllComments');
+/* 登录后添加用户评论功能 */
+export const setComments = (username,profile,content,time) => grayfoxAxios.post('/setComments', {
+  username,
+  profile,
+  content,
+  time
+});
+
+
+
+/* 爬虫爬取快手的接口集合 */
+/* 爬取快手热门视频(无cookie) */
+export const getKuaiShouHot = () => grayfoxAxios.get('/kuaishouHot');
+/* 爬取快手关键字视频 */
+/* @params:{keyword}:搜索关键字 */
+export const getKuaiShouSearchVideos = (keyword) => grayfoxAxios.post('/kuaishouSearchVideos', {
+  keyword
+});
+/* 爬取快手关键字用户集合 */
+/* @params:{keyword}:搜索关键字 */
+export const getKuaiShouSearchUsers = (keyword) => grayfoxAxios.post('/kuaishouSearchUsers', {
+  keyword
+});
+/* 爬取快手指定视频下的评论列表 */
+/* @params:{photoId}:视频id */
+export const getKuaiShouSearchComments = (photoId, authorId) => grayfoxAxios.post(
+  '/kuaishouSearchComments', {
+    photoId,
+    authorId
+  });
+/* 爬取快手指定用户主页信息 */
+export const getKuaiShouSearchUserInfo = (userId) => grayfoxAxios.post('/kuaishouSearchUserInfo', {
+  userId
+});
+
+
+
+
+
+/* 制作动态ajax请求用于开眼视频 */
 let ajaxRandomNum = parseInt(Math.random() * (130000 - 120000) + 120000);
 
 /* 实时获取微博热搜 */
@@ -22,14 +84,6 @@ export const getWeiboHotList = () => weiboAxios.get(
 /* 实时获取今日头条热门新闻 */
 export const getNewsHotList = () => hotNewsAxios.get(
   "/index?key=4428d8e64916b6207baf857dac31f424&num=50");
-
-/* 实时获取抖音热搜视频 */
-export const getDouyinVideoList = () => weiboAxios.get(
-  "/dyvideohot/index?key=4428d8e64916b6207baf857dac31f424");
-
-/* 实时获取快手热搜视频第一页数据 */
-export const getKuaiShouVideoList01 = () => kuaiShouAxios.get(
-  "/hot/videos/?source=kuai-shou&page=2");
 
 /* 实时获取抖音今日热门50条数据(无头像) */
 export const getRightNowList = () => rightNowAxios.get("/douyin/4");
@@ -74,24 +128,13 @@ export const getRandomSentencesList = () => randomsentences.get("/sentences");
 export const getVirusNumList = () => tianxingapiAxios.get(
   "/txapi/ncov/index?key=4428d8e64916b6207baf857dac31f424");
 
-/* 实时获取搜狐地理位置API */
-export const getLocation = () => locationAxios.get("/cityjson");
-
 /* 实时获取天行API体育新闻 */
 export const getSportsNewsList = () => tianxingapiAxios.get(
   "/tiyu/index?key=284032390ca46e0760bc80d2364bf65f&num=50");
 /* 实时获取天行API(此请求收费0.05元/条)微信文章 */
 export const getWXArticlesList = () => tianxingapiAxios.get(
   `http://api.tianapi.com/txapi/wxsearch/index?key=4428d8e64916b6207baf857dac31f424&word=${this.wxsearch}`
-  );
-
-
-
-/* 天气模块所需数据 */
-export const getUserWeather = () => weatherAxios.get(
-  "/s6/weather/now?location=auto_ip&key=db86a5196f304e52a4369818c5182e60");
-// export const getUserWeather = () => weatherAxios.get(
-//   "/s6/weather/now?location=175.161.250.159&key=db86a5196f304e52a4369818c5182e60");
+);
 
 // 分割线 ———————————————————————————————————— ---- —————————————————————— ---- —————————————————— ---- ————————
 /* 实时获取anyknow相关请求 */
@@ -117,14 +160,12 @@ export const getSciChinaNewsList = () => anyknowAxios.get("/api/v1/sites/kepuchi
 export const getCnBetaNewsList = () => anyknowAxios.get("/api/v1/sites/cnbeta");
 /* 实时获取雪球热搜榜 */
 export const getSnowballNewsList = () => anyknowAxios.get("/api/v1/sites/xueqiu");
-/* 实时获取eastmoney热搜榜 */
+/* 实时获取东方财富热搜榜 */
 export const getEasymoneyNewsList = () => anyknowAxios.get("/api/v1/sites/eastmoney");
 /* 实时获取财新热搜榜 */
 export const getCaixinNewsList = () => anyknowAxios.get("/api/v1/sites/caixin");
-/* 实时获取investing热搜榜 */
+/* 实时获取英为热搜榜 */
 export const getInvestingNewsList = () => anyknowAxios.get("/api/v1/sites/investing");
-/* 实时获取梨视频热搜榜 */
-export const getPearVideoList = () => anyknowAxios.get("/api/v1/sites/pearvideo");
 /* 实时获取bilibili热搜榜 */
 export const getBilibiliVideoList = () => anyknowAxios.get("/api/v1/sites/bilibili");
 /* 实时获取游民星空热搜榜 */
@@ -137,3 +178,5 @@ export const getSteamList = () => anyknowAxios.get("/api/v1/sites/steam");
 export const getDeveloperTopList = () => anyknowAxios.get("/api/v1/sites/toutiaoio");
 /* 实时获取开源中国热搜榜 */
 export const getOsChinaTopList = () => anyknowAxios.get("/api/v1/sites/oschina");
+/* 获取中关村热搜榜 */
+export const getZolList = () => anyknowAxios.get('/api/v1/sites/zol');

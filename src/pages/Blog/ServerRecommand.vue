@@ -68,7 +68,7 @@ export default {};
 .server-recommand p {
   padding: 5px 10px;
   font-weight: 400;
-
+  color:#555;
 }
 
 .server-recommand a {

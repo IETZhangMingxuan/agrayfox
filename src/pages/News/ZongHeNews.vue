@@ -25,7 +25,7 @@ export default {
   methods: {
     ...mapActions(["getZongHeNewsList"]),
     deleteImg() {
-      console.log("123456789");
+      console.log("综合新闻有图片加载失败了");
     }
   },
   async created() {
@@ -55,6 +55,7 @@ export default {
   }
   .zonghenewslist {
     list-style: none;
+    background-color: #fff;
     li {
       position: relative;
       //   border-left: 2px solid #409eef;

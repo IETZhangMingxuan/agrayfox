@@ -5,6 +5,7 @@
       <div class="loading" v-if="!KYVideoList.length">
         请稍后,正在努力加载中...
       </div>
+      <img src="./images/Kaiyan01.png" alt="logo" class="KaiYanLogo" />
       <ul class="videoList animate__animated animate__flipInY">
         <li
           v-for="(p, index) in KYVideoList.slice(currentIndex, currentIndex + pageSize)"
@@ -226,7 +227,11 @@ export default {
           console.log("我没有获取到开眼视频数据,原因是:" + error.message);
           this.sendAxios = "网络差";
         });
-      if (this.KYVideoList[0].data == undefined || this.KYVideoList[0].data.tags[0] == undefined || his.KYVideoList[0].data.author == undefined) {
+      if (
+        this.KYVideoList[0].data == undefined ||
+        this.KYVideoList[0].data.tags[0] == undefined ||
+        his.KYVideoList[0].data.author == undefined
+      ) {
         console.log("出错了cover不存在");
         this.getKYVideoList(sendAxios);
       } else {
@@ -258,6 +263,14 @@ export default {
     .loading {
       min-height: 600px;
       line-height: 600px;
+    }
+    .KaiYanLogo {
+      width: 190px;
+      height: 24px;
+      padding: 21px 0px;
+      position: absolute;
+      top: 603px;
+      right: -652px;
     }
     .videoList {
       width: 100%;

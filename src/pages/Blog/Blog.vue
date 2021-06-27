@@ -32,16 +32,14 @@ export default {
   data() {
     return {};
   },
-  methods: {
-    
-  }
+  methods: {}
 };
 </script>
 <style scoped>
 #blog {
   background-color: #f4f4f4;
-  margin-top:-120px;
-  padding:140px 20px 20px 20px;
+  margin-top: -120px;
+  padding: 140px 20px 20px 20px;
 }
 .blog-main {
   display: flex;

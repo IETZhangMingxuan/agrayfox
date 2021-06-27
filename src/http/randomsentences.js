@@ -17,7 +17,6 @@ axiosIns.interceptors.request.use(function (config) {
 axiosIns.interceptors.response.use(function (response) {
   // 对响应数据做点什么(自定义添加了.data)
   nprogress.done();
-  // console.log(response.data);
   return response.data;
 }, function (error) {
   // 对响应错误做点什么

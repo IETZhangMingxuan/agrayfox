@@ -19,7 +19,7 @@
       </ul>
     </div>
     <div class="searchMain">
-      <input type="text" placeholder="从上方选择搜索引擎后输入搜索内容" v-model="searchContent"/>
+      <input type="text" placeholder="从上方选择搜索引擎后输入搜索内容" v-model="searchContent" />
       <button @click="search(active, searchContent)">
         搜索
       </button>
@@ -27,7 +27,7 @@
     <!-- 火狐狸css特效 -->
     <!-- <div class="firefox"></div> -->
     <div class="jiTang">
-      <span v-show="RandomSentencesList.name">诗词鉴赏</span>&nbsp;&nbsp;：{{
+      <span v-show="RandomSentencesList.name">{{RandomSentencesList.from}}</span>&nbsp;&nbsp;{{
         RandomSentencesList.name
       }}
     </div>
@@ -50,7 +50,7 @@ export default {
         { name: "思否", id: "8", imgUrl: "https://static.iiter.cn/segmentfault.png" }
       ],
       active: "0",
-      searchContent: "",
+      searchContent: ""
     };
   },
   // input自动获取焦点
@@ -120,14 +120,15 @@ export default {
   width: 100%;
   .bgGif {
     z-index: -1;
-    width:100%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     // background: linear-gradient(to bottom, #C0DDF6, #f9f9f9);
-    background:url(https://img1.baidu.com/it/u=901960272,472766140&fm=26&fmt=auto&gp=0.jpg) repeat;
-    opacity: .4;
+    background: url("https://img1.baidu.com/it/u=901960272,472766140&fm=26&fmt=auto&gp=0.jpg")
+      repeat;
+    opacity: 0.4;
     .bg-bubbles {
       position: absolute;
       // 使气泡背景充满整个屏幕
@@ -326,13 +327,13 @@ export default {
       box-sizing: border-box;
       font-family: "microsoft yahei";
       font-size: 14px;
-      color:#f4f4f4;
+      color: #555666;
       user-select: none;
     }
     input:focus {
       border-color: #007fff;
       background-color: #fff;
-      color:#555666
+      color: #555666;
     }
     button {
       // box-shadow: 0px 1px 0.5px #409eee;
@@ -351,15 +352,9 @@ export default {
       font-size: 15px;
       letter-spacing: 2px;
     }
-
-    // button:active {
-    //   padding: 3px 6px 2px 8px;
-    //   border: 0.5px inset;
-    //   line-height: 22px;
-    //   height: 36px;
-    //   text-align: center;
-    //   display: inline-block;
-    // }
+    button:hover {
+      background: linear-gradient(45deg, #0876e4, #1e80ff);
+    }
   }
   /* 火狐狸CSS3特效 */
   .firefox {

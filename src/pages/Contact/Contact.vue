@@ -1,10 +1,13 @@
 <template>
-  <div id="contact">
+  <div id="contact" ref="testABC">
     <!-- 左侧留言板 -->
     <div class="left">
       <!-- 发布留言区 -->
       <div class="publish animate__animated infinite animate__slideInLeft">
-        <i class="iconfont icon-bianji"></i>
+        <!-- <i class="iconfont icon-bianji"></i> -->
+        <svg class="icon icon-liuyan" aria-hidden="true">
+          <use xlink:href="#icon-liuyan"></use>
+        </svg>
         <div class="title">
           <span>评论</span>
         </div>
@@ -12,40 +15,44 @@
         <!-- 提示 -->
         <div class="mention">
           <i class="iconfont icon-tishi"></i>
-          <span>温馨提示：为了能够更好的留言交流，请务必填写正确的个人信息并文明发言。</span>
+          <span
+            >温馨提示：验证码需要区分大小写，如果无法识别请再次点击验证码图片生成新的验证码。</span
+          >
         </div>
         <!-- 主要表单 -->
         <form action="https://formspree.io/f/myyblyqp" method="POST" class="mainForm" id="my-form">
-          <div class="nameInput">
-            <i class="iconfont icon-xingming"></i>
-            <input
-              type="text"
-              name="name"
-              class="name"
-              placeholder="请输入昵称"
-              autocomplete="off"
-              v-model="myName"
-            />
+          <!-- 操作判断提示框 -->
+          <div
+            class="formMention animate__animated animate__slideInDown"
+            v-if="isMentionShow"
+            :class="{
+              mentionRed: isMentionRed,
+              mentionGreen: isMentionGreen
+            }"
+          >
+            <p class="mentionWrapper">{{ mention }}</p>
           </div>
-          <div class="emailInput">
-            <i class="iconfont icon-youxiang"></i>
-            <input
-              type="email"
-              name="_replyto"
-              class="replyTo"
-              placeholder="请输入邮箱"
-              autocomplete="off"
-              v-model="myEmail"
-            />
+          <div class="userInfo">
+            <span v-if="!userInfo.userInfo" class="userName"
+              >请先<span class="plzLogin" @click="$router.push('/login')">登录</span
+              >后才可以评论哦</span
+            >
+            <span class="userName" v-else
+              ><span>你好，</span><span class="welcomeUser">{{ userInfo.userInfo.username }}</span
+              >！欢迎来到我的网站，有什么建议或者问题可以在下方给我留言哦，谢谢。</span
+            >
           </div>
-
           <textarea
             type="text"
             name="main"
             class="main"
             placeholder="在此处输入留言内容"
-            v-model="myMessage"
+            v-model.trim="myMessage"
           />
+          <!-- 小狐狸svg -->
+          <svg class="icon icon-huli" aria-hidden="true">
+            <use xlink:href="#icon-huli"></use>
+          </svg>
           <!-- 验证码功能 -->
           <div class="verticalNum">
             <i class="iconfont icon-yanzhengma2"></i>
@@ -60,7 +67,6 @@
             </div>
           </div>
           <!-- 验证码功能结束 -->
-
           <input type="button" value="清空" class="clearAll" @click="clearAllContents" />
           <input
             type="submit"
@@ -70,7 +76,6 @@
             v-model="submitText"
             ref="submitBtn"
           />
-          <!-- <p id="my-form-status" style="background:#eaeaea;margin-top:20px;padding:10px;">待发送</p> -->
         </form>
       </div>
       <!-- 广告区 -->
@@ -81,35 +86,47 @@
       </div> -->
       <!-- 留言板区 -->
       <div class="allContents animate__animated infinite animate__slideInLeft">
-        <i class="iconfont icon-liuyan2"></i>
+        <!-- <i class="iconfont icon-liuyan2"></i> -->
         <div class="title">
+          <svg class="icon icon-xiezi" aria-hidden="true">
+            <use xlink:href="#icon-xiezi"></use>
+          </svg>
           <span>留言板</span>
-          <span class="allNums">({{ contentsList.length }})</span>
+          <span class="allNums">({{ reverseComments.length }})</span>
         </div>
         <div class="contents">
-          <ul class="contentsList">
+          <h3 v-if="!this.reverseComments[2]">正在加载中...</h3>
+          <ul class="contentsList" v-else>
             <li
-              v-for="(item, index) in contentsList.slice(currentIndex, currentIndex + pageSize)"
+              v-for="(item, index) in reverseComments.slice(currentIndex, currentIndex + pageSize)"
               :key="index"
             >
-              <img :src="item.imgUrl" alt="" />
+              <img :src="item.profile" alt="" />
               <p class="name">
-                {{ item.name
-                }}<span v-show="item.isvip" class="vip" :style="`background-color:${item.color}`">{{
-                  item.vip
-                }}</span>
+                {{ item.username }}
               </p>
               <span class="time">{{ item.time }}</span>
-              <pre class="content">{{ item.content }}</pre>
-              <span class="floor">{{ item.id }}楼</span>
-              <div class="answerHim" v-show="item.answerHim">
-                <span class="zhanzhang">站长</span>
-                <span class="zhanZhangSays"
-                  >灰狐: {{ item.answerWhat }}
-                  <!-- <div class="replyZhanZhang">回复</div> -->
-                  <!-- <div class="reportZhanZhang">举报</div> -->
-                </span>
-                <div class="othersAnswer"></div>
+              <div class="content">
+                <p>{{ item.content }}</p>
+              </div>
+              <span class="floor">{{ reverseComments.length - index - currentIndex }}楼</span>
+              <div class="subComment" v-if="item.subcomment">
+                <!-- 可以做优化循环遍历配合接口实现楼中楼评论功能 -->
+                <div class="zhanZhangSays">
+                  <span class="zhanZhang">张明明</span>
+                  <span class="reply">回复</span>
+                  <span class="replyWho">{{ item.username }}：</span>
+                  <span class="zhanZhangComtent">{{ item.subcomment }}</span>
+                  <!-- <a href="javascript:;" style="color:#5893c2;text-decoration:none;padding-left:5px" class="clickReply" v-if="userInfo.userInfo">回复</a> -->
+                  <!-- <div class="test">
+                    <textarea name="" id="" cols="30" rows="10" :placeholder="`回复：张明明 回复 ${item.username}`"></textarea>
+                    <div class="subTest">
+                      <span>还能输入xxx个字符</span>
+                      <button>取消回复</button>
+                      <button>发表评论</button>
+                    </div>
+                  </div> -->
+                </div>
               </div>
             </li>
           </ul>
@@ -118,11 +135,9 @@
       <!-- 添加分页器 -->
       <div class="pagination">
         <el-pagination
-          background
-          layout="prev, pager, next,sizes,total"
-          :total="contentsList.length"
+          layout="prev,pager,next,total,jumper"
+          :total="allComments.length"
           class="elementUIPagination"
-          :page-sizes="[2, 3, 4, 5, 10]"
           :page-size="pageSize"
           :current-page="this.currentPage"
           @current-change="currentPageChange"
@@ -153,230 +168,26 @@
             你好,这里是灰狐,欢迎访问我的个人主页。
           </p>
           <p>
-            博主是一名前端码农,设计爱好者,中文名是张明轩,英文名是GrayFox
+            博主是一名前端码农,设计爱好者,中文名是张明明/张明轩,英文名是GrayFox
           </p>
           <p class="second">
-            目前我在魔都一家互联网公司供职,平时的爱好比较广泛,喜欢研究一些有趣的新技术,喜欢读书写字写Bug,旅游运动养奶喵。如你所见,这是我的个人博客主页,整个前端界面由我独自设计和开发,当前是Version
-            1.0版本,后续会慢慢对网站进行定期更新,也会开发该网站的小程序版本。随时欢迎大家来逛逛,如果需要在网站里添加哪些功能或者提供一些建议都可以在左边评论区给我留言,如果急需联系本人,也可以通过上方的联系方式立刻与我联系.我还可以帮忙给需要的人自助建站,配置服务器环境.
+            目前我在魔都一家互联网公司供职,平时的爱好比较广泛,喜欢研究一些有趣的新技术,喜欢读书写字写Bug,旅游运动养奶喵。如你所见,这是我的个人主页,开发本网站的原因是为了方便平时整合资料以及快速浏览热点新闻视频等,并且开发博客页用于记录技术上遇到的问题。整个前端界面和后端接口均由我独自设计和开发,当前是2.0版本,后续会慢慢对网站进行不定期更新,也会开发该网站的移动端版本。如果需要在网站里添加哪些功能或者提供一些建议都可以在左边评论区给我留言,需要自助建站或搭建服务器环境等,也可以通过下方的联系方式立刻与我联系.
           </p>
         </div>
         <div class="qq">
-          <a
-            href="https://api.66mz8.com/api/qq.talk.php?qq=1628029199"
-            style="text-decoration:none;"
-          >
+          <a href="https://api.sumt.cn/api/qq.talk.php?qq=1628029199" style="text-decoration:none;">
             <i class="iconfont icon-QQ1"></i>
           </a>
         </div>
-      </div>
-      <!-- 网站发展历程 -->
-      <div>
-        <Devoloped />
       </div>
     </div>
   </div>
 </template>
 <script>
-import axios from "axios";
+import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
-      contentsList: [
-        {
-          id: 16,
-          name: "admin",
-          content: `短视频无法评论`,
-          imgUrl: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1589620053,2046679525&fm=26&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2021年1月12日 14:36分",
-          color: "",
-          answerHim: true,
-          answerWhat: "短视频页只模拟了渲染元素,很多功能没有接口无法实现的"
-        },
-        {
-          id: 15,
-          name: "奈奈",
-          content: `嘻嘻,终于上线啦~`,
-          imgUrl: "https://t1.hxzdhn.com/uploads/tu/201805/9999/4a4431c8fa.jpg",
-          isvip: true,
-          vip: "会员",
-          time: "2021年1月6日 19:02分",
-          color: "orange",
-          answerHim: true,
-          answerWhat: "嗯呐~"
-        },
-        {
-          id: 14,
-          name: "余鑫睿",
-          content: `这个博客我喜欢`,
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1186877255,688740697&fm=11&gp=0.jpg",
-          isvip: false,
-          vip: "测试组",
-          time: "2021年1月6日 18:34分",
-          answerHim: true,
-          answerWhat: "谢谢,我也喜欢"
-        },
-        {
-          id: 13,
-          name: "灰狐",
-          content: `测试分页器`,
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
-          isvip: true,
-          vip: "站长",
-          time: "2021年1月6日 16:52分",
-          color: "orange",
-          answerHim: true,
-          answerWhat: "测试成功"
-        },
-        {
-          id: 12,
-          name: "灰狐",
-          content: `新年快乐`,
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
-          isvip: true,
-          vip: "站长",
-          time: "2021年1月1日 01:53分",
-          color: "orange"
-        },
-        {
-          id: 11,
-          name: "浩星",
-          content: `gitee,vant等未收录`,
-          imgUrl: "https://q2.qlogo.cn/headimg_dl?spec=100&dst_uin=1187161570",
-          isvip: false,
-          vip: "",
-          time: "2020年11月23日 15:35分",
-          color: "",
-          answerHim: true,
-          answerWhat: "已解决"
-        },
-        {
-          id: 10,
-          name: "李居居",
-          content: `阔以阔以`,
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=364100592,2649969402&fm=26&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2020年11月23日 15:35分",
-          color: ""
-        },
-        {
-          id: 9,
-          name: "高渐离",
-          content: `增加背景壁纸等功能`,
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1096934148,1681806628&fm=26&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2020年11月16日 10:11分",
-          color: "",
-          answerHim: false,
-          answerWhat: ""
-        },
-        {
-          id: 8,
-          name: "狸猫",
-          content: `需要添加微信网页版`,
-          imgUrl:
-            "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=277295029,627800089&fm=26&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2020年11月10日 14:43分",
-          color: "",
-          answerHim: true,
-          answerWhat: "已添加"
-        },
-        {
-          id: 7,
-          name: "赵菓菓",
-          content: `需要添加必应搜索`,
-          imgUrl:
-            "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1587601794,489963968&fm=11&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2020年11月8日 11:21分",
-          color: "",
-          answerHim: true,
-          answerWhat: "已添加"
-        },
-        {
-          id: 6,
-          name: "Ada",
-          content: `Hello World`,
-          imgUrl:
-            "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2861149065,2862383187&fm=26&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2020年11月6日 14:53分",
-          answerHim: true,
-          answerWhat: "Hello World"
-        },
-        {
-          id: 5,
-          name: "Lookie",
-          content: `这是一条测试文本`,
-          imgUrl:
-            "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2531384262,3699915741&fm=26&gp=0.jpg",
-          isvip: true,
-          vip: "测试组",
-          time: "2020年10月21日 13:20分",
-          color: "#00A4FF",
-          answerHim: true,
-          answerWhat: "这是一条回复文本"
-        },
-        {
-          id: 4,
-          name: "无悔",
-          content: `ReactNative的链接好像有点问题`,
-          imgUrl: "https://q2.qlogo.cn/headimg_dl?spec=100&dst_uin=1615740521",
-          isvip: false,
-          vip: "",
-          time: "2020年10月9日 10:44分",
-          color: "",
-          answerHim: true,
-          answerWhat: "已解决"
-        },
-        {
-          id: 3,
-          name: "peanut",
-          content: "Good！",
-          imgUrl: "https://q2.qlogo.cn/headimg_dl?spec=100&dst_uin=1935576264",
-          isvip: false,
-          vip: "",
-          time: "2020年10月6日 09:13分",
-          color: "",
-          answerHim: true,
-          answerWhat: "Thanks!"
-        },
-        {
-          id: 2,
-          name: "路人甲",
-          content: "路过来打个酱油",
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1209507270,48207376&fm=26&gp=0.jpg",
-          isvip: false,
-          vip: "",
-          time: "2020年10月3日 22:40分",
-          answerHim: true,
-          answerWhat: "欢迎"
-        },
-        {
-          id: 1,
-          name: "灰狐",
-          content: "大家好,欢迎来到我的网站,欢迎各位踊跃发言!",
-          imgUrl:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1341188422,709637882&fm=26&gp=0.jpg",
-          isvip: true,
-          vip: "站长",
-          time: "2020年10月01日 10:03分",
-          color: "orange"
-        }
-      ],
       /* 初始显示的首个索引:可修改,但不建议 */
       currentIndex: 0,
       /* 返回的总条数:不可修改 */
@@ -386,136 +197,135 @@ export default {
       /* 当前显示页:可修改,但不建议 */
       currentPage: 1,
       /* 下面是留言板所需数据,修改前务必想清楚 */
-      myEmail: "",
       myMessage: "",
-      myName: "",
       submitText: "提交评论",
       /* 验证码数据 */
       identifyCode: "",
-      verticalNum: ""
+      verticalNum: "",
+      mention: "测试文本",
+      isMentionShow: false,
+      isMentionRed: false,
+      isMentionGreen: false,
+      isCommentsReverse: false
     };
   },
   methods: {
+    ...mapActions(["setComments"]),
+    // 时间戳转化为时间的工具函数
+    tranform(timestamp) {
+      let date = new Date(timestamp);
+      let Y = date.getFullYear() + "-";
+      let M = (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-";
+      let D = (date.getDate() < 10 ? "0" + date.getDate() : date.getDate()) + " ";
+      let h = (date.getHours() < 10 ? "0" + date.getHours() : date.getHours()) + ":";
+      let m = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()) + ":";
+      let s = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+      return Y + M + D + h + m + s;
+    },
     // 分页器事件:当前页发生改变后触发
-    currentPageChange(index, currentPage) {
+    currentPageChange(index) {
       this.currentPage = index;
-      console.log(this.currentPage);
       if (this.currentPage === 1) {
         this.currentIndex = 0;
       } else {
         this.currentIndex = this.pageSize * (index - 1);
       }
+      this.$refs.testABC.scrollTop = this.$refs.testABC.scrollHeight;
     },
     // 分页器事件:当前页显示数量发生改变时触发
     sizeChange(size) {
       this.pageSize = size;
     },
-    // 提交评论事件,使用了Formspree用于后台管理
+    // 提交评论事件
     async sendEmail(ev) {
-      // console.log("准备发送邮件");
       ev.preventDefault();
-      // console.log("默认发送方式被取消了");
-      // console.log("准备手动发送");
       this.submitText = "发送中...";
       this.$refs.submitBtn.style.background = "orange";
       // 合法性校验
-      if (!this.myName || this.myName.length < 1) {
+      // 1.没有登录
+      if (!this.userInfo.userInfo) {
         //不合格
-        this.$message({
-          message: "用户名不能为空",
-          type: "error",
-          duration: 0,
-          duration: 1500,
-          offset: "275",
-          showClose: true,
-          customClass: "nonono",
-          center: true
-        });
-        this.submitText = "重新提交";
-        this.$refs.submitBtn.style.background = "#ff7171";
-      } else if (!this.myEmail || this.myEmail.length < 1) {
-        //不合格
-        this.$message({
-          message: "邮箱地址不能为空",
-          type: "error",
-          duration: 1500,
-          offset: "275",
-          showClose: true,
-          customClass: "nonono",
-          center: true
-        });
-        this.submitText = "重新提交";
-        this.$refs.submitBtn.style.background = "#ff7171";
+        this.mention = "请先登录";
+        this.isMentionShow = true;
+        this.isMentionRed = true;
+        setTimeout(() => {
+          this.mention = "";
+          this.isMentionShow = false;
+          this.isMentionRed = false;
+        }, 2000);
+        this.submitText = "提交评论";
+        this.$refs.submitBtn.style.background = "linear-gradient(45deg, #007fff, #4e6ef2)";
+        // 2.评论为空
       } else if (!this.myMessage || this.myMessage.length < 1) {
         //不合格
-        this.$message({
-          message: "评论内容不能为空",
-          type: "error",
-          duration: 1500,
-          offset: "275",
-          showClose: true,
-          customClass: "nonono",
-          center: true
-        });
-        this.submitText = "重新提交";
-        this.$refs.submitBtn.style.background = "#ff7171";
+        this.mention = "评论为空";
+        this.isMentionShow = true;
+        this.isMentionRed = true;
+        setTimeout(() => {
+          this.mention = "";
+          this.isMentionShow = false;
+          this.isMentionRed = false;
+        }, 2000);
+        this.submitText = "提交评论";
+        this.$refs.submitBtn.style.background = "linear-gradient(45deg, #007fff, #4e6ef2)";
+        // 3.验证码不对
       } else if (this.verticalNum !== this.identifyCode) {
-        this.$message({
-          message: "验证码不正确,请重新输入",
-          type: "error",
-          duration: 1500,
-          offset: "275",
-          showClose: true,
-          customClass: "nonono",
-          center: true
-        });
+        //不合格
+        this.submitText = "提交评论";
+        this.$refs.submitBtn.style.background = "linear-gradient(45deg, #007fff, #4e6ef2)";
+        this.mention = "验证码错误";
+        this.isMentionShow = true;
+        this.isMentionRed = true;
+        setTimeout(() => {
+          this.mention = "";
+          this.isMentionShow = false;
+          this.isMentionRed = false;
+        }, 2000);
         // this.drawPic();
-        this.submitText = "重新提交";
-        this.$refs.submitBtn.style.background = "#ff7171";
       } else {
-        await axios({
-          url: "https://formspree.io/f/myyblyqp",
-          method: "post",
-          headers: {
-            Accept: "application/json"
-          },
-          data: {
-            email: this.myEmail,
-            message: this.myMessage,
-            name: this.myName
-          }
-        })
-          .then(response => {
-            console.log(response);
-            console.log("已发送邮件");
-            this.$message({
-              message: "发送成功,待站长审核后显示",
-              type: "success",
-              offset: "275",
-              duration: 2500,
-              showClose: true
-            });
-            this.$refs.submitBtn.style.background = "#409eef";
-            this.myEmail = "";
-            this.myMessage = "";
-            this.myName = "";
-            this.submitText = "提交评论";
-            this.verticalNum = "";
-          })
-          .catch(error => {
-            console.log(error);
-            this.$message({
-              message: "发送失败,请检查邮箱格式是否正确",
-              type: "error",
-              duration: 1500,
-              offset: "275",
-              showClose: true,
-              customClass: "nonono",
-              center: true
-            });
-            this.$refs.submitBtn.style.background = "#ff7171";
-            this.submitText = "请修改后再次提交评论";
-          });
+        // 成功发送axios请求到我的接口去添加评论并获得新的评论列表修改本地仓库数据后渲染到页面上
+        // 获得当前时间戳并使用工具函数转化为时间格式与其他参数一起添加到json格式的请求体中发送ajax请求
+        let time = this.tranform(new Date().getTime());
+        // 获得返回值,setComments函数设置在login.js分仓库中,code为200代表成功,400代表失败
+        const code = await this.setComments({
+          username: this.userInfo.userInfo.username,
+          profile: this.userInfo.userInfo.profile,
+          content: this.myMessage,
+          time: time
+        });
+        if (code === 200) {
+          this.myMessage = "";
+          this.verticalNum = "";
+          this.submitText = "提交评论";
+          this.$refs.submitBtn.style.background = "linear-gradient(45deg, #007fff, #4e6ef2)";
+          this.isMentionShow = true;
+          this.mention = "评论成功";
+          this.isMentionGreen = true;
+          await setTimeout(() => {
+            this.isMentionShow = false;
+            this.isMentionGreen = false;
+          }, 3000);
+        } else if (code === 400) {
+          this.verticalNum = "";
+          this.mention = "评论失败";
+          this.isMentionShow = true;
+          this.isMentionRed = true;
+          setTimeout(() => {
+            this.mention = "";
+            this.isMentionShow = false;
+            this.isMentionRed = false;
+          }, 2000);
+        } else {
+          this.verticalNum = "";
+          this.mention = "网络波动";
+          this.isMentionShow = true;
+          this.isMentionRed = true;
+          setTimeout(() => {
+            this.mention = "";
+            this.isMentionShow = false;
+            this.isMentionRed = false;
+          }, 2000);
+        }
       }
     },
     // 清除评论事件
@@ -528,6 +338,27 @@ export default {
         this.myName = "";
       }, 300);
     }
+  },
+  computed: {
+    ...mapState({
+      allComments: state => state.login.allComments,
+      userInfo: state => state.login.userInfo
+    }),
+    // 由于需要在留言板上渲染的数据顺序与数据库中的顺序颠倒,需要进行转换
+    reverseComments() {
+      if (!this.isCommentsReverse) {
+        this.isCommentsReverse = true;
+        let arr = this.allComments.reverse();
+        return arr.reverse();
+      } else {
+        console.log(this.isCommentsReverse);
+        let arr2 = this.allComments.reverse();
+        return arr2;
+      }
+    }
+  },
+  async mounted() {
+    this.isCommentsReverse = false;
   }
 };
 </script>
@@ -545,7 +376,7 @@ html {
       display: flex;
       justify-content: space-between;
       background-color: #f9f9f9;
-      padding:20px 15px 0px 20px;
+      padding: 20px 15px 0px 20px;
       // 左侧留言模块
       .left {
         width: 780px;
@@ -558,23 +389,23 @@ html {
           position: relative;
           padding: 15px 25px 23px 15px;
           box-shadow: 0 0 10px hsla(0, 0%, 40%, 0.3);
-          .icon-bianji {
-            font-size: 1.2em;
+          .icon-liuyan {
+            font-size: 26px;
             position: absolute;
-            left: 27px;
-            top: 20px;
+            left: 26px;
+            top: 16px;
             color: hsl(210, 100%, 50%);
             font-weight: 300;
           }
           // 标题:评论
           .title {
             text-align: left;
-            font-family: "微软雅黑";
+            font-family: "Microsoft Yahei";
             font-size: 16px;
             // color: #999;
             color: #007fff;
             text-shadow: 1px 1px 1px 1px;
-            margin-left: 40px;
+            margin-left: 45px;
             margin-top: 3px;
             user-select: none;
             font-weight: 700;
@@ -590,7 +421,9 @@ html {
             border-radius: 7px;
             margin-top: 15px;
             margin-left: 10px;
-            font-family: "微软雅黑";
+
+            font-family: "Microsoft Yahei";
+
             font-size: 13px;
             text-align: center;
             color: rgba(#e6a23c);
@@ -599,16 +432,76 @@ html {
             .icon-tishi {
               position: absolute;
               top: 11px;
-              left: 122px;
+              left: 89px;
             }
           }
           .mainForm {
             // border: 1px solid black;
+            position: relative;
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-
+            .formMention {
+              position: absolute;
+              border-radius: 10px;
+              height: 30px;
+              line-height: 3 0px;
+              font-family: "Microsoft Yahei";
+              font-weight: 700;
+              font-size: 18px;
+              color: #fff;
+              padding: 3px 45px;
+              left: 280px;
+              top: 35px;
+              width: 90px !important;
+              border: 1px solid transparent;
+              user-select: none;
+              z-index: 9999;
+              .mentionWrapper {
+                text-align: center;
+                height: 30px;
+                line-height: 30px;
+                font-size: 15px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                overflow: hidden;
+              }
+            }
+            .mentionRed {
+              background-color: #f56c6c;
+              color: #fff;
+              border: 1px solid pink;
+            }
+            .mentionGreen {
+              background-color: #67c23a;
+              color: #fff;
+              border: 1px solid lightgreen;
+            }
+            .userInfo {
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: flex-start;
+              font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                "Microsoft YaHei", sans-serif;
+              font-weight: 300;
+              color: #555666;
+              .userName {
+                font-size: 15px;
+                font-weight: 700;
+                padding-left: 12px;
+                letter-spacing: 0.5px;
+                .plzLogin {
+                  color: #409eef;
+                  &:hover {
+                    cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
+                  }
+                }
+                .welcomeUser {
+                  color: #409eef;
+                }
+              }
+            }
             .iconName {
               background: #eaeaea;
               width: 50px;
@@ -618,79 +511,16 @@ html {
                 color: #fff;
               }
             }
-            // 输入昵称
-            .nameInput {
-              position: relative;
-              .icon-xingming {
-                color: rgba(#0876e4, 0.7);
-                // color: rgba(#333,0.7);
-                font-size: 1.3em;
-                position: absolute;
-                left: 20px;
-                top: 34%;
-              }
-              .name {
-                outline: none;
-                border: 1px solid #dcdfe6;
-                height: 35px;
-                line-height: 35px;
-                border-radius: 5px;
-                font-size: 14px;
-                // color: #0876e4;
-                // color: #333;
-                color: #666;
-                font-family: "微软雅黑";
-                padding-left: 35px;
-                margin-left: 10px;
-                width: 250px;
-                margin-top: 8px;
-                cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
-              }
-              .name:focus {
-                color: #666;
-                border: 1px solid rgba(#0876e4, 0.5);
-              }
-            }
-            // 输入邮箱
-            .emailInput {
-              position: relative;
-              .icon-youxiang {
-                color: rgba(#0876e4, 0.7);
-                // color: rgba(#333,0.7);
-                font-size: 1.3em;
-                position: absolute;
-                left: 14px;
-                top: 34%;
-              }
-              .replyTo {
-                outline: none;
-                outline: none;
-                border: 1px solid #dcdfe6;
-                height: 35px;
-                line-height: 35px;
-                border-radius: 5px;
-                font-size: 14px;
-                color: #333;
-                font-family: "微软雅黑";
-                padding-left: 45px;
-                width: 380px;
-                margin-top: 8px;
-                cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
-              }
-              .replyTo:focus {
-                color: #666;
-                border: 1px solid rgba(#0876e4, 0.5);
-              }
-            }
             // 输入评论
             .main {
+              position: relative;
               outline: none;
               border: 1px solid #dcdfe6;
               height: 100px !important;
               border-radius: 5px;
               font-size: 14px;
               color: #666;
-              font-family: "微软雅黑";
+              font-family: "Microsoft Yahei";
               padding-left: 10px;
               width: 780px !important;
               margin-top: 15px;
@@ -698,10 +528,19 @@ html {
               padding: 10px 15px;
               text-align: top;
               cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
+              // 清除textarea默认样式
+              resize: none;
             }
             .main:focus {
               color: #666;
               border: 1px solid rgba(#0876e4, 0.5);
+            }
+            // 小狐狸
+            .icon-huli {
+              position: absolute;
+              font-size: 25px;
+              right: 15px;
+              bottom: 65px;
             }
             // 输入验证码
             .verticalNum {
@@ -716,7 +555,7 @@ html {
                 font-size: 1.3em;
                 position: absolute;
                 left: 20px;
-                top: 20px;
+                top: 22px;
               }
               // input输入框
               .verticalInput {
@@ -730,7 +569,7 @@ html {
                 // color: #0876e4;
                 // color: #333;
                 color: #666;
-                font-family: "微软雅黑";
+                font-family: "Microsoft Yahei";
                 padding-left: 35px;
                 margin-left: 10px;
                 width: 170px;
@@ -751,16 +590,16 @@ html {
             // 清空按钮
             .clearAll {
               outline: none;
-              background-color: rgba(#409eef);
+              background: linear-gradient(45deg, #007fff, #4e6ef2);
               color: #fff;
-              font-family: "微软雅黑";
+              font-family: "Microsoft Yahei";
               font-size: 14.5px;
               text-align: center;
               // width: 780px !important;
               height: 35px;
               line-height: 35px;
               border: none;
-              border-radius: 5px;
+              border-radius: 20px;
               // width: 98.5% !important;
               width: 140px;
               margin-top: 15px;
@@ -769,22 +608,19 @@ html {
             }
             .clearAll:hover {
               cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
-              background-color: #0876e4;
             }
             // 提交按钮
             .submit {
               outline: none;
-              background-color: rgba(#409eef);
+              background: linear-gradient(45deg, #007fff, #4e6ef2);
               color: #fff;
-              font-family: "微软雅黑";
+              font-family: "Microsoft Yahei";
               font-size: 14.5px;
               text-align: center;
-              // width: 780px !important;
               height: 35px;
               line-height: 35px;
               border: none;
-              border-radius: 5px;
-              // width: 98.5% !important;
+              border-radius: 20px;
               width: 250px;
               margin-top: 15px;
               margin-left: 15px;
@@ -792,7 +628,6 @@ html {
             }
             .submit:hover {
               cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
-              background-color: #0876e4;
             }
           }
         }
@@ -814,199 +649,169 @@ html {
         }
         // 全部留言
         .allContents {
-          padding: 20px 25px 23px 15px;
-          box-shadow: 0 0 10px hsla(0, 0%, 40%, 0.3);
-          border-radius: 10px;
-          // border: 1px dashed blue;
-          margin-top: 30px;
           position: relative;
+          padding: 20px 25px;
+          margin-top: 30px;
+          border-radius: 10px;
           background-color: #fff;
-          .icon-liuyan2 {
+          box-shadow: 0 0 10px hsla(0, 0%, 40%, 0.3);
+          min-height: 800px;
+          .icon-xiezi {
             font-size: 1.7em;
             position: absolute;
-            left: 20px;
+            left: 25px;
             top: 17.5px;
             color: #007fff;
             font-weight: 400;
           }
           .title {
             text-align: left;
-            font-family: "微软雅黑";
+            font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+              "Microsoft YaHei", sans-serif;
             font-size: 16px;
-            // color: #333;
             color: #007fff;
             text-shadow: 1px 1px 1px 1px;
-            margin-left: 40px;
+            margin-left: 35px;
             user-select: none;
             font-weight: 700;
             .allNums {
-              font-family: consolas;
+              font-family: "Microsoft Yahei";
               font-size: 1.1em;
               margin-left: 5px;
             }
           }
-
           .contents {
+            // 加载时的文本
+            h3 {
+              font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                "Microsoft YaHei", sans-serif;
+              color: #409eef;
+              margin-top: 50px;
+            }
             .contentsList {
               list-style-type: none;
               margin-top: 20px;
               margin-bottom: 0px;
-              // border: 1px solid red;
               li {
-                // border: 1px solid blue;
-                // background: linear-gradient(45deg, #fafafa, #fff);
-                font-family: "微软雅黑";
-                margin-top: 20px;
-                // border-left: 3px solid rgba(#409eef, 0.8);
-                // border-right: 2px solid #fafafa;
-                border-top: 1px solid #eaeaea;
-                // border-bottom: 1px solid #eaeaea;
                 position: relative;
-                // box-shadow: 2px 2px 2px #eaeaea;
-                // box-shadow: 2px 2px 2px #f9f9f9;
-                // border:1px solid blue;
+                margin-top: 20px;
+                border: 1px solid #eaeaea;
+                background: linear-gradient(45deg, #fafafa, #fff);
+                font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                  "Microsoft YaHei", sans-serif;
+                box-shadow: 3px 3px 3px #eaeaea;
+                border-radius: 10px;
                 img {
+                  position: absolute;
+                  top: 12px;
+                  left: 15px;
                   width: 40px;
                   height: 40px;
                   border-radius: 50%;
-                  position: absolute;
-                  top: 12px;
-                  left: 12px;
-                }
-                img:hover {
-                  opacity: 0.8;
-                  // transform: scale(1.1);
-                }
-
-                .name {
-                  position: absolute;
-                  top: 12px;
-                  left: 65px;
-                  color: #333;
-                  font-weight: 600;
-                  letter-spacing: 1px;
-                  font-size: 15px;
-                  vertical-align: bottom;
-                  .vip {
-                    display: inline-block;
-                    color: #fff;
-                    // background-color: #409eff;
-                    background-color: #00a4ff;
-                    padding: 2px 4px;
-                    text-align: center;
-                    // border: 1px solid #eaeaea;
-                    border-radius: 4px;
-                    font-family: "微软雅黑";
-                    font-weight: 500;
-                    font-size: 12px;
-                    margin-left: 10px;
-                    top: -1px;
+                  &:hover {
+                    opacity: 0.8;
                   }
+                }
+                .name {
+                  display: inline-block;
+                  position: absolute;
+                  left: 65px;
+                  height: 35px !important;
+                  line-height: 48px;
+                  color: #555;
+                  letter-spacing: 1px;
+                  vertical-align: top;
+                  font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                    "Microsoft YaHei", sans-serif;
+                  font-size: 15px;
+                  font-weight: 600;
                 }
                 .time {
                   position: absolute;
-                  top: 38px;
+                  top: 37px;
                   left: 65px;
-                  color: #666;
-                  font-family: "consolas";
+                  color: #999aaa;
+                  font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                    "Microsoft YaHei", sans-serif;
                   font-size: 14px;
                 }
                 .content {
-                  color: #333;
+                  color: #4d4d4d;
                   font-weight: 400;
-                  font-size: 16px;
+                  font-size: 15px;
                   width: 650px;
-                  text-align: left;
-                  padding: 8px 10px;
-                  margin: 60px 0px 10px 60px;
-                  margin-bottom: 5px;
-                  margin-left: 55px;
-                  font-family: "consolas";
                   line-height: 20px;
-                  letter-spacing: 1px;
-                  // border:1px solid blue;
+                  padding: 8px 10px;
+                  margin: 53px 0px 10px 55px;
+                  text-align: left;
+                  font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                    "Microsoft YaHei", sans-serif;
+                  word-wrap: break-word;
+                  outline: 0;
+                  p {
+                    line-height: 26px;
+                  }
                 }
 
                 .floor {
                   position: absolute;
-                  top: 15px;
-                  right: 10px;
-                  font-size: 14px;
-                  color: #666;
-                  font-family: "Times New Roman", Times, serif;
+                  top: 10px;
+                  right: 15px;
+                  font-size: 13px;
+                  color: #555666;
+                  font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                    "Microsoft YaHei", sans-serif;
                   font-weight: 400;
                 }
 
-                .answerHim {
+                .subComment {
                   // border: 2px solid blue;
                   position: relative;
-                  background-color: rgba(#f4f4f4, 0.5);
-                  padding: 5px 0px 5px 10px;
+                  background-color: rgba(#f4f4f4, 0.7);
+                  padding: 3px 0px 3px 5px;
                   text-align: left;
                   margin-left: 65px;
                   margin-bottom: 20px;
                   font-size: 14px;
                   font-weight: 400;
-                  font-family: "微软雅黑";
-                  font-family: "consolas";
-                  width: 500px;
-                  height: 25px;
+                  font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                    "Microsoft YaHei", sans-serif;
+                  font-family: "Microsoft Yahei";
+                  width: 635px;
                   line-height: 25px;
                   color: #333;
-                  border-left: 3px solid #888;
-
-                  .zhanzhang {
-                    margin-left: 0px;
-                    background-color: orange;
-                    color: #fff;
-                    padding: 3px 4px;
-                    border-radius: 4px;
-                    font-size: 14px;
-                    font-weight: 300;
-                    letter-spacing: 1px;
-                  }
+                  border-left: 3px solid #eaeaea;
+                  margin-top: -5px;
                   .zhanZhangSays {
                     position: relative;
                     margin-left: 5px;
-                    font-size: 15px;
                     color: #666;
-                    .replyZhanZhang {
-                      position: absolute;
-                      right: -40px;
-                      top: -0.5px;
-                      font-size: 13px;
-                      color: #5893c2;
-                      // border: 2px solid red;
-                      height: 20px;
-                      line-height: 20px;
+                    font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                      "Microsoft YaHei", sans-serif;
+                    .zhanZhang {
+                      font-size: 14px;
+                      font-weight: 400;
+                      color: #007fff;
                     }
-                    :hover {
-                      color: red;
-                      cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur),
-                        auto !important;
+                    .reply {
+                      color: #999;
+                      padding-left: 5px;
                     }
-                    .reportZhanZhang {
-                      position: absolute;
-                      right: -70px;
-                      top: -0.5px;
-                      font-size: 13px;
-                      color: #5893c2;
-                      // border: 2px solid red;
-                      height: 20px;
-                      line-height: 20px;
+                    .replyWho {
+                      padding-left: 5px;
+                      color: #007fff;
                     }
-                    :hover {
-                      color: red;
-                      cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur),
-                        auto !important;
+                    .zhanZhangComtent {
+                      font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+                        "Microsoft YaHei", sans-serif;
                     }
                   }
                 }
               }
-              li:first-child {
-                margin-top: 0px;
-                border-color: transparent;
-              }
+              // li:first-child {
+              //   margin-top: 0px;
+              //   border-color: transparent;
+              // }
               // li:hover {
               //   // transform: translateX(-5px);
               //   // box-shadow: 1px 1px 2px #999;
@@ -1023,7 +828,6 @@ html {
           border-radius: 10px;
           padding: 15px 25px 0px 25px;
           // border:1px solid blue;
-          margin-bottom: 130px;
           margin-top: 15px;
           font-family: "Microsoft Yahei,", sans-serif;
           .elementUIPagination {
@@ -1031,8 +835,8 @@ html {
             transform: scale(1.1);
             .el-pager {
               li {
-                font-family: "consolas";
-                font-size: 14px;
+                font-family: "Microsoft Yahei";
+                font-size: 12px;
                 button {
                   cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur), auto !important;
                   .el-icon-arrow-right {
@@ -1043,15 +847,15 @@ html {
               li.active {
                 color: #fff;
                 background-color: #0876e4;
+                border-radius: 15px;
               }
             }
             .el-input__inner {
-              font-family: "consolas";
+              font-family: "Microsoft Yahei";
               font-size: 14px;
             }
             .el-pagination__total {
-              // color: red !important;
-              font-family: "consolas";
+              font-family: "Microsoft Yahei";
               font-size: 13px;
             }
           }
@@ -1064,7 +868,7 @@ html {
         // border: 1px solid blue;
         padding: 0px;
         margin-top: 10px;
-        margin-right:15px;
+        margin-right: 15px;
         .myself {
           // border: 1px dashed red;
           background-color: #fff;
@@ -1082,7 +886,8 @@ html {
             left: 25px;
           }
           .title {
-            font-family: "微软雅黑";
+            font-family: "Microsoft Yahei";
+
             font-size: 16px;
             margin-left: 40px;
             color: #409eef;
@@ -1100,25 +905,23 @@ html {
             border-radius: 50%;
           }
           .basicInfo {
-            // border: 1px solid blue;
-            font-family: "Microsoft Yahei";
+            font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+              "Microsoft YaHei", sans-serif;
             padding: 140px 25px;
             text-align: left;
             .hi {
               color: #666;
-              font-size: 14px;
-              font-weight: 300;
+              font-size: 15px;
+              font-weight: 700;
               margin-top: 5px;
               letter-spacing: 1px;
             }
             .myName,
             .myEmail,
             .myWebsite {
-              color: #555;
-              font-size: 14px;
+              color: #409eef;
+              font-size: 15px;
               font-weight: 700;
-              // font-family: "consolas";
-              font-family: "Microsoft Yahei";
               padding: 2px 0px 5px 0px;
               height: 20px;
               line-height: 20px;
@@ -1131,32 +934,24 @@ html {
             margin: -120px auto;
           }
           .intro {
-            // border: 1px solid blue;
-            // text-indent: 30px;
             margin-top: 110px;
-            font-family: "Microsoft Yahei";
-            // font-family: "consolas";
+            font-family: "SF Pro Display", Arial, "PingFang SC", "Hiragino Sans GB",
+              "Microsoft YaHei", sans-serif;
             font-weight: 400;
             text-align: left;
-            color: #777;
+            color: #444555;
             font-size: 14px;
             padding: 20px 25px;
             line-height: 22px;
             letter-spacing: 0.5px;
             .first {
-              // text-indent: 25px;
               margin-top: 5px;
               margin-bottom: 10px;
             }
-            :hover {
-              color: #007fff;
-            }
             .second {
-              // text-indent: 25px;
               margin-top: 10px;
             }
             .third {
-              // text-indent: 25px;
               margin-top: 10px;
             }
           }
@@ -1164,7 +959,7 @@ html {
             margin-top: -10px;
             padding-bottom: 10px;
             .icon-QQ1 {
-              color: grey;
+              color: #409eef;
               font-size: 1.5em;
               cursor: url(https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur), auto !important;
             }
@@ -1199,7 +994,9 @@ html {
     }
     .el-message__content {
       font-size: 14px;
-      font-family: "微软雅黑";
+
+      font-family: "Microsoft Yahei";
+
       font-weight: 300;
       letter-spacing: 1px;
       // color: rgba(red,0.8) !important;

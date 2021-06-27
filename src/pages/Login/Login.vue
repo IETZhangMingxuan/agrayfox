@@ -1,176 +1,234 @@
 <template>
-  <div id="login">
-    <h2>我是测试页</h2>
-    <br />
-    <!-- 模拟动态背景 -->
-    <div class="bgGif">
-      <ul class="bg-bubbles">
-        <li v-for="i in 10" :key="i">{{ item }}</li>
-      </ul>
-    </div>
-    <div class="login-search">
-      <h4>需求1：商品搜索</h4>
-      <input type="text" v-model.trim="keyword" />
-      <button @click="toSearch(1, {})">模拟搜索</button>
-    </div>
-    <div class="login-list" style="margin-top:80px;">
-      <h4>需求2：商品分类列表</h4>
-      <ul style="list-style-type:none">
-        <li v-for="(item, index) in goodsList" :key="index">
-          <a href="javascript:;" @click="toSearch(2, { goodName: item, goodId: index })">{{
-            item
-          }}</a>
-        </li>
-      </ul>
+  <div id="login" class="animate__animated animate__fadeIn">
+    <div class="login-main">
+      <div class="login-header">
+        <h2 class="login-title">用户登录</h2>
+        <div class="line"></div>
+      </div>
+      <div class="username">
+        <el-input
+          v-model="username"
+          placeholder="请输入用户名"
+          class="changeElementUI"
+          clearable
+          prefix-icon="el-icon-user-solid"
+          name="username"
+        ></el-input>
+      </div>
+      <div class="password">
+        <el-input
+          v-model="password"
+          show-password
+          placeholder="请输入密码"
+          class="changeElementUI"
+          clearable
+          prefix-icon="el-icon-lock"
+          name="password"
+        ></el-input>
+      </div>
+      <div class="submit">
+        <el-button type="primary" :loading="isLoading" size="medium" round @click="sendPost">{{
+          submitContent
+        }}</el-button>
+      </div>
+      <div class="mention">
+        <router-link to="/register">免费注册</router-link>
+        <a>忘记密码</a>
+      </div>
     </div>
   </div>
 </template>
 <script>
+// import axios from "axios";
+import { mapState, mapActions } from "vuex";
 export default {
   data() {
     return {
-      keyword: "",
-      goodsList: ["茶叶", "烟酒", "饮料", "电器", "家具", "工具", "厨具", "方便食品", "调料"],
-      bubbles: []
+      username: "",
+      password: "",
+      submitContent: "登录",
+      isLoading: false,
+      // 所有用户信息
+      userData: ""
     };
   },
+  computed: {
+    // 从仓库获得的登录成功后的用户信息
+    ...mapState({
+      userInfo: state => state.login.userInfo
+    })
+  },
   methods: {
-    toSearch(type, { goodName, goodId }) {
-      if (type === 1) {
-        this.$router.push({
-          name: "test",
-          params: {
-            keyword: this.keyword
-          }
-        });
+    ...mapActions(["sendLoginAxios"]),
+    async sendPost() {
+      if (this.username !== "" && this.password !== "") {
+        const { username, password } = this;
+        const result = await this.sendLoginAxios({ username, password });
+        console.log(result);
+        if (result === 200) {
+          this.$message({
+            message: "登录成功,即将跳转到主页...",
+            type: "success",
+            center: true,
+            offset: 80
+          });
+          await setTimeout(() => {
+            // 将后台传过来的token保存在sessionStorage
+            window.sessionStorage.setItem("grayfox_token", this.userInfo.token);
+            this.$router.push("/home");
+          }, 2000);
+        } else if (result === 207) {
+          this.$message({
+            message: "登录失败,请检查信息是否正确!",
+            type: "error",
+            center: true,
+            offset: 80
+          });
+        }
       } else {
-        this.$router.push({
-          name: "test",
-          query: {
-            goodName: goodName,
-            goodId: goodId
-          }
+        // 用户名和密码不能为空
+        this.$message({
+          message: "用户名及密码不能为空",
+          type: "warning",
+          center: true,
+          offset: 80
         });
       }
     }
-  }
+    // async loginFn() {
+    //   if (this.username !== "" && this.password !== "") {
+    //     // 切换按钮加载状态
+    //     this.isLoading = !this.isLoading;
+    //     // 发送axios请求检验用户名及密码是否正确
+    //     // const data = await this.sendLoginAxios({
+    //     //   username: this.username,
+    //     //   password: this.password
+    //     // });
+    //     // console.log(data);
+    //     await axios({
+    //       method: "POST",
+    //       // url: "http://59.110.242.49:8080/login"
+    //       url: `http://127.0.0.1:8082/login?username=${this.username}&password=${this.password}`
+    //     }).then(
+    //       res => {
+    //         this.userData = res.data;
+    //         // console.log(res.data);
+    //       },
+    //       error => {
+    //         console.log(error);
+    //       }
+    //     );
+    //     if (this.userData.code === 200) {
+    //       this.$message({
+    //         message: "登录成功,即将跳转到主页...",
+    //         type: "success",
+    //         center: true,
+    //         offset: 80
+    //       });
+    //       this.userInfo = this.userData.data;
+    //       await setTimeout(() => {
+    //         console.log(this.userInfo);
+    //         // 将后台传过来的token保存在sessionStorage
+    //         window.sessionStorage.setItem("grayfox_token", this.userInfo.token);
+    //         // 用总线传参
+    //         this.$bus.$emit("sendUserInfo", this.userInfo);
+    //         this.$router.push("/home");
+    //       }, 2000);
+    //     } else if (this.userData.code === 207) {
+    //       this.isLoading = !this.isLoading;
+    //       console.log("登录失败");
+    //       this.$message({
+    //         message: "登录失败,请检查信息是否正确!",
+    //         type: "error",
+    //         center: true,
+    //         offset: 80
+    //       });
+    //       this.password = "";
+    //     }
+    //   } else {
+    //     this.$message({
+    //       message: "用户名及密码不能为空",
+    //       type: "warning",
+    //       center: true,
+    //       offset: 80
+    //     });
+    //   }
+    // }
+  },
+  /* 重点问题:$on事件没有在Home组件被触发,只是在Header组件被触发了 */
+  /* 原因: 当我们还在登录页面的时候,home组件还没有生成,也就是home组件中的created监听的来自登录页面的事件还没有被触发,这个时候当在登录页面触发$emit事件的时候,home组件是无法监听到的
+     解决办法:将登录页面组件中的$emit事件写在beforeDestroy中去(详见csdn收藏 高级知识点)
+  */
+  // beforeDestroy() {
+  //   this.$bus.$emit("sendUserInfoToHome", this.userInfo);
+  // }
 };
 </script>
 <style scoped lang="less">
 #login {
-  margin-top: 60px;
-  .bgGif {
-    width: 200px;
+  width: 100%;
+  min-height: 700px;
+  height: 100vh;
+  background: url("./images/0001.png") no-repeat;
+  background-size: cover;
+  border: 1px solid transparent;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  // 去除margin塌陷
+  overflow: hidden;
+  opacity: 0.2;
+  .login-main {
+    opacity: 1 !important;
+    width: 300px;
     height: 300px;
-    position: relative;
-    background: linear-gradient(to bottom right, #409eef, #fff);
-    .bg-bubbles {
-      position: absolute;
-      // 使气泡背景充满整个屏幕
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      li {
-        position: absolute;
-        border-radius: 50%;
-        // bottom 的设置是为了营造出气泡从页面底部冒出的效果；
-        bottom: -160px;
-        // 默认的气泡大小；
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.15);
-        list-style: none;
-        // 使用自定义动画使气泡渐现、上升和翻滚；
-        animation: square 15s infinite;
-        transition-timing-function: linear;
-        // 分别设置每个气泡不同的位置、大小、透明度和速度，以显得有层次感；
-        &:nth-child(1) {
-          left: 10%;
-        }
-        &:nth-child(2) {
-          left: 20%;
-          width: 90px;
-          height: 90px;
-          animation-delay: 2s;
-          animation-duration: 7s;
-        }
-        &:nth-child(3) {
-          left: 25%;
-          animation-delay: 4s;
-        }
-        &:nth-child(4) {
-          left: 40%;
-          width: 60px;
-          height: 60px;
-          animation-duration: 8s;
-          background-color: rgba(255, 255, 255, 0.3);
-        }
-        &:nth-child(5) {
-          left: 70%;
-        }
-        &:nth-child(6) {
-          left: 80%;
-          width: 120px;
-          height: 120px;
-          animation-delay: 3s;
-          background-color: rgba(255, 255, 255, 0.2);
-        }
-        &:nth-child(7) {
-          left: 32%;
-          width: 160px;
-          height: 160px;
-          animation-delay: 2s;
-        }
-        &:nth-child(8) {
-          left: 55%;
-          width: 20px;
-          height: 20px;
-          animation-delay: 4s;
-          animation-duration: 15s;
-        }
-        &:nth-child(9) {
-          left: 25%;
-          width: 10px;
-          height: 10px;
-          animation-delay: 2s;
-          animation-duration: 12s;
-          background-color: rgba(255, 255, 255, 0.3);
-        }
-        &:nth-child(10) {
-          left: 85%;
-          width: 160px;
-          height: 160px;
-          animation-delay: 5s;
-        }
+    padding: 10px 30px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 2px rgba(0, 0, 0, 0.31);
+    .login-header {
+      position: relative;
+      .login-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #409eef;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
       }
-      // 自定义 square 动画；
-      @keyframes square {
-        0% {
-          opacity: 0.5;
-          transform: translateY(0px) rotate(45deg);
-        }
-        25% {
-          opacity: 0.75;
-          transform: translateY(-400px) rotate(90deg);
-        }
-        50% {
-          opacity: 1;
-          transform: translateY(-600px) rotate(135deg);
-        }
-        100% {
-          opacity: 0;
-          transform: translateY(-1000px) rotate(180deg);
-        }
+      .line {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        height: 3px;
+        background-color: #409eef;
       }
     }
-  }
-  .login-list ul {
-    li {
-      padding: 10px 0;
+    .username,
+    .password,
+    .submit {
+      margin-top: 30px;
+    }
+    .submit {
+      width: 100%;
+      .el-button {
+        display: inline-block;
+        width: 100%;
+        font-family: "Microsoft YaHei";
+        letter-spacing: 1px;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    .mention {
+      font-size: 12px;
+      color: #555666;
+      padding: 15px 0;
       a {
-        text-decoration: none;
+        display: inline-block;
+        padding: 0 5px;
+        color: #409eff;
+        text-decoration: none !important;
+        user-select: none;
       }
     }
   }

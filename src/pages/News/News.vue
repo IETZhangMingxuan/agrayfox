@@ -257,8 +257,6 @@ export default {
     changeVisible(e) {
       // this.isVisible = true;
       const { pathName } = e.target.dataset;
-      console.log(pathName);
-      console.log(this.$route.path);
       if (pathName === this.$route.path) {
         // this.isVisible = true;
       } else {
@@ -267,7 +265,6 @@ export default {
     },
     liClick(index) {
       this.selectIndex = index;
-      // console.log(index, this.selectIndex);
     },
     virusNumTime(VirusNumList) {
       return moment(VirusNumList[0].desc.modifyTime).format("lll");
@@ -319,26 +316,25 @@ export default {
       width: 150px;
       position: relative;
       box-sizing: border-box;
-
+      background-color: #fff;
       li {
         padding: 0px 0px;
         width: 150px !important;
         border: 0.5px dashed transparent;
-        // margin-top:10px;
         position: relative;
-
         a {
           text-decoration: none;
           color: #666;
           padding: 8px 0px;
           display: inline-block;
           width: 100%;
+          // background-color: #fff;
         }
       }
       li.active {
         width: 150px !important;
         box-sizing: border-box;
-        background-color: rgba(#eaeaea, 0.2);
+        background-color: rgba(#eaeaea, 0.5);
         font-weight: 700;
         border-left: 3px solid #007fff;
       }
@@ -348,7 +344,7 @@ export default {
 
       li:hover {
         box-sizing: border-box;
-        background-color: rgba(#eaeaea, 0.5);
+        background-color: rgba(#eaeaea, 0.8);
         border-left: 3px solid #007fff;
         // width:150px !important;
       }

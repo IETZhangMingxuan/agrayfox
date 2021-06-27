@@ -22,7 +22,6 @@ export default {
         code,
         result
       } = await getWYNewsList();
-      // console.log(code, newslist);
       commit("getWYNewsList", result);
       return result;
     }

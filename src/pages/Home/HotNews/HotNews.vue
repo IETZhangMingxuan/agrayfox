@@ -60,7 +60,7 @@ export default {
   //   border: 1px solid blue;
   box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.1);
   width: 29.5%;
-  background-color: #fff;
+  background-color: #eaeaea;
   margin-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
@@ -101,8 +101,8 @@ export default {
       }
       .icon-more {
         position: absolute;
-        top:-0.5px;
-        left:-21px;
+        top: -1px;
+        left: -21px;
         font-size: 17px;
       }
     }
@@ -140,14 +140,16 @@ export default {
           padding: 3px 10px;
           border-radius: 5px;
           text-align: center;
-          background-color: #eaeaea;
+          // background-color: #eaeaea;
+          background-color: #fff;
           color: #666;
+          // color:#333;
           user-select: none;
         }
         a {
           margin-left: 10px;
           text-decoration: none;
-          color: #666;
+          color: #333;
           font-family: "Microsoft Yahei";
           font-size: 14px;
         }
@@ -171,6 +173,20 @@ export default {
       color: #0876e4;
     }
   }
+}
+// 利用伪元素给组件添加背景图
+#hotnews::after {
+  content: "";
+  background-image: url(./images/0003.png);
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+  background-position:left;
 }
 #hotnews:hover {
   box-shadow: 0 0 20px hsla(0, 0%, 40%, 0.3);

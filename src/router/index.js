@@ -64,7 +64,34 @@ const routes = [{
     name: 'Resources',
     path: "/resources",
     component: () => import( /* webpackChunkName:"resources" */ 'pages/Resources/Resources'),
-
+    children: [{
+      name: 'Comprehensive',
+      path: 'comprehensive',
+      component: () => import('pages/Resources/Comprehensive.vue')
+    }, {
+      name: 'Tech',
+      path: 'tech',
+      component: () => import('pages/Resources/Tech.vue')
+    }, {
+      name: 'Economy',
+      path: 'economy',
+      component: () => import('pages/Resources/Economy.vue')
+    }, {
+      name: 'Media',
+      path: 'media',
+      component: () => import('pages/Resources/Media.vue')
+    }, {
+      name: 'Entertainment',
+      path: 'entertainment',
+      component: () => import('pages/Resources/Entertainment.vue')
+    }, {
+      name: 'Internet',
+      path: 'internet',
+      component: () => import('pages/Resources/Internet.vue')
+    }, {
+      path: '',
+      redirect: '/resources/comprehensive'
+    }]
   }, {
     name: 'Content',
     path: "/content",
@@ -74,10 +101,6 @@ const routes = [{
     path: "/douyin",
     component: () => import( /* webpackChunkName:"douyin" */ 'pages/Douyin/Douyin'),
     children: [{
-      name: 'TodayVideo',
-      path: "todayVideo",
-      component: () => import('pages/Douyin/TodayVideo')
-    }, {
       name: 'HotVideo',
       path: "hotVideo",
       component: () => import('pages/Douyin/HotVideo')
@@ -94,8 +117,27 @@ const routes = [{
       path: "kaiYan",
       component: () => import('pages/Douyin/Kaiyan'),
     }, {
+      name: 'KuaiShouSearch',
+      path: 'kuaiShouSearch',
+      component: () => import('pages/Douyin/KuaiShouSearch'),
+      children: [{
+          name: 'KuaiShouSearchUsers',
+          path: 'kuaiShouSearchUsers',
+          component: () => import('pages/Douyin/KuaiShouSearchUsers')
+        },
+        {
+          path: 'KuaiShouSearchUsers/:id',
+          component: () => import('pages/Douyin/KuaiShouUserInfo')
+        },
+        {
+          name: 'KuaiShouSearchVideos',
+          path: 'kuaiShouSearchVideos',
+          component: () => import('pages/Douyin/KuaiShouSearchVideos')
+        }
+      ]
+    }, {
       path: '',
-      redirect: '/douyin/kaiYan'
+      redirect: '/douyin/hotVideo'
     }]
   }, {
     name: 'Contact',
@@ -106,6 +148,9 @@ const routes = [{
     path: '/login',
     component: () => import('pages/Login/Login')
 
+  }, {
+    path: '/register',
+    component: () => import('pages/Login/Register')
   }, {
     name: 'test',
     path: '/test/:keyword?',
@@ -126,6 +171,7 @@ const routes = [{
 const router = new VueRouter({
   mode: 'history',
   routes,
+  linkActiveClass: 'active',
   // 路由滑动API,跳转到新路由时自动吸顶
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

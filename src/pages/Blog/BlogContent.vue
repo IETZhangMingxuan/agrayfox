@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-content">
+  <div class="blog-content animate__animated animate__fadeIn">
     <div class="blog-title" id="blog-title">
       <span>{{ newsList.title }}</span>
     </div>
