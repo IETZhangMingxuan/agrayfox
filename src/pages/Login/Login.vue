@@ -40,6 +40,7 @@
 </template>
 <script>
 // import axios from "axios";
+import store from "store/store";
 import { mapState, mapActions } from "vuex";
 export default {
   data() {

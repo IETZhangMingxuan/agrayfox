@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
 Vue.use(VueRouter);
 
 const routes = [{
@@ -146,11 +145,28 @@ const routes = [{
   },
   {
     path: '/login',
-    component: () => import('pages/Login/Login')
-
+    component: () => import('pages/Login/Login'),
+    // 添加路由守卫,在用户登录后将不能访问login页
+    async beforeEnter(to, from, next) {
+      const tokenStr = window.sessionStorage.getItem('grayfox_token');
+      if (tokenStr) {
+        next('/home')
+      } else {
+        next();
+      }
+    }
   }, {
     path: '/register',
-    component: () => import('pages/Login/Register')
+    component: () => import('pages/Login/Register'),
+    // 添加路由守卫,在用户登录后将不能访问register页
+    async beforeEnter(to, from, next) {
+      const tokenStr = window.sessionStorage.getItem('grayfox_token');
+      if (tokenStr) {
+        next('/home')
+      } else {
+        next();
+      }
+    }
   }, {
     name: 'test',
     path: '/test/:keyword?',
